@@ -1,5 +1,15 @@
 #!/bin/sh
 
+if [ `uname` == 'Darwin' ] then
+  # brew  
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  
+  brew install android-sdk cmake fasd imagemagick wget
+else if [ `uname` == 'Linux ] then
+  # apt-get
+  apt-get install git make
+fi
+
 # Nano
 cp .nanorc ~/
 
@@ -17,15 +27,7 @@ chsh -s /bin/zsh
 
 cp .zpreztorc .zprofile .zshrc ~/.zprezto/runcoms
 
-# NVM
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
-
-nvm install v0.10
-nvm install v0.12
-nvm install v4
-nvm install v5
-
-# brew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-brew install android-sdk cmake fasd imagemagick wget
+# fasd
+git clone https://github.com/clvv/fasd.git
+cd fasd
+make install

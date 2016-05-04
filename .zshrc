@@ -10,19 +10,20 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# ZSH
-alias zshc="nano ~/.zshrc"
-alias zshs="source ~/.zshrc"
-alias zshu="pushd .; cd ~/.zprezto; git pull && git submodule update --init --recursive; popd"
-
-# Maven
-alias mvn-build="mvn clean install -DskipTests -Dconnections.tomcat7.home='/etc/tomcat7'"
-
-# Tomcat
-alias tomcat-start="sudo launchctl load -w /Library/LaunchDaemons/org.apache.tomcat.plist"
-alias tomcat-stop="sudo launchctl unload /Library/LaunchDaemons/org.apache.tomcat.plist"
+# fasd
+alias a='fasd -a'        # any
+alias s='fasd -si'        # show / search / select
+alias d='fasd -d'        # directory
+alias ds='fasd -sid'     # interactive directory selection
+alias f='fasd -f'        # file
+alias fs='fasd -sif'     # interactive file selection
+alias j='fasd_cd -d'     # cd, same functionality as j in autojump
+alias js='fasd_cd -d -i' # cd with interactive selection
 
 # NOM
 nom() {
   npm "$@";
 }
+
+# ZSH
+alias zshu="pushd .; cd ~/.zprezto; git pull && git submodule update --init --recursive; popd"
