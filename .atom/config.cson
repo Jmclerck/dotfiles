@@ -1,0 +1,73 @@
+"*":
+  "atom-beautify":
+    _analyticsUserId: "8223c220-1a3d-4b24-b2c3-9d2579868821"
+    css_convert_quotes: "single"
+    css_preserve_newlines: true
+    html_end_with_newline: true
+    html_extra_liners: [
+      ""
+    ]
+    html_indent_inner_html: true
+    js_break_chained_methods: true
+    js_end_with_newline: true
+    js_space_after_anon_function: true
+  "atom-ternjs":
+    useSnippets: true
+  "autohide-tree-view": {}
+  core:
+    audioBeep: false
+    disabledPackages: [
+      "autohide-tree-view"
+    ]
+    projectHome: "/Users/jc185355/Documents"
+    themes: [
+      "one-dark-ui"
+      "oceanic-next"
+    ]
+  editor:
+    backUpBeforeSaving: true
+    fontSize: 13
+    lineHeight: 1.7
+    preferredLineLength: 150
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "5b31cdd1-aee4-b697-eeff-9dcd1dd6815e"
+  "file-icons":
+    forceShow: true
+  "formatter-jsbeautify":
+    a:
+      executablePath: "Users/Jonathan/.nvm/versions/node/v5.10.1/bin/js-beautify"
+  linter:
+    errorPanelHeight: 19
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+  "linter-jscs": {}
+  minimap:
+    plugins:
+      linter: true
+      linterDecorationsZIndex: 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
+  "sync-settings":
+    _analyticsUserId: "d47eaf2c-bf89-4d82-907c-4709fce9ffb5"
+    _lastBackupHash: "555764b83039d4e663cb651d5e53494b34963884"
+    gistId: "a965271c7b5ff3598344"
+    personalAccessToken: "66a7fffbea81a453443c0467866301400e4b6fdd"
+  "terminal-plus":
+    style:
+      theme: "dracula"
+  "tool-bar":
+    iconSize: "32px"
+    position: "Right"
+    visible: false
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+".ini.source":
+  editor:
+    preferredLineLength: 150
