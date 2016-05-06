@@ -24,6 +24,3 @@ alias js='fasd_cd -d -i' # cd with interactive selection
 nom() {
   npm "$@";
 }
-
-# ZSH
-alias zshu="pushd .; cd ~/.zprezto; git pull && git submodule update --init --recursive; popd"

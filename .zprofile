@@ -36,31 +36,6 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
-export ANDROID_HOME=/usr/local/opt/android-sdk
-export CATALINA_HOME=/etc/tomcat7
-export GRADLE_OPTS='-Dorg.gradle.daemon=true'
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
-export M2=~/.m2
-
-# Identities
-export PGUSER=postgres
-export COE_USERNAME=jonathanclerck
-
-# NVM
-export NVM_DIR=~/.nvm
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# NVM Use on CD
-autoload -U add-zsh-hook
-load-nvmrc() {
-  if [[ -f .nvmrc && -r .nvmrc ]]; then
-    nvm use --silent
-  else
-    nvm use default --silent
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
