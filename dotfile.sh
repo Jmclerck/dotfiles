@@ -32,9 +32,9 @@ cp .nanorc ~/
 # Prezto 
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-GLOBIGNORE="README.md"
-for f in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/; do
-  ln -s "$f" "${ZDOTDIR:-$HOME}/.${f:t}"
+shopt -s extglob
+for f in ~/.zprezto/runcoms/!(README.md); do 
+  ln -s $f $HOME/.$(basename $f)
 done
 
 cp zpreztorc zprofile zshrc ~/.zprezto/runcoms/
