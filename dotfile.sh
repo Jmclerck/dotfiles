@@ -34,7 +34,7 @@ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$H
 
 GLOBIGNORE="README.md"
 for f in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/; do
-  ln -s "$f" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+  ln -s "$f" "${ZDOTDIR:-$HOME}/.${f:t}"
 done
 
 cp zpreztorc zprofile zshrc ~/.zprezto/runcoms/
