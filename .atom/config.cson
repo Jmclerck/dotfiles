@@ -30,6 +30,7 @@
     style:
       theme: "dracula"
   "tree-view":
+    autoReveal: true
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
   welcome:
