@@ -20,12 +20,11 @@ cp *.ttf ~/Library/Fonts
 popd
 rm -rf Fira-master
 
-# Nano
-cp .nanorc ~/
-
 # Oh-My-ZSH
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+# Copy RC files
+cp nanorc ~/.nanorc
 cp zshrc ~/.zshrc
 cp powerlevelrc ~/.powerlevelrc
 
