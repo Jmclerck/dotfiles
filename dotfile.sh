@@ -1,33 +1,21 @@
 #!/bin/sh
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install fasd wget
-
-# iTerm
-cp -rf .iterm ~/
-
-# Awesome Terminal Fonts Patched
-git clone https://github.com/gabrielelana/awesome-terminal-fonts.git
-pushd awesome-terminal-fonts/patched
-cp *.ttf ~/Library/Fonts
-popd
-rm -rf awesome-terminal-fonts
-
-# Fira Mono
-git clone https://github.com/mozilla/Fira.git
-pushd Fira-master/ttf
-cp *.ttf ~/Library/Fonts
-popd
-rm -rf Fira-master
-
-# Oh-My-ZSH
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
 # Copy RC files
+cp terminal.plist ~/Library/Preferences/com.apple.Terminal.plist
 cp nanorc ~/.nanorc
 cp zshrc ~/.zshrc
 cp powerlevelrc ~/.powerlevelrc
 
-chsh -s /bin/zsh
+# brew utilities
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install fasd wget
+
+# oh-my-zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+# Hack fonts
+wget https://github.com/chrissimpkins/Hack/releases/download/v2.020/Hack-v2_020-ttf.zip -O hack.zip
+unzip hack.zip ~/Library/Fonts/
+rm hack.zip
 
 exit
