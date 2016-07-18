@@ -8,7 +8,10 @@ cp powerlevelrc ~/.powerlevelrc
 
 # brew utilities
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install fasd wget
+brew install fasd python wget
+
+# glances
+pip install glances
 
 # oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
