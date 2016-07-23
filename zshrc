@@ -22,7 +22,7 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(brew docker fasd git node osx)
+plugins=(brew docker docker-compose fasd git node osx)
 
 # User configuration
 
