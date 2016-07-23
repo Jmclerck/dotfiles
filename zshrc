@@ -49,8 +49,21 @@ alias fs='fasd -sif'     # interactive file selection
 alias j='fasd_cd -d'     # cd, same functionality as j in autojump
 alias js='fasd_cd -d -i' # cd with interactive selection
 
+# A better Docker attach
+attach() {
+  if [ ! $1 ];
+then
+      echo "A container must be selected";
+  elif [ ! $2 ];
+    then
+      docker exec -i -t $1 /bin/bash;
+  else
+      docker exec -i -t $1 $2;
+  fi
+}
+
 # Coffee. Must ... Stay ... Awake ...
-Coffee() {
+coffee() {
   if [ $1 = "wait" ] 
     then
       caffeinate -d $2;
