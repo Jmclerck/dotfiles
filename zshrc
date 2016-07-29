@@ -1,10 +1,23 @@
+shell-test() {
+  app_string=$(rev <<< $(rev <<< $(ps aux | grep $(lsappinfo info -only pid `lsappinfo front` | awk -F '='  '{print $2}') | grep '/Applications') | awk -F '/' '{print $1}'))	
+  app=( $app_string )
+
+  if [ $app = 'Terminal' ];
+    then
+      ZSH_THEME=powerlevel9k/powerlevel9k;
+    else
+      ZSH_THEME=lambda-mod;
+  fi
+}
+
 # Path to your oh-my-zsh installation.
+export TERM="xterm-256color"
 export ZSH=/Users/Jonathan/.oh-my-zsh
 
 source /Users/Jonathan/.powerlevelrc
 
 # Set name of the theme to load. Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="powerlevel9k/powerlevel9k"
+shell-test
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -49,30 +62,36 @@ alias fs='fasd -sif'     # interactive file selection
 alias j='fasd_cd -d'     # cd, same functionality as j in autojump
 alias js='fasd_cd -d -i' # cd with interactive selection
 
-# A better Docker attach
-attach() {
-  if [ ! $1 ];
-then
-      echo "A container must be selected";
-  elif [ ! $2 ];
-    then
-      docker exec -i -t $1 /bin/bash;
-  else
-      docker exec -i -t $1 $2;
-  fi
-}
+alias reset-dock='defaults delete com.apple.dock; killall Dock' 															# Reset Dock layout and settings 
+alias reset-launchpad='defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock' # Reset LaunchPad layout
+
+alias htop='glances --disable-left-sidebar --disable-quicklook --process-short-name --percpu'
 
 # Coffee. Must ... Stay ... Awake ...
 coffee() {
-  if [ $1 = "wait" ] 
+	if [ ! $1 ];
+		then
+			caffeinate;
+  elif [ $1 = "wait" ]; 
     then
       caffeinate -d $2;
-  elif [ $1 = "time" ]
+  elif [ $1 = "time" ];
     then
       caffeinate -t $2;
-  else
-    echo "I don't understand";
-  fi
+	fi
+}
+
+# A better Docker attach
+attach() {
+	if [ ! $1 ];
+		then
+			echo "A container must be selected";
+	elif [ ! $2 ];
+		then
+			docker exec -i -t $1 /bin/bash;
+	else
+			docker exec -i -t $1 $2;
+	fi
 }
 
 # Cow says Hello
