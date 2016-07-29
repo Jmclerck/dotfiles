@@ -1,5 +1,5 @@
 shell-test() {
-  app_string=$(rev <<< $(rev <<< $(ps aux | grep $(lsappinfo info -only pid `lsappinfo front` | awk -F '='  '{print $2}') | grep '/Applications') | awk -F '/' '{print $1}'))	
+  app_string=$(rev <<< $(rev <<< $(ps aux | grep $(lsappinfo info -only pid `lsappinfo front` | awk -F '='  '{print $2}')) | awk -F '/' '{print $1}'))	
   app=( $app_string )
 
   if [ $app = 'Terminal' ];
