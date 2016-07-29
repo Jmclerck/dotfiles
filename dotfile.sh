@@ -18,7 +18,8 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 # Hack fonts
 wget https://github.com/chrissimpkins/Hack/releases/download/v2.020/Hack-v2_020-ttf.zip -O hack.zip
-unzip hack.zip ~/Library/Fonts/
+unzip hack.zip
+mv *.ttf ~/Library/Fonts/
 rm hack.zip
 
 exit
