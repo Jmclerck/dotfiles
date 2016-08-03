@@ -4,9 +4,10 @@ shell-test() {
 
   if [ $app = 'Terminal' ];
     then
-      ZSH_THEME=powerlevel9k/powerlevel9k;
+			ZSH_THEME=gitster;
+      #ZSH_THEME=powerlevel9k/powerlevel9k;
     else
-      ZSH_THEME=lambda-mod;
+      ZSH_THEME=gitster;
   fi
 }
 
