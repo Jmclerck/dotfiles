@@ -4,8 +4,7 @@ shell-test() {
 
   if [ $app = 'Terminal' ];
     then
-			ZSH_THEME=gitster;
-      #ZSH_THEME=powerlevel9k/powerlevel9k;
+      ZSH_THEME=powerlevel9k/powerlevel9k;
     else
       ZSH_THEME=gitster;
   fi
@@ -18,7 +17,7 @@ export ZSH=/Users/Jonathan/.oh-my-zsh
 source /Users/Jonathan/.powerlevelrc
 
 # Set name of the theme to load. Look in ~/.oh-my-zsh/themes/
-shell-test
+ZSH_THEME="gitster"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -27,7 +26,7 @@ CASE_SENSITIVE="true"
 HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-export UPDATE_ZSH_DAYS=7
+export UPDATE_ZSH_DAYS=3
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -63,24 +62,9 @@ alias fs='fasd -sif'     # interactive file selection
 alias j='fasd_cd -d'     # cd, same functionality as j in autojump
 alias js='fasd_cd -d -i' # cd with interactive selection
 
-alias reset-dock='defaults delete com.apple.dock; killall Dock' 															# Reset Dock layout and settings 
-alias reset-launchpad='defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock' # Reset LaunchPad layout
-
+alias reset-dock='defaults delete com.apple.dock; killall Dock'
+alias reset-launchpad='defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock'
 alias htop='glances --disable-left-sidebar --disable-quicklook --process-short-name --percpu'
-
-# Coffee. Must ... Stay ... Awake ...
-coffee() {
-	if [ ! $1 ];
-		then
-			caffeinate;
-  elif [ $1 = "wait" ]; 
-    then
-      caffeinate -d $2;
-  elif [ $1 = "time" ];
-    then
-      caffeinate -t $2;
-	fi
-}
 
 # A better Docker attach
 attach() {
@@ -95,11 +79,41 @@ attach() {
 	fi
 }
 
+# Everything must go! Except the cow, the cow can stay ...
+cls() {
+	clear;
+	greeting;
+}
+
+# Coffee. Must ... Stay ... Awake ...
+coffee() {
+  if [ ! $1 ];
+    then
+      caffeinate;
+  elif [ $1 = "wait" ];
+    then
+      caffeinate -d $2;
+  elif [ $1 = "time" ];
+    then
+      caffeinate -t $2;
+  fi
+}
+
+docker-watch() {
+	while :
+		do
+	  	clear;
+			docker ps;
+			sleep 2;
+	done
+}
+
 # Cow says Hello
 greeting() {
-  local user=$(whoami);
-  local time=$(date '+%X');
-  cowsay Hello ${user} the time is: ${time};
+  user=$(whoami);
+  time=$(date '+%X');
+	quote=$(fortune -sn 40);
+  cowsay Hello ${user} the time is: ${time} ${quote} | lolcat; 
 }
 
 # Alias NOM to NPM, for fun and profit
@@ -112,4 +126,29 @@ strip() {
   zip -d $1 __MACOSX/\*;
 }
 
+zipstrip () {
+	if [ ! $1 ];
+		then # If there no are arguments set destination and source
+  		destination=~/Desktop/Archive.zip;
+			source=.;
+  elif [ ! $2 ];
+		then # If there is only one argument set the first argument as destination
+			destination=$1;
+			source=.;
+	else
+		destination=$1;
+		source=$2;
+	fi
+
+	echo "Zipping ${source} to ${destination}";
+
+	tmp=$( date "+%s" ).zip;
+	zip -qr /tmp/${tmp} $source;
+	strip /tmp/${tmp};
+	mv /tmp/${tmp} $destination;
+}
+
+tabs -2
+
 greeting
+
