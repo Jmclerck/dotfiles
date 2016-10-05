@@ -13,7 +13,7 @@ POWERLEVEL9K_SHORTEN_STRATEGY=truncate_middle
 
 # Git
 
-POWERLEVEL9K_SHOW_CHANGESET="true"
+POWERLEVEL9K_SHOW_CHANGESET="false"
 
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="003"
 POWERLEVEL9K_VCS_MODIFIED_FOREGROUND="000"
@@ -90,8 +90,18 @@ prompt_prompt() {
     esac
   fi
 
-  local content="${who} at ${host} in ${current_path}"
+  local content=""
 
+	if [[ $(tput cols) -le 50 ]]; then
+  	local content=" "
+	elif [[ $(tput cols) -le 100 && -e ".git" ]]; then
+		local content=" "
+	elif [[ $(tput cols) -le 150 ]]; then
+		local content="${current_path}"
+	else
+		local content="${who} at ${host} in ${current_path}"
+  fi
+	
   if [[ $(print -P "%~") == "~" ]]; then
     "$1_prompt_segment" "$0_HOME" "$2" "004" "000" "$content" "HOME_ICON"
   elif [[ $(print -P "%~") == "~"* ]]; then

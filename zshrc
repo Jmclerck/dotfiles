@@ -1,13 +1,13 @@
 shell-test() {
-  app_string=$(rev <<< $(rev <<< $(ps aux | grep $(lsappinfo info -only pid `lsappinfo front` | awk -F '='  '{print $2}')) | awk -F '/' '{print $1}'))	
+  app_string=$(rev <<< $(rev <<< $(ps aux | grep $(lsappinfo info -only pid `lsappinfo front` | awk -F '='  '{print $2}')) | awk -F '/' '{print $1}'))
   app=( $app_string )
 
   if [ $app = 'Terminal' ];
     then
-      ZSH_THEME=powerlevel9k/powerlevel9k;
+			ZSH_THEME=powerlevel9k/powerlevel9k;
     else
       ZSH_THEME=gitster;
-  fi
+		fi
 }
 
 # Path to your oh-my-zsh installation.
@@ -17,7 +17,7 @@ export ZSH=/Users/Jonathan/.oh-my-zsh
 source /Users/Jonathan/.powerlevelrc
 
 # Set name of the theme to load. Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="gitster"
+shell-test
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -62,6 +62,8 @@ alias fs='fasd -sif'     # interactive file selection
 alias j='fasd_cd -d'     # cd, same functionality as j in autojump
 alias js='fasd_cd -d -i' # cd with interactive selection
 
+alias dps='docker ps --format "table {{.ID}}\t{{.Command}}\t{{.Names}}\t{{.Ports}}"'
+
 alias reset-dock='defaults delete com.apple.dock; killall Dock'
 alias reset-launchpad='defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock'
 alias htop='glances --disable-left-sidebar --disable-quicklook --process-short-name --percpu'
@@ -99,11 +101,12 @@ coffee() {
   fi
 }
 
+# Refreshing Docker Machine status
 docker-watch() {
 	while :
 		do
 	  	clear;
-			docker ps;
+			dps;
 			sleep 2;
 	done
 }
@@ -119,6 +122,19 @@ greeting() {
 # Alias NOM to NPM, for fun and profit
 nom() {
   npm "$@";
+}
+
+last=$(date +%s)
+# Throttled resize event for terminal window, just need to make it 
+resize() {
+  local now=$(date +%s);
+  local delta=$(($now - $last));
+
+  if [[ $delta -gt 2 ]]; then
+    last=$now;
+		source /Users/Jonathan/.powerlevelrc
+	 	tput el;
+  fi
 }
 
 # Strip extra macOS files from Archives 
@@ -152,3 +168,4 @@ tabs -2
 
 greeting
 
+trap 'resize' WINCH
