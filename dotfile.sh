@@ -8,7 +8,7 @@ cp powerlevelrc ~/.powerlevelrc
 
 # brew utilities
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install cowsay fasd forune python wget
+brew install cowsay fasd fortune python wget
 
 # glances
 pip install glances lolcat
