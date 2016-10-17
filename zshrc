@@ -14,10 +14,8 @@ shell-test() {
 export TERM="xterm-256color"
 export ZSH=/Users/Jonathan/.oh-my-zsh
 
-source /Users/Jonathan/.powerlevelrc
-
 # Set name of the theme to load. Look in ~/.oh-my-zsh/themes/
-shell-test
+ZSH_THEME="gitster"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -44,7 +42,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export EDITOR="nano"
 
 source $ZSH/oh-my-zsh.sh
-source /Users/Jonathan/.powerlevelrc
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -66,7 +63,6 @@ alias dps='docker ps --format "table {{.ID}}\t{{.Command}}\t{{.Names}}\t{{.Ports
 
 alias reset-dock='defaults delete com.apple.dock; killall Dock'
 alias reset-launchpad='defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock'
-alias htop='glances --disable-left-sidebar --disable-quicklook --process-short-name --percpu'
 
 # A better Docker attach
 attach() {
@@ -113,10 +109,12 @@ docker-watch() {
 
 # Cow says Hello
 greeting() {
+	lang=fr;
+	greeting=$(trans :${lang} --brief "hello");
   user=$(whoami);
   time=$(date '+%X');
 	quote=$(fortune -sn 40);
-  cowsay Hello ${user} the time is: ${time} ${quote} | lolcat; 
+  echo -e "${greeting} ${user}, the time is: ${time}\n" "${quote}" | cowthink | lolcat; 
 }
 
 # Alias NOM to NPM, for fun and profit
