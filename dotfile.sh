@@ -1,13 +1,16 @@
 #!/bin/sh
 
-# Copy RC files
-cp terminal.plist ~/Library/Preferences/com.apple.Terminal.plist
-cp nanorc ~/.nanorc
-cp zshrc ~/.zshrc
+# Symlink Terminal Preferences
+rm ~/Library/Preferences/com.apple.Terminal.plist
+ln -s com.apple.Terminal.plist ~/Library/Preferences/com.apple.Terminal.plist
+
+# Symlink RC files
+ln -s .nanorc ~/.nanorc
+ln -s .zshrc ~/.zshrc
 
 # brew utilities
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install cowsay fasd fortune node python wget
+brew install cowsay fasd fortune node python tailor wget
 
 # glances
 pip install lolcat

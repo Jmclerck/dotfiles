@@ -1,15 +1,3 @@
-shell-test() {
-  app_string=$(rev <<< $(rev <<< $(ps aux | grep $(lsappinfo info -only pid `lsappinfo front` | awk -F '='  '{print $2}')) | awk -F '/' '{print $1}'))
-  app=( $app_string )
-
-  if [ $app = 'Terminal' ];
-    then
-			ZSH_THEME=powerlevel9k/powerlevel9k;
-    else
-      ZSH_THEME=gitster;
-		fi
-}
-
 # Path to your oh-my-zsh installation.
 export TERM="xterm-256color"
 export ZSH=/Users/Jonathan/.oh-my-zsh
@@ -37,7 +25,7 @@ plugins=(brew docker docker-compose fasd git node osx)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:./node_modules/.bin/"
 
 export EDITOR="nano"
 
@@ -59,6 +47,7 @@ alias fs='fasd -sif'     # interactive file selection
 alias j='fasd_cd -d'     # cd, same functionality as j in autojump
 alias js='fasd_cd -d -i' # cd with interactive selection
 
+alias "c."='code .'
 alias dps='docker ps --format "table {{.ID}}\t{{.Command}}\t{{.Names}}\t{{.Ports}}"'
 
 alias reset-dock='defaults delete com.apple.dock; killall Dock'
@@ -130,7 +119,6 @@ resize() {
 
   if [[ $delta -gt 2 ]]; then
     last=$now;
-		source /Users/Jonathan/.powerlevelrc
 	 	tput el;
   fi
 }
@@ -138,6 +126,18 @@ resize() {
 # Strip extra macOS files from Archives 
 strip() {
   zip -d $1 __MACOSX/\*;
+}
+
+shell-test() {
+  app_string=$(rev <<< $(rev <<< $(ps aux | grep $(lsappinfo info -only pid `lsappinfo front` | awk -F '='  '{print $2}')) | awk -F '/' '{print $1}'))
+  app=( $app_string )
+
+  if [ $app = 'Terminal' ];
+    then
+      ZSH_THEME=powerlevel9k/powerlevel9k;
+    else
+      ZSH_THEME=gitster;
+    fi
 }
 
 zipstrip () {
