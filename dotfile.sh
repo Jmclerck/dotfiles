@@ -2,15 +2,18 @@
 
 # Symlink Terminal Preferences
 rm ~/Library/Preferences/com.apple.Terminal.plist
-ln -s com.apple.Terminal.plist ~/Library/Preferences/com.apple.Terminal.plist
+ln -s "$(pwd)/com.apple.Terminal.plist ~/Library/Preferences/com.apple.Terminal.plist
 
 # Symlink RC files
-ln -s .nanorc ~/.nanorc
-ln -s .zshrc ~/.zshrc
+ln -s "$(pwd)/.nanorc" ~/.nanorc
+ln -s "$(pwd)/.zshrc" ~/.zshrc
 
 # brew utilities
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install cowsay fasd fortune node python tailor wget
+
+# brew app casks
+brew cask install docker google-chrome kaleidoscope parallels-desktop paw spectacle tower visual-studio-code
 
 # glances
 pip install lolcat
@@ -19,10 +22,7 @@ pip install lolcat
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # gitster theme
-wget https://raw.githubusercontent.com/shashankmehta/dotfiles/master/thesetup/zsh/.oh-my-zsh/custom/themes/gitster.zsh-theme -O ~/.oh-my-zsh/custom/themes/gitster.zsh-theme
-
-# powerlevel9k theme
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone https://github.com/Ranndom/gitster-theme.git ~/.oh-my-zsh/custom/themes/gitster.zsh-theme
 
 # Hack fonts
 wget https://github.com/chrissimpkins/Hack/releases/download/v2.020/Hack-v2_020-ttf.zip -O hack.zip
