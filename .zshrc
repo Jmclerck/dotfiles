@@ -21,11 +21,11 @@ ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(brew docker docker-compose fasd git node osx)
+plugins=(docker docker-compose fasd git node osx)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:./node_modules/.bin/"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:./node_modules/.bin"
 
 export EDITOR="nano"
 
@@ -49,7 +49,7 @@ alias js='fasd_cd -d -i' # cd with interactive selection
 
 alias "c."='code .'
 alias dps='docker ps --format "table {{.ID}}\t{{.Command}}\t{{.Names}}\t{{.Ports}}"'
-
+alias pup="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 alias reset-dock='defaults delete com.apple.dock; killall Dock'
 alias reset-launchpad='defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock'
 
