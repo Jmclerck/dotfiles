@@ -2,13 +2,20 @@
 
 # brew utilities
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew install cowsay fasd fortune node python tailor wget
+    brew install cowsay fasd fortune gawk node python wget
 
 # brew app casks
-    brew cask install docker google-chrome kaleidoscope parallels-desktop paw spectacle tower visual-studio-code
+    brew cask install docker google-chrome java kaleidoscope parallels-desktop paw spectacle tower visual-studio-code
+
+# tailor depends on java being installed first
+    brew install tailor
 
 # glances
     pip install lolcat
+
+# trans
+    wget git.io/trans /usr/local/bin/trans
+    chmod +x /usr/local/bin/trans
 
 # oh-my-zsh
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
@@ -26,11 +33,11 @@
     rm ~/Library/Preferences/com.apple.Terminal.plist
     ln -s "$(pwd)/com.apple.Terminal.plist" ~/Library/Preferences/com.apple.Terminal.plist
 
-# Sym link VS 
+# Symlink VS 
     ln -s "$(pwd)/settings.json" ~/Library/Application\ Support/Code/User/settings.json
 
 # Symlink RC files
     ln -s "$(pwd)/.nanorc" ~/.nanorc
-    ln -s "$(pwd)/.zshrc" ~/.zshrc
+    ln -s "$(pwd)/zshrc.zsh" ~/.oh-my-zsh/custom/zshrc.zsh
 
 exit

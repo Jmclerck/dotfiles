@@ -19,9 +19,11 @@
 		"**/.svn": true,
 		"**/.hg": true,
 		"**/.DS_Store": true,
+		"**/.nyc_output": true,
+		"**/.vscode": true,
 		"**/coverage": true,
-		"**/dist": false,
-		"**/node_modules": false
+		"**/dist": true,
+		"**/node_modules": true
 	},
 	"html.format.indentInnerHtml": true,
 	"html.format.endWithNewline": true,
@@ -33,7 +35,6 @@
 		"**/coverage": true,
 		"**/node_modules": true
 	},
-	"typescript.tsdk": "/usr/local/lib/node_modules/typescript/lib",
 	"workbench.editor.showTabs": false,
 	"workbench.sideBar.location": "right",
 	"xo.enable": true,
