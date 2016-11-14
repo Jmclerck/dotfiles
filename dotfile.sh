@@ -2,7 +2,7 @@
 
 # brew utilities
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew install cowsay fasd fortune gawk node python wget
+    brew install autojump cowsay fortune gawk node python wget
 
 # brew app casks
     brew cask install docker google-chrome java kaleidoscope parallels-desktop paw spectacle tower visual-studio-code
@@ -16,6 +16,9 @@
 # trans
     wget git.io/trans /usr/local/bin/trans
     chmod +x /usr/local/bin/trans
+
+# node apps
+    npm install -g now vtop
 
 # oh-my-zsh
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
