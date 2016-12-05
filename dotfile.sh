@@ -36,12 +36,6 @@
     rm ~/Library/Preferences/com.apple.Terminal.plist
     ln -s "$(pwd)/com.apple.Terminal.plist" ~/Library/Preferences/com.apple.Terminal.plist
 
-# Symlink hyper
-		ln -s "$(pwd)/.hyper.js" ~/.hyper.js
-
-# Symlink VS
-    ln -s "$(pwd)/settings.json" ~/Library/Application\ Support/Code/User/settings.json
-
 # Symlink RC files
     ln -s "$(pwd)/.nanorc" ~/.nanorc
     ln -s "$(pwd)/zshrc.zsh" ~/.oh-my-zsh/custom/zshrc.zsh

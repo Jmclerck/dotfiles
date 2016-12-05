@@ -8,16 +8,30 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="gitster"
 
+EDITOR="atom"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump docker docker-compose git node osx)
+plugins=(cask docker docker-compose fasd git node osx xcode)
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
-alias "c."='code .'
+# fasd
+alias a='fasd -a'        # any
+alias s='fasd -si'       # show / search / select
+alias d='fasd -d'        # directory
+alias f='fasd -f'        # file
+alias sd='fasd -sid'     # interactive directory selection
+alias sf='fasd -sif'     # interactive file selection
+alias j='fasd_cd -d'     # cd, same functionality as j in autojump
+alias z='fasd_cd -d -i' # cd with interactive selection
+
+alias "c."='$EDITOR .'
+alias "a."='$EDITOR .'
+
 alias dps='docker ps --format "table {{.ID}}\t{{.Command}}\t{{.Names}}\t{{.Ports}}"'
 alias pup="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 alias reset-dock='defaults delete com.apple.dock; killall Dock'
@@ -30,7 +44,7 @@ attach() {
 			echo "A container must be selected";
 	elif [ ! $2 ];
 		then
-			docker exec -i -t $1 /bin/bash;
+			docker exec -i -t $1 /bin/bash -c "export TERM=xterm; exec bash";
 	else
 			docker exec -i -t $1 $2;
 	fi
@@ -73,7 +87,7 @@ greeting() {
   user=$(whoami);
   time=$(date '+%X');
 	quote=$(fortune -sn 40);
-  echo -e "${greeting} ${user}, the time is: ${time}\n" "${quote}" | cowthink | lolcat; 
+  echo -e "${greeting} ${user}, the time is: ${time}\n" "${quote}" | cowthink | lolcat;
 }
 
 # Alias NOM to NPM, for fun and profit
@@ -81,21 +95,15 @@ nom() {
   npm "$@";
 }
 
-last=$(date +%s)
-# Throttled resize event for terminal window, just need to make it 
-resize() {
-  local now=$(date +%s);
-  local delta=$(($now - $last));
+select-language() {
+	list=$( trans -reference | while read line; do echo $(cat $1); done | tr '|' '\n');
+	languages=( $list );
 
-  if [[ $delta -gt 2 ]]; then
-    last=$now;
-	 	tput el;
-  fi
-}
-
-# Strip extra macOS files from Archives 
-strip() {
-  zip -d $1 __MACOSX/\*;
+	for var in "${languages[@]}"
+	do
+		lang=${var}
+		test=$lang | perl -ne 'print "$1" if /(.*)\s*(?=-)/'
+	done
 }
 
 shell-test() {
@@ -108,6 +116,11 @@ shell-test() {
     else
       ZSH_THEME=gitster;
     fi
+}
+
+# Strip extra macOS files from Archives
+strip() {
+  zip -d $1 __MACOSX/\*;
 }
 
 zipstrip () {
@@ -132,10 +145,11 @@ zipstrip () {
 	mv /tmp/${tmp} $destination;
 }
 
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
 
+export JAVA_HOME=$(/usr/libexec/java_home)
+eval "$(fasd --init auto)"
 tabs -2
 
 greeting
-
-trap 'resize' WINCH
