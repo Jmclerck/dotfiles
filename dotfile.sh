@@ -5,7 +5,7 @@
     brew install autojump cowsay fortune gawk node python wget
 
 # brew app casks
-    brew cask install docker google-chrome java kaleidoscope parallels-desktop paw spectacle tower visual-studio-code
+    brew cask install atom docker google-chrome hyper java kaleidoscope parallels-desktop paw spectacle tower
 
 # tailor depends on java being installed first
     brew install tailor
@@ -18,13 +18,13 @@
     chmod +x /usr/local/bin/trans
 
 # node apps
-    npm install -g now vtop
+    npm install -g now yarn vtop
 
 # oh-my-zsh
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # gitster theme
-    git clone https://github.com/Ranndom/gitster-theme.git ~/.oh-my-zsh/custom/themes/gitster.zsh-theme
+    git clone https://github.com/Ranndom/gitster-theme.git ~/.oh-my-zsh/custom/themes
 
 # Hack fonts
     wget https://github.com/chrissimpkins/Hack/releases/download/v2.020/Hack-v2_020-ttf.zip -O hack.zip
@@ -36,7 +36,10 @@
     rm ~/Library/Preferences/com.apple.Terminal.plist
     ln -s "$(pwd)/com.apple.Terminal.plist" ~/Library/Preferences/com.apple.Terminal.plist
 
-# Symlink VS 
+# Symlink hyper
+		ln -s "$(pwd)/.hyper.js" ~/.hyper.js
+
+# Symlink VS
     ln -s "$(pwd)/settings.json" ~/Library/Application\ Support/Code/User/settings.json
 
 # Symlink RC files
