@@ -17,7 +17,7 @@
     chmod +x /usr/local/bin/trans
 
 # node apps
-    npm install -g now yarn vtop
+    npm install -g hpm-cli yarn vtop
 
 # oh-my-zsh
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
