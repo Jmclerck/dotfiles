@@ -23,7 +23,7 @@
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # gitster theme
-    git clone https://github.com/Ranndom/gitster-theme.git ~/.oh-my-zsh/custom/themes
+    git clone https://github.com/Jmclerck/gitster-theme.git ~/.oh-my-zsh/custom/themes/gitster.zsh-theme
 
 # Symlink Terminal Preferences
     rm ~/Library/Preferences/com.apple.Terminal.plist
