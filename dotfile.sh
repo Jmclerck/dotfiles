@@ -2,13 +2,12 @@
 
 # brew utilities
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew install autojump cowsay fortune gawk node python wget
 
 # brew app casks
     brew cask install atom docker google-chrome hyper java kaleidoscope parallels-desktop paw spectacle tower
 
 # tailor depends on java being installed first
-    brew install tailor
+    brew install autojump cowsay fortune gawk node python tailor wget
 
 # glances
     pip install lolcat
@@ -25,12 +24,6 @@
 
 # gitster theme
     git clone https://github.com/Ranndom/gitster-theme.git ~/.oh-my-zsh/custom/themes
-
-# Hack fonts
-    wget https://github.com/chrissimpkins/Hack/releases/download/v2.020/Hack-v2_020-ttf.zip -O hack.zip
-    unzip hack.zip
-    mv *.ttf ~/Library/Fonts/
-    rm hack.zip
 
 # Symlink Terminal Preferences
     rm ~/Library/Preferences/com.apple.Terminal.plist
