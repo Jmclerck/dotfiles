@@ -4,10 +4,7 @@
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # brew app casks
-    brew cask install atom docker google-chrome hyper java kaleidoscope parallels-desktop paw spectacle tower
-
-# tailor depends on java being installed first
-    brew install autojump cowsay fortune gawk node python tailor wget
+    brew bundle
 
 # glances
     pip install lolcat
@@ -17,7 +14,7 @@
     chmod +x /usr/local/bin/trans
 
 # node apps
-    npm install -g hpm-cli yarn vtop
+    npm install -g eslint yarn webpack vtop
 
 # oh-my-zsh
     sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
