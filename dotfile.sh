@@ -30,4 +30,6 @@
     ln -s "$(pwd)/.nanorc" ~/.nanorc
     ln -s "$(pwd)/zshrc.zsh" ~/.oh-my-zsh/custom/zshrc.zsh
 
+
+reset-launchpad
 exit
