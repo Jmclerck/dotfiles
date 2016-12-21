@@ -21,15 +21,15 @@ brew 'sl'
 brew 'tailor'
 brew 'wget'
 
-mas 'Xcode', id: 497799835
-mas 'Keynote', id: 409183694
-mas 'Fantastical 2', id: 975937182
 mas '1Password', id: 443987910
-mas 'Doo', id: 1107759193
-mas 'CARROT Weather', id: 993487541
-mas 'Radium', id: 597611879
 mas 'Better', id: 1121192229
-mas 'Pixelmator', id: 407963104
-mas 'Pages', id: 409201541
-mas 'Spark', id: 1176895641
+mas 'CARROT Weather', id: 993487541
+mas 'Doo', id: 1107759193
+mas 'Fantastical 2', id: 975937182
+mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
+mas 'Pages', id: 409201541
+mas 'Pixelmator', id: 407963104
+mas 'Radium', id: 597611879
+mas 'Spark', id: 1176895641
+mas 'Xcode', id: 497799835
