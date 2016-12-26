@@ -40,11 +40,6 @@ ln -s "$(pwd)/zshrc.zsh" ~/.oh-my-zsh/custom/zshrc.zsh
 
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 
-# Tap to Click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
 chsh -s /bin/zsh
 
 exit
