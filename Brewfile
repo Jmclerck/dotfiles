@@ -20,6 +20,7 @@ brew 'python'
 brew 'sl'
 brew 'tailor'
 brew 'wget'
+brew 'yarn'
 
 mas '1Password', id: 443987910
 mas 'Better', id: 1121192229

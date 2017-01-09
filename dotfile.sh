@@ -17,7 +17,7 @@ wget git.io/trans -O /usr/local/bin/trans
 chmod +x /usr/local/bin/trans
 
 # node apps
-npm install -g eslint yarn webpack vtop
+npm install -g eslint eslint-plugin-react webpack vtop
 
 # oh-my-zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
