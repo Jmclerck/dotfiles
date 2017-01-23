@@ -3,6 +3,12 @@
 # Files on the custom/ directory will be automatically loaded by the init
 # script, in alphabetical order.
 
+export ZSH_THEME_SHOW_GLYPHS=false
+export ZSH_THEME_SHOW_REMAINING=true
+export ZSH_THEME_SHOW_PERCENTAGE=true
+export ZSH_THEME_SHOW_SHA=true
+export ZSH_THEME_SHOW_BRANCH=true
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
