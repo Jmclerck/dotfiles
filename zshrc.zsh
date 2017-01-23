@@ -14,6 +14,9 @@ export ZSH_THEME_SHOW_BRANCH=true
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="gister/gister"
 
+# If you come from bash you might have to change your $PATH.
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
