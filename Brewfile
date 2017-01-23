@@ -32,4 +32,5 @@ mas 'Pages', id: 409201541
 mas 'Pixelmator', id: 407963104
 mas 'Radium', id: 597611879
 mas 'Slack', id: 803453959
+mas 'Tweetbot', id: 557168941
 mas 'Xcode', id: 497799835
