@@ -3,29 +3,17 @@
 # brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# install Node manager
-curl -L https://git.io/n-install | bash
-
-# install latest Node
-n latest
-
 # brew app casks
 brew bundle
 
-# yarn
-curl -o- -L https://yarnpkg.com/install.sh | bash
-
 # node apps
-npm install -g eslint lighthouse nodengine webpack vtop
+npm install -g eslint lighthouse webpack vtop
 
 # octicons font
-wget https://raw.githubusercontent.com/ryanoasis/nerd-fonts/blob/master/src/glyphs/octicons.ttf -O ~/Library/Fonts/octicons.ttf
+wget https://github.com/ryanoasis/nerd-fonts/blob/master/src/glyphs/octicons.ttf -O ~/Library/Fonts/octicons.ttf
 
 # devicons
-wget https://raw.githubusercontent.com/ryanoasis/nerd-fonts/blob/master/src/glyphs/icomoon.ttf
-~/Library/Fonts/icomoon.ttf
-
-/usr/local/bin/fish
+wget https://github.com/ryanoasis/nerd-fonts/blob/master/src/glyphs/devicons.ttf -O ~/Library/Fonts/icomoon.ttf
 
 # oh-my-fish
 curl -L http://get.oh-my.fish | fish
@@ -35,15 +23,13 @@ rm ~/.nanorc
 ln -s (PWD)/.nanorc ~
 rm ~/.hyper.js
 ln -s (PWD)/.hyper.js ~
-rm ~/.config/fish/config.zsh
-ln -s (PWD)/fish/config.fish ~/.config/fish
+rm ~/.config/fish/config.fish
+ln -s (PWD)/fish/config.fish ~/.config/fish/config.fish
 rm ~/.config/fish/functions
 ln -s (PWD)/fish/functions ~/.config/fish/
 
-source ~/.config/fish/config.fish
 
-reset-launchpad
-reset-dock
-greeting
+# source ~/.config/fish/config.fish
+# reset-launchpad
 
 exit

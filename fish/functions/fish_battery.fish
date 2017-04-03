@@ -9,8 +9,10 @@ function battery
   set percentage (pmset -g batt | grep -o '[0-9]*%' | grep -o '[0-9]*')
   set remaining (pmset -g batt | grep -o '[0-9]*:[0-9][0-9]')
 
-  set p (string trim "$percentage")
-  set icon (eval 'echo $fish_battery_status_'$state)
+	if test -n "$state"
+	  set p (string trim "$percentage")
+  	set icon (eval 'echo $fish_battery_status_'$state)
 
-  printf "%s%s %s%s" $remaining "($p%)" (eval 'set_color $fish_battery_percentage_'$p) $icon
+  	printf "%s%s %s%s" $remaining "($p%)" (eval 'set_color $fish_battery_percentage_'$p) $icon
+	end
 end
