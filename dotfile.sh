@@ -1,45 +1,35 @@
 #!/bin/sh
 
-# fake ZSH shell to avoid context switch mid script
-export SHELL="zsh"
-
-# brew utilities
+# brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # brew app casks
 brew bundle
 
-# glances
-pip install lolcat
-
-# trans
-wget git.io/trans -O /usr/local/bin/trans
-chmod +x /usr/local/bin/trans
-
 # node apps
-npm install -g eslint eslint-plugin-react webpack vtop
-
-# oh-my-zsh
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
-# gitster theme
-git clone https://github.com/Jmclerck/gitster-theme.git ~/.oh-my-zsh/custom/themes/gister
+npm install -g eslint lighthouse webpack vtop
 
 # octicons font
-wget https://raw.githubusercontent.com/ryanoasis/nerd-fonts/blob/master/src/glyphs/octicons.ttf -O ~/Library/Fonts/octicons.ttf
+wget https://github.com/ryanoasis/nerd-fonts/blob/master/src/glyphs/octicons.ttf -O ~/Library/Fonts/octicons.ttf
 
-# Symlink Terminal Preferences
-rm ~/Library/Preferences/com.apple.Terminal.plist
-ln -s "$(pwd)/com.apple.Terminal.plist" ~/Library/Preferences/com.apple.Terminal.plist
+# devicons
+wget https://github.com/ryanoasis/nerd-fonts/blob/master/src/glyphs/devicons.ttf -O ~/Library/Fonts/icomoon.ttf
+
+# oh-my-fish
+curl -L http://get.oh-my.fish | fish
 
 # Symlink RC files
 rm ~/.nanorc
-ln -s "$(pwd)/.nanorc" ~/.nanorc
-rm ~/.oh-my-zsh/custom/zshrc.zsh
-ln -s "$(pwd)/zshrc.zsh" ~/.oh-my-zsh/custom/zshrc.zsh
+ln -s (PWD)/.nanorc ~
+rm ~/.hyper.js
+ln -s (PWD)/.hyper.js ~
+rm ~/.config/fish/config.fish
+ln -s (PWD)/fish/config.fish ~/.config/fish/config.fish
+rm ~/.config/fish/functions
+ln -s (PWD)/fish/functions ~/.config/fish/
 
-defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 
-chsh -s /bin/zsh
+# source ~/.config/fish/config.fish
+# reset-launchpad
 
 exit
