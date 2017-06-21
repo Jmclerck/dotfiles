@@ -3,33 +3,24 @@
 # brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
 # brew app casks
 brew bundle
 
-# node apps
-npm install -g eslint lighthouse webpack vtop
-
-# octicons font
+# octicons
 wget https://github.com/ryanoasis/nerd-fonts/blob/master/src/glyphs/octicons.ttf -O ~/Library/Fonts/octicons.ttf
-
-# devicons
-wget https://github.com/ryanoasis/nerd-fonts/blob/master/src/glyphs/devicons.ttf -O ~/Library/Fonts/icomoon.ttf
-
-# oh-my-fish
-curl -L http://get.oh-my.fish | fish
 
 # Symlink RC files
 rm ~/.nanorc
 ln -s (PWD)/.nanorc ~
 rm ~/.hyper.js
 ln -s (PWD)/.hyper.js ~
-rm ~/.config/fish/config.fish
-ln -s (PWD)/fish/config.fish ~/.config/fish/config.fish
-rm ~/.config/fish/functions
-ln -s (PWD)/fish/functions ~/.config/fish/
+rm ~/.oh-my-zsh/custom/mine.zsh
+ln -s (PWD)/mine.zsh ~/.oh-my-zsh/custom
 
-
-# source ~/.config/fish/config.fish
-# reset-launchpad
+# execute reset-launchpad
+/bin/zsh -c 'source ~/.zshrc; reset-launchpad'
 
 exit
