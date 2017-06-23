@@ -10,6 +10,8 @@
 	<integer>1</integer>
 	<key>Default Bookmark Guid</key>
 	<string>E5FAD1B5-8A85-4219-844A-890623DCCB46</string>
+	<key>DimInactiveSplitPanes</key>
+	<false/>
 	<key>HideMenuBarInFullscreen</key>
 	<true/>
 	<key>HideTabNumber</key>
@@ -56,9 +58,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1537 113 445 103 0 0 2048 1130 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>556 525 796 473 0 0 2048 1130 </string>
+	<string>556 679 937 464 0 0 2048 1152 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>419 202 1210 807 0 0 2048 1130 </string>
+	<string>0 462 1020 667 0 0 2048 1130 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>266 122 570 452 0 0 2048 1130 </string>
 	<key>New Bookmarks</key>
@@ -751,24 +753,40 @@
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>519643463.08201897</real>
+	<key>OnlyWhenMoreTabs</key>
+	<false/>
 	<key>OptionClickMovesCursor</key>
 	<false/>
 	<key>PointerActions</key>
 	<dict/>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/jonathanclerck/Documents/GitHub/dotfiles</string>
+	<key>PromptOnQuit</key>
+	<false/>
+	<key>QuitWhenAllWindowsClosed</key>
+	<true/>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
 	<string>https://iterm2.com/appcasts/final.xml?shard=28</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
+	<key>SULastCheckTime</key>
+	<date>2017-06-23T07:24:17Z</date>
+	<key>SUSendProfileInfo</key>
+	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
+	<key>SplitPaneDimmingAmount</key>
+	<real>0.19197215544871796</real>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>WindowNumber</key>
