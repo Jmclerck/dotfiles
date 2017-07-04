@@ -7,10 +7,6 @@ ZSH_THEME="zeit"
 
 plugins=(brew docker docker-compose git thefuck node npm osx z)
 
-function cls() {
-	clear
-}
-
 function reset-dock() {
 	defaults delete com.apple.dock; killall Dock
 }
@@ -21,5 +17,4 @@ function reset-launchpad() {
 
 eval $(thefuck --alias)
 
-. ~/.oh-my-zsh/custom/particle.zsh
 . ~/.oh-my-zsh/plugins/z/z.sh
