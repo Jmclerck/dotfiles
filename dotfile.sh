@@ -7,29 +7,25 @@
 brew bundle
 
 # node apps
-npm install -g eslint lighthouse webpack vtop
+npm install -g vtop
 
 # octicons font
 wget https://github.com/ryanoasis/nerd-fonts/blob/master/src/glyphs/octicons.ttf -O ~/Library/Fonts/octicons.ttf
 
-# devicons
-wget https://github.com/ryanoasis/nerd-fonts/blob/master/src/glyphs/devicons.ttf -O ~/Library/Fonts/icomoon.ttf
-
-# oh-my-fish
-curl -L http://get.oh-my.fish | fish
+# zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # Symlink RC files
 rm ~/.nanorc
-ln -s (PWD)/.nanorc ~
+ln -s $(PWD)/.nanorc ~
 rm ~/.hyper.js
-ln -s (PWD)/.hyper.js ~
-rm ~/.config/fish/config.fish
-ln -s (PWD)/fish/config.fish ~/.config/fish/config.fish
-rm ~/.config/fish/functions
-ln -s (PWD)/fish/functions ~/.config/fish/
+ln -s $(PWD)/.hyper.js ~
+rm ~/.oh-my-zsh/custom/mine.zsh
+ln -s $(PWD)/mine.zsh ~/.oh-my-zsh/custom
+mkdir ~/.oh-my-zsh/custom/themes
+ln -s $(PWD)/zeit.zsh-theme ~/.oh-my-zsh/custom/themes
 
-
-# source ~/.config/fish/config.fish
-# reset-launchpad
+# execute reset-launchpad
+/bin/zsh -c 'source ~/.zshrc; reset-launchpad'
 
 exit

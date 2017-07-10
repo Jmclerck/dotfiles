@@ -2,6 +2,7 @@ tap "caskroom/cask"
 tap "homebrew/bundle"
 tap "homebrew/core"
 cask "java"
+cask "xquartz"
 brew "carthage"
 brew "git-flow"
 brew "icu4c"
@@ -11,6 +12,7 @@ brew "tailor"
 brew "thefuck"
 brew "watchman"
 brew "wget"
+brew "wine"
 brew "yarn"
 cask "aerial"
 cask "atom"
@@ -19,7 +21,6 @@ cask "google-chrome"
 cask "iterm2"
 cask "kaleidoscope"
 cask "little-snitch"
-cask "now"
 cask "parallels-desktop"
 cask "paw"
 cask "postgres"
@@ -39,6 +40,7 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
 mas "Slack", id: 803453959
+mas "Things3", id: 904280696
 mas "Tweetbot", id: 557168941
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
