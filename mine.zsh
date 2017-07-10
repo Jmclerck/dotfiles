@@ -16,5 +16,6 @@ function reset-launchpad() {
 }
 
 eval $(thefuck --alias)
+eval $(ssh-add -K ~/.ssh/id_rsa 2>/dev/null)
 
 . ~/.oh-my-zsh/plugins/z/z.sh
