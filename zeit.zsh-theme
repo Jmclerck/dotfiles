@@ -1,8 +1,8 @@
 local resetColor="%{$reset_color%}"
 local prefix="▲"
 local dir="%{$fg_bold[green]%}%c$resetColor$resetColor"
-local node="%{$fg_bold[green]%} $(npm config get node-version)"
-local yarn="%{$fg_bold[blue]%} $(yarn --version)"
+local node="%{$fg_bold[green]%}  $(npm config get node-version)"
+local yarn="%{$fg_bold[blue]%}  $(yarn --version)"
 
 PROMPT='$prefix $dir $(git_prompt_info)'
 RPROMPT="$node$yarn$resetColor$resetColor"

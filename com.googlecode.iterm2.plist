@@ -63,9 +63,9 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1391 113 590 257 0 0 2048 1130 </string>
+	<string>601 374 847 362 0 0 2048 1130 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>556 569 796 473 0 0 2048 1130 </string>
+	<string>556 547 796 473 0 0 2048 1130 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>514 272 1020 667 0 0 2048 1130 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
