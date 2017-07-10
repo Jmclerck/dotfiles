@@ -20,8 +20,6 @@ fi
 # Symlink RC files
 rm ~/.nanorc
 ln -s $(PWD)/.nanorc ~
-rm ~/.hyper.js
-ln -s $(PWD)/.hyper.js ~
 rm ~/.oh-my-zsh/custom/mine.zsh
 ln -s $(PWD)/mine.zsh ~/.oh-my-zsh/custom
 rm ~/.oh-my-zsh/custom/themes/zeit.zsh-theme
