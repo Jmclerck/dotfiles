@@ -12,6 +12,7 @@ alias reset-launchpad="defaults write com.apple.dock ResetLaunchPad -bool true; 
 alias vtop="vtop --theme acid"
 
 eval $(thefuck --alias)
-eval $(ssh-add -K ~/.ssh/id_rsa 2>/dev/null)
+ssh-add -K ~/.ssh/id_rsa 2>/dev/null
+source <(npx --shell-auto-fallback zsh)
 
 . ~/.oh-my-zsh/plugins/z/z.sh
