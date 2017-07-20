@@ -22,8 +22,8 @@ rm ~/.nanorc
 ln -s $(PWD)/.nanorc ~
 rm ~/.oh-my-zsh/custom/mine.zsh
 ln -s $(PWD)/mine.zsh ~/.oh-my-zsh/custom
-rm ~/.oh-my-zsh/custom/themes/zeit.zsh-theme
-ln -s $(PWD)/zeit.zsh-theme ~/.oh-my-zsh/custom/themes
+rm ~/.oh-my-zsh/custom/themes/web.zsh-theme
+ln -s $(PWD)/web.zsh-theme ~/.oh-my-zsh/custom/themes
 rm ~/Library/Fonts/icomoon.ttf
 ln -s $(PWD)/font/icomoon.ttf ~/Library/Fonts/
 
