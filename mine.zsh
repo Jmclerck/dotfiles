@@ -7,9 +7,16 @@ ZSH_THEME="web"
 
 plugins=(brew docker docker-compose git thefuck node npm osx z)
 
+function hitop() {
+  pushd /usr/local/lib/node_modules/vtop/themes &> /dev/null
+  local files=($(find -E . -type f -regex ".*\.json"))
+  local selection=${files[$(( $RANDOM % ${#files[@]} + 1 ))]}
+  popd &> /dev/null
+  vtop --theme $(echo $selection | cut -d / -f 2 | cut -d . -f 1) || vtop
+}
+
 alias reset-dock="defaults delete com.apple.dock; killall Dock"
 alias reset-launchpad="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock"
-alias vtop="vtop --theme acid"
 
 eval $(thefuck --alias)
 ssh-add -K ~/.ssh/id_rsa 2>/dev/null
