@@ -1,15 +1,25 @@
 local resetColor="%{$reset_color%}"
 
+local magenta="%{$FG[004]%}"
+local lightblue="%{$FG[006]%}"
+local lightgreen="%{$FG[010]%}"
+local darkblue="%{$FG[012]%}"
+local darkgreen="%{$FG[028]%}"
+local purple="%{$FG[165]%}"
+local orange="%{$FG[202]%}"
+local yellow="%{$FG[226]%}"
+
 local dir=" %c"
 
-local prefix=("" "" "%{$FG[012]%}" "" "%{$FG[012]%}" "" "%{$FG[202]%}" "%{$FG[202]%}" "%{$FG[226]%}" "%{$FG[006]%}" "%{$FG[165]%}" "" "" "%{$FG[012]%}" "" "%{$FG[010]%}" "%{$FG[006]%}")
+local prefix=("" "$darkgreen" "$darkblue" "" "$darkblue" "" "$orange" "$orange" "$yellow" "$lightblue" "$purple" "" "" "$darkblue" "" "$lightgreen" "$lightblue")
 local selection=${prefix[$(( $RANDOM % ${#prefix[@]} + 1 ))]}
 
-local node="%{$FG[010]%}  $(npm config get node-version)$resetColor$resetColor"
-local yarn="%{$FG[012]%}  $(yarn --version)$resetColor$resetColor"
+local node='$lightgreen  $(npm config get node-version)$resetColor$resetColor'
+local yarn='$darkblue  $(yarn --version)$resetColor$resetColor'
 
 function batt() {
   local remaining=$(pmset −g batt)
+  echo "  100%%"
 }
 
 function stat() {
@@ -86,9 +96,11 @@ function stat() {
       fi
     fi
 
-    echo "$resetColor$resetColor at %{$FG[004]%}$(git_current_branch)$resetColor$resetColor$icons"
+    echo "$resetColor at $magenta$(git_current_branch)$resetColor$icons"
+  else
+    echo "$resetColor  "
   fi
 }
 
 PROMPT='$selection$dir$(stat)$resetColor$resetColor'
-RPROMPT='$node$yarn'
+RPROMPT="$node$yarn"
