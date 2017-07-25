@@ -1,60 +1,68 @@
 local resetColor="%{$reset_color%}"
 
-local prefix=("" "" "%{$FG[012]%}" "" "%{$FG[012]%}" "" "%{$FG[202]%}" "%{$FG[202]%}" "%{$FG[226]%}" "%{$FG[006]%}" "%{$FG[165]%}" "" "" "%{$FG[012]%}" "" "%{$FG[010]%}")
+local dir=" %c"
+
+local prefix=("" "" "%{$FG[012]%}" "" "%{$FG[012]%}" "" "%{$FG[202]%}" "%{$FG[202]%}" "%{$FG[226]%}" "%{$FG[006]%}" "%{$FG[165]%}" "" "" "%{$FG[012]%}" "" "%{$FG[010]%}" "%{$FG[006]%}")
 local selection=${prefix[$(( $RANDOM % ${#prefix[@]} + 1 ))]}
 
-local dir="%c"
+local node="%{$FG[010]%}  $(npm config get node-version)$resetColor$resetColor"
+local yarn="%{$FG[012]%}  $(yarn --version)$resetColor$resetColor"
 
-local node=' $(npm config get node-version)'
-local yarn=' $(yarn --version)'
-
-local battery=$(pmset −g batt)
+function batt() {
+  local remaining=$(pmset −g batt)
+}
 
 function stat() {
   local icons=''
   local git=$(git rev-parse --is-inside-work-tree 2> /dev/null)
 
   if [[ $git == true ]]; then
-    local stashes=$(git stash list | grep -o '@' | tr -d '\n')
+    local stashes=$(git stash list | grep -o '@' |  tr -d ' ' | tr -d '\n')
     local numberOfStashes=${#stashes}
     if [[ $numberOfStashes -gt 0 ]]; then
       icons="$icons  $numberOfStashes"
     fi
 
-    local untracked=$(git status --porcelain | grep -o '??' | tr -d '\n')
+    local untracked=$(git status --porcelain | grep -o '^??\s' |  tr -d ' ' | tr -d '\n')
     local numberOfUntracked=${#untracked}
     if [[ $numberOfUntracked -gt 0 ]]; then
       icons="$icons  $(($numberOfUntracked / 2))"
     fi
 
-    local added=$(git status --porcelain | grep -o 'A' | tr -d '\n')
+    local added=$(git status --porcelain | grep -oE '^\sA\s|^A\s{2}' |  tr -d ' ' | tr -d '\n')
     local numberOfAdded=${#added}
     if [[ $numberOfAdded -gt 0 ]]; then
       icons="$icons  $numberOfAdded"
     fi
 
-    local deleted=$(git status --porcelain | grep -o 'D' | tr -d '\n')
+    local deleted=$(git status --porcelain | grep -oE '^\sD\s|^D\s{2}' |  tr -d ' ' | tr -d '\n')
     local numberOfDeleted=${#deleted}
     if [[ $numberOfDeleted -gt 0 ]]; then
       icons="$icons  $numberOfDeleted"
     fi
 
-    local modified=$(git status --porcelain | grep -o 'M' | tr -d '\n')
+    local modified=$(git status --porcelain | grep -oE '^\sM\s|^M\s{2}' |  tr -d ' ' | tr -d '\n')
     local numberOfModified=${#modified}
     if [[ $numberOfModified -gt 0 ]]; then
       icons="$icons  $numberOfModified"
     fi
 
-    local renamed=$(git status --porcelain | grep -o 'R' | tr -d '\n')
+    local renamed=$(git status --porcelain | grep -oE '^\sR\s|^R\s{2}' |  tr -d ' ' | tr -d '\n')
     local numberOfRenamed=${#renamed}
     if [[ $numberOfRenamed -gt 0 ]]; then
       icons="$icons  $numberOfRenamed"
     fi
 
-    local conflicts=$(git status --porcelain | grep -o 'UU' | tr -d '\n')
+    local conflicts=$(git status --porcelain | grep -oE '^UU\s' |  tr -d ' ' | tr -d '\n')
     local numberOfConflicts=${#conflicts}
     if [[ $numberOfConflicts -gt 0 ]]; then
       icons="$icons  $(($numberOfConflicts / 2))"
+    fi
+
+    local staged=$(git status --porcelain |  grep -oE '^A\s{2}|^D\s{2}|^M\s{2}|^R\s{2}' | tr -d ' ' | tr -d '\n')
+    local numberOfStaged=${#staged}
+    if [[ $numberOfStaged -gt 0 ]]; then
+      icons="$icons  $(($numberOfStaged))"
     fi
 
     local ahead=$(git_commits_ahead)
@@ -78,9 +86,9 @@ function stat() {
       fi
     fi
 
-    echo "at %{$FG[004]%}$(git_current_branch)$resetColor$resetColor$icons"
+    echo "$resetColor$resetColor at %{$FG[004]%}$(git_current_branch)$resetColor$resetColor$icons"
   fi
 }
 
-PROMPT='$selection $dir$resetColor$resetColor $(stat)'
-RPROMPT="%{$FG[010]%}$node$resetColor$resetColor %{$FG[012]%}$yarn$resetColor$resetColor"
+PROMPT='$selection$dir$(stat)$resetColor$resetColor'
+RPROMPT='$node$yarn'
