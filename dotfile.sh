@@ -17,15 +17,15 @@ if [[ ! -a ~/.oh-my-zsh/custom/themes ]]; then
   mkdir ~/.oh-my-zsh/custom/themes
 fi
 
-# Symlink RC files
+# Symlink config files
 rm ~/.nanorc
 ln -s $(PWD)/.nanorc ~
 rm ~/.oh-my-zsh/custom/mine.zsh
 ln -s $(PWD)/mine.zsh ~/.oh-my-zsh/custom
 rm ~/.oh-my-zsh/custom/themes/web.zsh-theme
 ln -s $(PWD)/web.zsh-theme ~/.oh-my-zsh/custom/themes
-rm ~/Library/Fonts/icomoon.ttf
-ln -s $(PWD)/font/icomoon.ttf ~/Library/Fonts/
+rm ~/Library/Fonts/webicons.ttf
+ln -s $(PWD)/font/webicons.ttf ~/Library/Fonts/
 
 # execute reset-launchpad
 /bin/zsh -c 'source ~/.zshrc; reset-launchpad'

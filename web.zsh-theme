@@ -2,6 +2,7 @@ local resetColor="%{$reset_color%}"
 
 local magenta="%{$FG[004]%}"
 local lightblue="%{$FG[006]%}"
+local red="%{$FG[009]%}"
 local lightgreen="%{$FG[010]%}"
 local darkblue="%{$FG[012]%}"
 local darkgreen="%{$FG[028]%}"
@@ -18,8 +19,10 @@ local node='$lightgreen  $(npm config get node-version)$resetColor$resetColor
 local yarn='$darkblue  $(yarn --version)$resetColor$resetColor'
 
 function batt() {
-  local remaining=$(pmset −g batt)
-  echo "  100%%"
+  local indicators=("$red" "$orange" "$orange" "$orange" "$orange" "$orange" "$orange" "$orange" "$orange" "$lightgreen");
+  # $(pmset −g batt)
+  local remaining="99"
+  echo ${indicators[$(( $RANDOM % ${#indicators[@]} + 1 ))]}
 }
 
 function stat() {
