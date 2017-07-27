@@ -1,5 +1,3 @@
-local resetColor="%{$reset_color%}"
-
 local magenta="%{$FG[004]%}"
 local lightblue="%{$FG[006]%}"
 local red="%{$FG[009]%}"
@@ -9,20 +7,23 @@ local darkgreen="%{$FG[028]%}"
 local purple="%{$FG[165]%}"
 local orange="%{$FG[202]%}"
 local yellow="%{$FG[226]%}"
+local resetColor="%{$reset_color%}"
 
 local dir=" %c"
-
-local prefix=("" "$darkgreen" "$darkblue" "" "$darkblue" "" "$orange" "$orange" "$yellow" "$lightblue" "$purple" "" "" "$darkblue" "" "$lightgreen" "$lightblue")
+local prefix=("" "$darkgreen" "$darkblue" "" "$darkblue" "" "$orange" "$yellow" "$lightgreen" "$purple" "$lightblue" "" "" "$darkblue" "" "$lightblue" "$orange")
 local selection=${prefix[$(( $RANDOM % ${#prefix[@]} + 1 ))]}
 
-local node='$lightgreen  $(npm config get node-version)$resetColor$resetColor'
-local yarn='$darkblue  $(yarn --version)$resetColor$resetColor'
+local node='$lightgreen  $(npm config get node-version)'
+local yarn='$darkblue  $(yarn --version)'
 
 function batt() {
-  local indicators=("$red" "$orange" "$orange" "$orange" "$orange" "$orange" "$orange" "$orange" "$orange" "$lightgreen");
-  # $(pmset −g batt)
-  local remaining="99"
-  echo ${indicators[$(( $RANDOM % ${#indicators[@]} + 1 ))]}
+  local source=$(pmset -g batt | grep -o 'AC Power')
+
+  if [[ -z source ]]; then
+    let remaining=$(pmset −g batt | grep -oE "([0-9]+\%).*" | cut -f1 -d ';')
+    local indicators=("$red  " "$orange  " "$orange  " "$orange  " "$orange  " "$orange  " "$orange  " "$orange  " "$orange  " "$lightgreen  ");
+    echo ${indicators[$(( floor($remaining / 10) ))]}$remaining%%
+  fi
 }
 
 function stat() {
@@ -106,4 +107,4 @@ function stat() {
 }
 
 PROMPT='$selection$dir$(stat)$resetColor$resetColor'
-RPROMPT="$node$yarn"
+RPROMPT="$node$yarn$(batt)$resetColor$resetColor"
