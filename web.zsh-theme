@@ -79,20 +79,20 @@ function stat() {
       icons="$icons  $(($numberOfStaged))"
     fi
 
-    local ahead=$(git_commits_ahead)
-    if [[  $ahead -gt 0 ]]; then
-      icons="$icons  $ahead"
-    fi
-
-    local behind=$(git_commits_behind)
-    if [[ -n $behind && $behind -gt 0 ]]; then
-      icons="$icons  $behind"
-    fi
-
-    local remote=$(command git show-ref origin/$(git_current_branch))
+    local remote=$(git show-ref origin/$(git_current_branch) 2> /dev/null)
     if [[ -z $remote ]]; then
       icons="$icons  "
     else
+      local ahead=$(git_commits_ahead)
+      if [[ $ahead -gt 0 ]]; then
+        icons="$icons  $ahead"
+      fi
+
+      local behind=$(git_commits_behind)
+      if [[ $behind -gt 0 ]]; then
+        icons="$icons  $behind"
+      fi
+
       if [[ $remote == "master" ]]; then
         icons="$icons  "
       else
