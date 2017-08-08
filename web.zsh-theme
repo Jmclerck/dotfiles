@@ -93,7 +93,7 @@ function stat() {
         icons="$icons  $behind"
       fi
 
-      if [[ $remote == "master" ]]; then
+      if [[ $(git_current_branch) == "master" ]]; then
         icons="$icons  "
       else
         icons="$icons  "
