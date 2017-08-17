@@ -10,7 +10,7 @@ local yellow="%{$FG[226]%}"
 local resetColor="%{$reset_color%}"
 
 local dir=" %c"
-local prefix=("" "$darkgreen" "$darkblue" "" "$darkblue" "" "$orange" "$yellow" "$lightgreen" "$purple" "$lightblue" "" "" "$darkblue" "" "$lightblue" "$orange")
+local prefix=("" "$darkgreen" "$darkblue" "" "$lightblue" "$darkblue" "$orange" "$yellow" "$lightgreen" "$purple" "$lightblue" "" "" "$darkblue" "" "$lightblue" "$orange")
 local selection=${prefix[$(( $RANDOM % ${#prefix[@]} + 1 ))]}
 
 local node='$lightgreen  $(npm config get node-version)'
