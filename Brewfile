@@ -33,6 +33,7 @@ cask "postico"
 cask "spectacle"
 cask "tower"
 mas "1Password", id: 443987910
+cask "webpack-dashboard"
 mas "Affinity Designer", id: 824171161
 mas "Bear", id: 1091189122
 mas "Better", id: 1121192229
