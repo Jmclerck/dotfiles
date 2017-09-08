@@ -7,6 +7,14 @@ ZSH_THEME="web"
 
 plugins=(brew docker docker-compose git thefuck node npm osx z)
 
+function brew() {
+	if [[ $1 == 'update' ]]; then
+	  command brew update | grep -oE '\w+ ✔'
+	else
+		command brew $@
+	fi
+}
+
 function hitop() {
   pushd /usr/local/lib/node_modules/vtop/themes &> /dev/null
   local files=($(find -E . -type f -regex ".*\.json"))
