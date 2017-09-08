@@ -32,8 +32,8 @@ cask "postgres"
 cask "postico"
 cask "spectacle"
 cask "tower"
-mas "1Password", id: 443987910
 cask "webpack-dashboard"
+mas "1Password", id: 443987910
 mas "Affinity Designer", id: 824171161
 mas "Bear", id: 1091189122
 mas "Better", id: 1121192229
@@ -46,5 +46,4 @@ mas "NordVPN", id: 1116599239
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
-mas "Slack", id: 803453959
 mas "Xcode", id: 497799835
