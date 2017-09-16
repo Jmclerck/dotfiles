@@ -9,7 +9,7 @@ plugins=(brew docker docker-compose git thefuck node npm osx z)
 
 function brew() {
 	if [[ $1 == 'update' ]]; then
-	  command brew update | grep -oE '\w+ ✔'
+	  command brew update
 	else
 		command brew $@
 	fi
