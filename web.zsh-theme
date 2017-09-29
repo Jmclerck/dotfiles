@@ -13,8 +13,8 @@ local dir=" %c"
 local prefix=("" "" "" "" "" "" "$orange" "$orange" "$purple" "$yellow" "$darkblue" "$darkblue" "$darkblue" "$darkblue" "$darkgreen"  "$lightgreen" "$lightblue" "$lightblue" )
 local selection=${prefix[$(( $RANDOM % ${#prefix[@]} + 1 ))]}
 
-local node='$lightgreen  $(npm config get node-version)'
-local yarn='$darkblue  $(yarn --version)'
+local node='$lightgreen  $(npm config get node-version)'
+local yarn='$lightblue  $(yarn --version)'
 
 function batt() {
   local source=$(pmset -g batt | grep -o 'AC Power')
