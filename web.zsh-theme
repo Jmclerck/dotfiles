@@ -10,7 +10,7 @@ local yellow="%{$FG[226]%}"
 local resetColor="%{$reset_color%}"
 
 local dir=" %c"
-local prefix=("" "$darkgreen" "$darkblue" "" "$darkblue" "$darkblue" "$orange" "$yellow" "$lightgreen" "$purple" "$lightblue" "" "" "$darkblue" "" "$lightblue" "$orange")
+local prefix=("" "" "" "" "" "" "$orange" "$orange" "$purple" "$yellow" "$darkblue" "$darkblue" "$darkblue" "$darkblue" "$darkgreen"  "$lightgreen" "$lightblue" "$lightblue" )
 local selection=${prefix[$(( $RANDOM % ${#prefix[@]} + 1 ))]}
 
 local node='$lightgreen  $(npm config get node-version)'
@@ -21,7 +21,7 @@ function batt() {
 
   if [[ -z source ]]; then
     let remaining=$(pmset −g batt | grep -oE "([0-9]+\%).*" | cut -f1 -d ';')
-    local indicators=("$red  " "$orange  " "$orange  " "$orange  " "$orange  " "$orange  " "$orange  " "$orange  " "$orange  " "$lightgreen  ");
+    local indicators=("$red  " "$orange  " "$orange  " "$orange  " "$orange  " "$orange  " "$orange  " "$orange  " "$orange  " "$lightgreen  ");
     echo ${indicators[$(( floor($remaining / 10) ))]}$remaining%%
   fi
 }
