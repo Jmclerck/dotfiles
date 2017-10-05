@@ -63,13 +63,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>601 374 847 362 0 0 2048 1130 </string>
+	<string>1793 113 701 309 0 0 2560 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>556 547 796 473 0 0 2048 1130 </string>
+	<string>269 201 796 473 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>514 272 1020 667 0 0 2048 1130 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
-	<string>266 80 1020 667 0 0 2048 1130 </string>
+	<string>720 384 1121 731 0 0 2560 1418 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -675,11 +673,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>icomoon 16</string>
+			<string>webicons 18</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>OperatorMonoSSm-Medium 16</string>
+			<string>OperatorMonoSSm-Medium 18</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -755,7 +753,7 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>A6245B52-D3B5-41A6-B3CE-F3723622797A</string>
+	<string>23E795AA-1F98-49EF-8F89-C873F7B9D31B</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -763,7 +761,7 @@
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>519643463.08201897</real>
+	<real>520012086.36945498</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OptionClickMovesCursor</key>
@@ -771,7 +769,7 @@
 	<key>PointerActions</key>
 	<dict/>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/jonathanclerck/Documents/GitHub/dotfiles</string>
+	<string>/Users/jonathan/Documents/GitHub/dotfiles</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -781,11 +779,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=28</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=60</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-07-10T07:22:41Z</date>
+	<date>2017-07-27T18:36:14Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
