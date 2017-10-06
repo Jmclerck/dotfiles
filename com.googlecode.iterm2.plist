@@ -8,6 +8,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>Default Bookmark Guid</key>
 	<string>E5FAD1B5-8A85-4219-844A-890623DCCB46</string>
 	<key>DimInactiveSplitPanes</key>
@@ -16,6 +18,8 @@
 	<true/>
 	<key>HideTabNumber</key>
 	<true/>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>JobName</key>
 	<false/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -23,7 +27,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents/GitHub/dotfiles</string>
+	<string>~/Library/Mobile Documents/com~apple~CloudDocs/Documents/Github/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -41,7 +45,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdCGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -63,11 +67,19 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1793 113 701 309 0 0 2560 1418 </string>
+	<string>601 374 847 362 0 0 2048 1130 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>714 573 620 392 0 0 2048 1130 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 102 599 519 0 0 2048 1152 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 201 796 473 0 0 2560 1418 </string>
+	<string>269 143 796 473 0 0 2048 1130 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>720 384 1121 731 0 0 2560 1418 </string>
+	<string>464 240 1121 731 0 0 2048 1130 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>927 399 1121 731 0 0 2048 1130 </string>
+	<key>NSWindow Frame iTerm Window 2</key>
+	<string>287 99 1121 731 0 0 2048 1130 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -753,7 +765,7 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>23E795AA-1F98-49EF-8F89-C873F7B9D31B</string>
+	<string>A6245B52-D3B5-41A6-B3CE-F3723622797A</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -761,7 +773,7 @@
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>520012086.36945498</real>
+	<real>519643463.08201897</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OptionClickMovesCursor</key>
@@ -769,7 +781,7 @@
 	<key>PointerActions</key>
 	<dict/>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/jonathan/Documents/GitHub/dotfiles</string>
+	<string>/Users/jonathanclerck/Library/Mobile Documents/com~apple~CloudDocs/Documents/Github/dotfiles</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -779,11 +791,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=60</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=28</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-07-27T18:36:14Z</date>
+	<date>2017-10-06T08:32:41Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -799,7 +811,7 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.2</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>7</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
