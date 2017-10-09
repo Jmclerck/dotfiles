@@ -3,7 +3,7 @@
 # Files on the custom/ directory will be automatically loaded by the init
 # script, in alphabetical order.
 
-ZSH_THEME="web"
+ZSH_THEME="webicons"
 
 plugins=(brew docker docker-compose git thefuck node npm osx z)
 
