@@ -18,7 +18,6 @@ brew "watchman"
 brew "wget"
 brew "yarn"
 cask "aerial"
-cask "atom"
 cask "docker"
 cask "iterm2"
 cask "kaleidoscope"
@@ -31,6 +30,7 @@ cask "sauce-connect"
 cask "spectacle"
 cask "tower"
 cask "webpack-dashboard"
+cask "caskroom/versions/visual-studio-code-insiders"
 mas "1Password", id: 443987910
 mas "Affinity Designer", id: 824171161
 mas "Bear", id: 1091189122
@@ -40,6 +40,7 @@ mas "Drop", id: 1173932628
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "MacFamilyTree 8", id: 1037755919
 mas "NordVPN", id: 1116599239
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
