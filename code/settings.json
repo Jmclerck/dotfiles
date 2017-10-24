@@ -1,0 +1,22 @@
+{
+  "editor.cursorBlinking": "expand",
+  "editor.fontFamily":
+    "Operator Mono, Monaco, 'Courier New', monospace, webicons",
+  "editor.fontSize": 15,
+  "editor.formatOnSave": true,
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "flow.useNPMPackagedFlow": true,
+  "prettier.eslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  "problems.decorations.enabled": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontSize": 15,
+  "window.closeWhenEmpty": true,
+  "workbench.editor.revealIfOpen": true,
+  "prettier.printWidth": 120
+}

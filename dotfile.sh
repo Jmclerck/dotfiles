@@ -26,6 +26,11 @@ rm ~/.oh-my-zsh/custom/themes/web.zsh-theme
 ln -s "$(PWD)/web.zsh-theme" ~/.oh-my-zsh/custom/themes
 rm ~/Library/Fonts/webicons.ttf
 ln -s "$(PWD)/font/webicons.ttf" ~/Library/Fonts/
+rm ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
+ln -s "$(PWD)/code/settings.json" ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
+rm -rf ~/Library/Application\ Support/Code\ -\ Insiders/User/snippets
+ln -s "$(PWD)/code/snippets" ~/Library/Application\ Support/Code\ -\ Insiders/User/snippets
+
 
 # execute reset-launchpad
 /bin/zsh -c 'source ~/.zshrc; reset-launchpad'
