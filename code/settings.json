@@ -1,7 +1,6 @@
 {
   "editor.cursorBlinking": "expand",
-  "editor.fontFamily":
-    "Operator Mono, Monaco, 'Courier New', monospace, webicons",
+  "editor.fontFamily": "Operator Mono, Monaco, 'Courier New', monospace, webicons",
   "editor.fontSize": 15,
   "editor.formatOnSave": true,
   "editor.renderControlCharacters": true,
@@ -18,5 +17,5 @@
   "terminal.integrated.fontSize": 15,
   "window.closeWhenEmpty": true,
   "workbench.editor.revealIfOpen": true,
-  "prettier.printWidth": 120
+  "workbench.panel.location": "right"
 }
