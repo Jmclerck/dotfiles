@@ -9,6 +9,7 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "flow.useNPMPackagedFlow": true,
+  "javascript.validate.enable": false,
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
   "problems.decorations.enabled": true,

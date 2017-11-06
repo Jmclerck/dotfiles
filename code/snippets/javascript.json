@@ -29,19 +29,19 @@
       "\t\treturn [$2];",
       "\t}\n",
       "\tget $3() {",
-      "\t\t$4",
+      "\t\treturn this.$3;",
       "\t}\n",
-      "\tset $5(val) {",
-      "\t\t$6",
+      "\tset $3(val) {",
+      "\t\tthis.$3 = val;",
       "\t}\n",
       "\tconstructor() {",
       "\t\tsuper();",
       "\t}\n",
       "\tattributeChangedCallback(name, oldValue, newValue) {",
-      "\t\t$7",
+      "\t\t$4",
       "\t}",
       "}\n",
-      "customElements.define('$8', $9);"
+      "customElements.define('$5', $1);"
     ],
     "description": "Insert Custom Element class structure and definition"
   }
