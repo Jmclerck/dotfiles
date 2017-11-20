@@ -28,6 +28,6 @@ alias reset-launchpad="defaults write com.apple.dock ResetLaunchPad -bool true; 
 
 eval $(thefuck --alias)
 ssh-add -K ~/.ssh/id_rsa 2>/dev/null
-source <(npx --shell-auto-fallback zsh)
+source <(npx --shell-auto-fallback --no-install zsh)
 
 . ~/.oh-my-zsh/plugins/z/z.sh
