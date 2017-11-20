@@ -8,15 +8,14 @@
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "flow.useNPMPackagedFlow": true,
   "javascript.validate.enable": false,
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
   "problems.decorations.enabled": true,
+  "python.pythonPath": "python3",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 15,
   "window.closeWhenEmpty": true,
-  "workbench.editor.revealIfOpen": true,
-  "workbench.panel.location": "right"
+  "workbench.editor.revealIfOpen": true
 }
