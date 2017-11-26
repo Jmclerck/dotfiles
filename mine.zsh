@@ -9,7 +9,7 @@ plugins=(brew docker docker-compose git thefuck node npm osx z)
 
 function hitop() {
   pushd /usr/local/lib/node_modules/vtop/themes &> /dev/null
-  local files=($(find -E . -type f -regex ".*\.json"))
+  local files=($(find . -regex '.*\.json'))
   local selection=${files[$(( $RANDOM % ${#files[@]} + 1 ))]}
   popd &> /dev/null
   vtop --theme $(echo $selection | cut -d / -f 2 | cut -d . -f 1) || vtop
