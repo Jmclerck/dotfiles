@@ -15,8 +15,13 @@ function hitop() {
   vtop --theme $(echo $selection | cut -d / -f 2 | cut -d . -f 1) || vtop
 }
 
-alias reset-dock="defaults delete com.apple.dock; killall Dock"
-alias reset-launchpad="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock"
+function reset-dock() {
+  defaults delete com.apple.dock; killall Dock
+}
+
+function reset-launchpad() {
+  defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
+}
 
 eval $(thefuck --alias)
 ssh-add -K ~/.ssh/id_rsa 2>/dev/null

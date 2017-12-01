@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Set shell to `zsh` 
-export SHELL=/bin/zsh
-
 # brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -10,7 +7,9 @@ export SHELL=/bin/zsh
 brew bundle
 
 # zsh
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+if [[ ! -a ~/.oh-my-zsh/custom/themes ]]; then
+  0> /dev/null sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+fi
 
 # Make a custom themes folder, if it doesn't already exist
 if [[ ! -a ~/.oh-my-zsh/custom/themes ]]; then
@@ -22,10 +21,10 @@ rm ~/.nanorc
 ln -s "$(PWD)/.nanorc" ~
 rm ~/.oh-my-zsh/custom/mine.zsh
 ln -s "$(PWD)/mine.zsh" ~/.oh-my-zsh/custom
-rm ~/.oh-my-zsh/custom/themes/web.zsh-theme
-ln -s "$(PWD)/web.zsh-theme" ~/.oh-my-zsh/custom/themes
+rm ~/.oh-my-zsh/custom/themes/webicons.zsh-theme
+ln -s "$(PWD)/webicons.zsh-theme/webicons.zsh-theme" ~/.oh-my-zsh/custom/themes
 rm ~/Library/Fonts/webicons.ttf
-ln -s "$(PWD)/font/webicons.ttf" ~/Library/Fonts/
+ln -s "$(PWD)/webicons.zsh-theme/font/webicons.ttf" ~/Library/Fonts/
 rm ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
 ln -s "$(PWD)/code/settings.json" ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
 rm -rf ~/Library/Application\ Support/Code\ -\ Insiders/User/snippets
@@ -37,4 +36,4 @@ ln -s "$(PWD)/code/snippets" ~/Library/Application\ Support/Code\ -\ Insiders/Us
 # install vscode extensions
 /bin/zsh -c 'for i in `cat vscode.ext`; do; code --install-extension $i; done'
 
-exit
+zsh
