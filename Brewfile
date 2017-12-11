@@ -32,6 +32,7 @@ cask "sauce-connect"
 cask "spectacle"
 cask "tower"
 cask "webpack-dashboard"
+cask "caskroom/versions/google-chrome-dev"
 cask "caskroom/versions/visual-studio-code-insiders"
 mas "1Password", id: 443987910
 mas "Affinity Designer", id: 824171161
@@ -47,6 +48,7 @@ mas "NordVPN", id: 1116599239
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
+mas "Reeder", id: 880001334
 mas "Slack", id: 803453959
 mas "Twitterrific", id: 1289378661
 mas "Xcode", id: 497799835
