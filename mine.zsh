@@ -25,6 +25,5 @@ function reset-launchpad() {
 
 eval $(thefuck --alias)
 ssh-add -K ~/.ssh/id_rsa 2>/dev/null
-source <(npx --shell-auto-fallback --no-install zsh)
 
 . ~/.oh-my-zsh/plugins/z/z.sh
