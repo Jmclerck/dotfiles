@@ -6,6 +6,8 @@
 	<true/>
 	<key>AboutToPasteTabsWithCancel_selection</key>
 	<integer>2</integer>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
@@ -15,7 +17,7 @@
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
 	<key>Default Bookmark Guid</key>
-	<string>E5FAD1B5-8A85-4219-844A-890623DCCB46</string>
+	<string>C3BF3604-F85F-4798-B3C0-BEF852650A4E</string>
 	<key>DimInactiveSplitPanes</key>
 	<false/>
 	<key>HideFromDockAndAppSwitcher</key>
@@ -79,9 +81,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 102 599 519 0 0 2048 1152 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2545 349 770 429 2048 72 1920 1058 </string>
+	<string>554 268 796 473 0 0 2048 1130 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2448 236 1121 731 2048 72 1920 1058 </string>
+	<string>464 240 1121 731 0 0 2048 1130 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>927 399 1121 731 0 0 2048 1130 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -835,9 +837,9 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.9916318059</real>
+				<real>0.19607843459999999</real>
 				<key>Red Component</key>
-				<real>0.0068533346060000002</real>
+				<real>0.015686275440000001</real>
 			</dict>
 			<key>Ansi 13 Color</key>
 			<dict>
@@ -861,9 +863,9 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.19607843459999999</real>
+				<real>0.9916318059</real>
 				<key>Red Component</key>
-				<real>0.015686275440000001</real>
+				<real>0.0068533346060000002</real>
 			</dict>
 			<key>Ansi 15 Color</key>
 			<dict>
@@ -913,9 +915,9 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.9916318059</real>
+				<real>0.19607843459999999</real>
 				<key>Red Component</key>
-				<real>0.0068533346060000002</real>
+				<real>0.015686275440000001</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
@@ -939,9 +941,9 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.19607843459999999</real>
+				<real>0.9916318059</real>
 				<key>Red Component</key>
-				<real>0.015686275440000001</real>
+				<real>0.0068533346060000002</real>
 			</dict>
 			<key>Ansi 7 Color</key>
 			<dict>
@@ -1461,6 +1463,8 @@
 			<string>/Users/jonathanclerck</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
@@ -1496,7 +1500,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-30T13:39:12Z</date>
+	<date>2018-01-04T10:19:40Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
