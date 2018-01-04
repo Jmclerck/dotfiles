@@ -1,7 +1,7 @@
-tap "caskroom/cask"
-tap "caskroom/versions"
-tap "homebrew/bundle"
 tap "homebrew/core"
+tap "homebrew/bundle"
+tap "caskroom/versions"
+tap "caskroom/cask"
 cask "java"
 brew "azure-cli"
 brew "carthage"
@@ -44,10 +44,12 @@ mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "MacFamilyTree 8", id: 1037755919
+mas "MindNode", id: 1289197285
 mas "NordVPN", id: 1116599239
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 880001334
 mas "Slack", id: 803453959
+mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
