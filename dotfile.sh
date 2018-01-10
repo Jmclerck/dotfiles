@@ -3,7 +3,10 @@
 # brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# brew app casks
+# remove brew apps
+brew bundle cleanup
+
+# install brew apps
 brew bundle
 
 # zsh
@@ -32,6 +35,9 @@ ln -s "$(PWD)/code/snippets" ~/Library/Application\ Support/Code\ -\ Insiders/Us
 
 # execute reset-launchpad
 /bin/zsh -c 'source ~/.zshrc; reset-launchpad'
+
+# remove vscode extensions
+/bin/zsh -c 'for i in $(code --list-extensions); do; code --uninstall-extension $i; done'
 
 # install vscode extensions
 /bin/zsh -c 'for i in `cat vscode.ext`; do; code --install-extension $i; done'
