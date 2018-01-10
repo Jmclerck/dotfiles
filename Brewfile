@@ -3,7 +3,6 @@ tap "homebrew/bundle"
 tap "caskroom/versions"
 tap "caskroom/cask"
 cask "java"
-brew "azure-cli"
 brew "carthage"
 brew "git-flow"
 brew "git-lfs"
@@ -51,5 +50,6 @@ mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 880001334
 mas "Slack", id: 803453959
+mas "Twitterrific", id: 1289378661
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
