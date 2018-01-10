@@ -1,7 +1,7 @@
 {
   "editor.cursorBlinking": "expand",
   "editor.fontLigatures": true,
-  "editor.fontFamily": "Operator Mono, Monaco, monospace, webicons",
+  "editor.fontFamily": "Operator Mono SSm, Fira Code, Monaco, monospace, webicons",
   "editor.fontSize": 15,
   "editor.formatOnSave": true,
   "editor.renderControlCharacters": true,
