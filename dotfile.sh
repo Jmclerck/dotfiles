@@ -4,7 +4,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # remove brew apps
-brew bundle cleanup
+brew bundle cleanup --force
 
 # install brew apps
 brew bundle
