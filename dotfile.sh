@@ -40,6 +40,6 @@ ln -s "$(PWD)/code/snippets" ~/Library/Application\ Support/Code\ -\ Insiders/Us
 /bin/zsh -c 'for i in $(code --list-extensions); do; code --uninstall-extension $i; done'
 
 # install vscode extensions
-/bin/zsh -c 'for i in `cat vscode.ext`; do; code --install-extension $i; done'
+/bin/zsh -c 'for i in $(cat vscode.ext); do; code --install-extension $i; done'
 
 zsh
