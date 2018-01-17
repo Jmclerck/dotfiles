@@ -1,8 +1,8 @@
 {
   "editor.cursorBlinking": "expand",
-  "editor.fontFamily": "Operator Mono SSm, Fira Code, Monaco, monospace, webicons",
+  "editor.fontFamily": "Operator Mono SSm, Monaco, monospace, webicons",
   "editor.fontLigatures": true,
-  "editor.fontSize": 15,
+  "editor.fontSize": 17,
   "editor.formatOnSave": true,
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
@@ -18,8 +18,9 @@
   "python.pythonPath": "python3",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontSize": 17,
   "window.closeWhenEmpty": true,
+  "window.newWindowDimensions": "inherit",
   "workbench.colorTheme": "Dracula",
   "workbench.editor.revealIfOpen": true
 }
