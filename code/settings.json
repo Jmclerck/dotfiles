@@ -1,4 +1,5 @@
 {
+  "diffEditor.ignoreTrimWhitespace": true,
   "editor.cursorBlinking": "expand",
   "editor.fontFamily": "Operator Mono SSm, Monaco, monospace, webicons",
   "editor.fontLigatures": true,
@@ -18,7 +19,7 @@
   "python.pythonPath": "python3",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.fontSize": 17,
+  "terminal.integrated.fontSize": 18,
   "window.closeWhenEmpty": true,
   "window.newWindowDimensions": "inherit",
   "workbench.colorTheme": "Dracula",
