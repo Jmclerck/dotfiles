@@ -37,7 +37,7 @@ ln -s "$(PWD)/code/snippets" ~/Library/Application\ Support/Code\ -\ Insiders/Us
 /bin/zsh -c 'source ~/.zshrc; reset-launchpad'
 
 # remove vscode extensions
-/bin/zsh -c 'for i in $(code --list-extensions); do; code --uninstall-extension $i; done'
+/bin/zsh -c 'for i in $(code --list-extensions | comm -13 ~/Documents/Github/dotfiles/vscode.ext -); do; code --uninstall-extension $i; done'
 
 # install vscode extensions
 /bin/zsh -c 'for i in $(cat vscode.ext); do; code --install-extension $i; done'
