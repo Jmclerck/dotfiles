@@ -27,5 +27,7 @@ eval $(thefuck --alias)
 ssh-add -K ~/.ssh/id_rsa 2>/dev/null
 
 export THEME_BLUETOOTH_STATUS=true
+export THEME_NODE_VERSION=true
+export THEME_NPM_VERSION=true
 
 . ~/.oh-my-zsh/plugins/z/z.sh
