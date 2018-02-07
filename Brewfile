@@ -33,6 +33,7 @@ cask "spectacle"
 cask "tower"
 cask "webpack-dashboard"
 cask "caskroom/versions/google-chrome-canary"
+cask "caskroom/versions/safari-technology-preview"
 cask "caskroom/versions/visual-studio-code-insiders"
 mas "1Password", id: 443987910
 mas "Affinity Designer", id: 824171161
