@@ -7,4 +7,5 @@ esbenp.prettier-vscode
 flowtype.flow-for-vscode
 ms-python.python
 msjsdiag.debugger-for-chrome
+msjsdiag.debugger-for-edge
 shinnn.stylelint
