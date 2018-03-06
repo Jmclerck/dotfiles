@@ -7,14 +7,6 @@ ZSH_THEME="webicons"
 
 plugins=(brew docker docker-compose git thefuck node npm osx z)
 
-function hitop() {
-  pushd /usr/local/lib/node_modules/vtop/themes &> /dev/null
-  local files=($(find . -regex '.*\.json'))
-  local selection=${files[$(( $RANDOM % ${#files[@]} + 1 ))]}
-  popd &> /dev/null
-  vtop --theme $(echo $selection | cut -d / -f 2 | cut -d . -f 1) || vtop
-}
-
 function reset-dock() {
   defaults delete com.apple.dock; killall Dock
 }
@@ -24,10 +16,12 @@ function reset-launchpad() {
 }
 
 eval $(thefuck --alias)
+
 ssh-add -K ~/.ssh/id_rsa 2>/dev/null
 
 export THEME_BLUETOOTH_STATUS=true
 export THEME_NODE_VERSION=true
 export THEME_NPM_VERSION=true
 
+. ~/Public/Particle/Particle.zsh 2>/dev/null
 . ~/.oh-my-zsh/plugins/z/z.sh
