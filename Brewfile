@@ -24,7 +24,7 @@ cask "github"
 cask "iterm2"
 cask "kaleidoscope"
 cask "little-snitch"
-cask "parallels-desktop"
+cask "parallels"
 cask "paw"
 cask "postgres"
 cask "postico"
@@ -52,6 +52,7 @@ mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 880001334
 mas "Slack", id: 803453959
+mas "Tadam", id: 531349534
 mas "Twitterrific", id: 1289378661
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
