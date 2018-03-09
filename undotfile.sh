@@ -2,7 +2,7 @@
 
 brew bundle dump --force
 
-code --list-extensions > vscode.ext
+code-insiders --list-extensions > vscode.ext
 
 git add .
 git status
