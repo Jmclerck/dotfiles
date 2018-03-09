@@ -39,6 +39,7 @@ mas "1Password", id: 443987910
 mas "Affinity Designer", id: 824171161
 mas "Bear", id: 1091189122
 mas "Better", id: 1121192229
+mas "Calcbot", id: 931657367
 mas "CARROT Weather", id: 993487541
 mas "Drop", id: 1173932628
 mas "GarageBand", id: 682658836
