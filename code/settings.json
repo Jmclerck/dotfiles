@@ -8,9 +8,9 @@
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
+  "eslint.alwaysShowStatus": true,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "flow.enabled": false,
   "git.autofetch": true,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
