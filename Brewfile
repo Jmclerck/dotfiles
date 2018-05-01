@@ -1,8 +1,8 @@
-tap "caskroom/cask"
-tap "caskroom/versions"
 tap "heroku/brew"
-tap "homebrew/bundle"
 tap "homebrew/core"
+tap "homebrew/bundle"
+tap "caskroom/versions"
+tap "caskroom/cask"
 cask "java"
 brew "carthage"
 brew "git-flow"
@@ -27,6 +27,7 @@ cask "handbrake"
 cask "hyper"
 cask "kaleidoscope"
 cask "little-snitch"
+cask "malwarebytes"
 cask "parallels"
 cask "paw"
 cask "postgres"
@@ -44,7 +45,6 @@ mas "Bear", id: 1091189122
 mas "Better", id: 1121192229
 mas "Calcbot", id: 931657367
 mas "CARROT Weather", id: 993487541
-mas "Drop", id: 1173932628
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
