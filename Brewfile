@@ -39,7 +39,7 @@ cask "webpack-dashboard"
 cask "homebrew/cask-versions/google-chrome-canary"
 cask "homebrew/cask-versions/safari-technology-preview"
 cask "homebrew/cask-versions/visual-studio-code-insiders"
-mas "1Password", id: 443987910
+mas "1Password 7", id: 1333542190
 mas "Affinity Designer", id: 824171161
 mas "Bear", id: 1091189122
 mas "Better", id: 1121192229
@@ -50,7 +50,7 @@ mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "MacFamilyTree 8", id: 1037755919
 mas "MindNode", id: 1289197285
-mas "NordVPN", id: 1116599239
+mas "NordVPN IKE", id: 1116599239
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
