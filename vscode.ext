@@ -3,9 +3,9 @@ WallabyJs.quokka-vscode
 WallabyJs.wallaby-vscode
 dbaeumer.vscode-eslint
 dracula-theme.theme-dracula
-eamodio.gitlens
 esbenp.prettier-vscode
 ms-python.python
+ms-vsliveshare.vsliveshare
 msjsdiag.debugger-for-chrome
 msjsdiag.debugger-for-edge
 shinnn.stylelint
