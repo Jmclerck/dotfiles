@@ -1,8 +1,8 @@
 tap "heroku/brew"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "homebrew/cask"
 tap "homebrew/bundle"
-tap "caskroom/versions"
-tap "caskroom/cask"
 cask "java"
 brew "carthage"
 brew "git-flow"
@@ -36,9 +36,9 @@ cask "sauce-connect"
 cask "spectacle"
 cask "tower"
 cask "webpack-dashboard"
-cask "caskroom/versions/google-chrome-canary"
-cask "caskroom/versions/safari-technology-preview"
-cask "caskroom/versions/visual-studio-code-insiders"
+cask "homebrew/cask-versions/google-chrome-canary"
+cask "homebrew/cask-versions/safari-technology-preview"
+cask "homebrew/cask-versions/visual-studio-code-insiders"
 mas "1Password", id: 443987910
 mas "Affinity Designer", id: 824171161
 mas "Bear", id: 1091189122
