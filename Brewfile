@@ -55,7 +55,6 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 880001334
-mas "Slack", id: 803453959
 mas "Tadam", id: 531349534
 mas "Twitterrific", id: 1289378661
 mas "WhatsApp", id: 1147396723
