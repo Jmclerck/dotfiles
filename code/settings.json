@@ -21,6 +21,5 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 18,
   "window.closeWhenEmpty": true,
-  "workbench.colorTheme": "Dracula",
   "workbench.editor.revealIfOpen": true
 }
