@@ -13,7 +13,6 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
-  "javascript.validate.enable": false,
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
   "problems.decorations.enabled": true,
