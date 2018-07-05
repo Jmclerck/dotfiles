@@ -9,39 +9,52 @@ brew bundle cleanup --force
 # install brew apps
 brew bundle
 
-# zsh
-if [[ ! -a ~/.oh-my-zsh/custom/themes ]]; then
-  0> /dev/null sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+# bash-it
+if [[ ! -a ~/.bash_it ]]; then
+  git clone https://github.com/Bash-it/bash-it.git ~/.bash_it
+  ~/.bash_it/install.sh --no-modify-config --silent
 fi
 
-# Make a custom themes folder, if it doesn't already exist
-if [[ ! -a ~/.oh-my-zsh/custom/themes ]]; then
-  mkdir ~/.oh-my-zsh/custom/themes
-fi
+# Symlink Bash/Bash-IT configuration
+rm ~/.bash_profile
+ln -s "$(PWD)/.bash_profile" ~
 
-# Symlink config files
+# Symlink nano configuration
 rm ~/.nanorc
 ln -s "$(PWD)/.nanorc" ~
-rm ~/.hyper.js
-ln -s "$(PWD)/.hyper.js" ~
-rm ~/.oh-my-zsh/custom/mine.zsh
-ln -s "$(PWD)/mine.zsh" ~/.oh-my-zsh/custom
-rm ~/.oh-my-zsh/custom/themes/webicons.zsh-theme
-ln -s "$(PWD)/webicons.zsh-theme/webicons.zsh-theme" ~/.oh-my-zsh/custom/themes
+
+# Symlink Visual Studio Code settings
+rm ~/Library/Application\ Support/Code/User/settings.json
+ln -s "$(PWD)/code/settings.json" ~/Library/Application\ Support/Code/User/settings.json
+
+# Copy Terminal preferences (can't be symlinked)
+rm ~/Library/Preferences/com.apple.Terminal.plist
+cp com.apple.Terminal.plist ~/Library/Preferences
+
+# Copy WebIcons font (can't be symlinked, since macOS 10.13)
 rm ~/Library/Fonts/webicons.ttf
-ln -s "$(PWD)/webicons.zsh-theme/font/webicons.ttf" ~/Library/Fonts/
-rm ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
-ln -s "$(PWD)/code/settings.json" ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
-rm -rf ~/Library/Application\ Support/Code\ -\ Insiders/User/snippets
-ln -s "$(PWD)/code/snippets" ~/Library/Application\ Support/Code\ -\ Insiders/User/snippets
+cp "$(PWD)/webicons.zsh-theme/font/webicons.ttf" ~/Library/Fonts/
+
+# Symlink Visual Studio Code snippets
+rm -rf ~/Library/Application\ Support/Code/User/snippets
+ln -s "$(PWD)/code/snippets" ~/Library/Application\ Support/Code/User/snippets
+
+# Copy enabled bash-it plugins (can't be symlinked)
+rm -rf /Users/jonathan/.bash_it/enabled
+cp -r "$(PWD)/bash-it/enabled" ~/.bash_it
+
+# Add webicons to monospace font fallbacks
+sudo /usr/libexec/PlistBuddy -c "Add monospace:0 string 'webicons'" /System/Library/Frameworks/CoreText.framework/Versions/A/Resources/DefaultFontFallbacks.plist
 
 # execute reset-launchpad
-/bin/zsh -c 'source ~/.zshrc; reset-launchpad'
+reset-launchpad
 
-# remove vscode extensions
-/bin/zsh -c 'for i in $(code-insiders --list-extensions | comm -13 ~/Documents/Github/dotfiles/vscode.ext -); do; code --uninstall-extension $i; done'
+# remove existing vscode extensions
+for i in $(code --list-extensions | comm -13 ~/Documents/Github/dotfiles/vscode.ext -); do
+  code --uninstall-extension $i
+done
 
-# install vscode extensions
-/bin/zsh -c 'for i in $(cat vscode.ext); do; code-insiders --install-extension $i; done'
-
-zsh
+# install expected vscode extensions
+for i in $(cat vscode.ext); do
+  code --install-extension $i
+done
