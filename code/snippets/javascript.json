@@ -14,13 +14,11 @@
 		"description": "Log output to console"
 	}
 */
-
   "Debugger": {
     "prefix": "dbg",
     "body": "debugger; // eslint-disable-line",
     "description": "Insert debug breakpoint"
   },
-
   "Custom Element": {
     "prefix": "ce",
     "body": [
@@ -44,5 +42,25 @@
       "customElements.define('$5', $1);"
     ],
     "description": "Insert Custom Element class structure and definition"
+  },
+  "Jest Snapshot Test": {
+    "prefix": "jst",
+    "body": [
+      "import { $2 } from '$1';",
+      "import React from 'react';",
+      "import { shallow } from 'enzyme';",
+      "\n",
+      "describe('$3 snapshot', () => {",
+      "\n",
+      "\tit('should render correctly$4', () => {",
+      "\t\tconst props = {$5};",
+      "\n",
+      "\t\tconst tree = shallow(<$6 {...props} />);",
+      "\n",
+      "\t\texpect(tree).toMatchSnapshot();",
+      "\t});",
+      "});"
+    ],
+    "description": "Insert Jest Snapshot test"
   }
 }

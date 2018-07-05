@@ -20,5 +20,6 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 18,
   "window.closeWhenEmpty": true,
-  "workbench.editor.revealIfOpen": true
+  "workbench.editor.revealIfOpen": true,
+  "workbench.statusBar.feedback.visible": false
 }
