@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-___prefix=("" "" "" "" "" "" "${orange}" "${orange}" "${orange}" "${orange}" "${magenta}" "${purple}" "${purple}" "${purple}" "${purple}" "${red}" "${yellow}" "${darkblue}" "${darkblue}" "${darkblue}" "${darkblue}" "${darkgreen}" "${darkgreen}" "${lightblue}" "${lightblue}" )
+___prefix=("" "" "" "" "" "" "${orange}" "${orange}" "${orange}" "${orange}" "${orange}" "${magenta}" "${purple}" "${purple}" "${purple}" "${purple}" "${red}" "${yellow}" "${darkblue}" "${darkblue}" "${darkblue}" "${darkblue}" "${darkgreen}" "${darkgreen}" "${lightblue}" "${lightblue}" )
+
+___silent() {
+    { 2>&3 "$@"& } 3>&2 2>/dev/null
+    disown &>/dev/null
+}
 
 __stat() {
   local icons=''
@@ -94,7 +99,7 @@ __updates() {
   local cask=$(brew cask outdated 2> /dev/null | wc -l | tr -d ' ')
   local updates=($brew + $cask)
   if [[ $updates -gt 0 ]]; then
-    icons=" $updates $icons"
+    icons=" $updates $icons"
   fi
 
   local store=$(mas outdated 2> /dev/null | wc -l | tr -d ' ')
@@ -109,7 +114,7 @@ __versions() {
   local icons=''
 
   if [[ $THEME_NPM_VERSION != false ]]; then
-    icons="$icons${red}  $(npm --version)"
+    icons="$icons${red}  $(npm --version)"
   fi
 
   if [[ $THEME_NODE_VERSION != false ]]; then
@@ -125,6 +130,6 @@ function prompt_command() {
   PS1="$selection $(__versions) ${green}\w${purple}$(__stat)${reset_color}\n${reset_color}${green}→${reset_color} "
 }
 
-( &> /dev/null __updates & )
+___silent __updates
 
 safe_append_prompt_command prompt_command
