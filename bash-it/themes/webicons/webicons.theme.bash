@@ -85,6 +85,26 @@ __stat() {
   fi
 }
 
+__updates() {
+  local icons=''
+
+  brew update > /dev/null 2>&1
+
+  local brew=$(brew outdated 2> /dev/null | wc -l | tr -d ' ')
+  local cask=$(brew cask outdated 2> /dev/null | wc -l | tr -d ' ')
+  local updates=($brew + $cask)
+  if [[ $updates -gt 0 ]]; then
+    icons=" $updates $icons"
+  fi
+
+  local store=$(mas outdated 2> /dev/null | wc -l | tr -d ' ')
+  if [[ $store -gt 0 ]]; then
+    icons=" $store $icons"
+  fi
+
+  printf "$icons"
+}
+
 __versions() {
   local icons=''
 
@@ -96,13 +116,15 @@ __versions() {
     icons="$icons${green}  $(npm config get node-version)"
   fi
 
-  printf " $icons "
+  printf "$icons"
 }
 
 function prompt_command() {
   index=$(( $RANDOM % ${#___prefix[@]} ))
   selection=${___prefix[$index]}
-  PS1="$selection$(__versions)${green}\w${purple}$(__stat)${reset_color}\n${reset_color}${green}→${reset_color} "
+  PS1="$selection $(__versions) ${green}\w${purple}$(__stat)${reset_color}\n${reset_color}${green}→${reset_color} "
 }
+
+( &> /dev/null __updates & )
 
 safe_append_prompt_command prompt_command
