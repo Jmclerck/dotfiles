@@ -62,6 +62,12 @@ source ~/Documents/Particle/Particle.bash 2>/dev/null
 # Add SSH keys
 ssh-add -K ~/.ssh/id_rsa 2>/dev/null
 
+if type brew 2&>/dev/null; then
+  for completion_file in $(brew --prefix)/etc/bash_completion.d/*; do
+    source "$completion_file"
+  done
+fi
+
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
