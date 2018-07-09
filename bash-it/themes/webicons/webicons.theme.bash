@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-___prefix=("" "" "" "" "" "" "${darkblue}" "${darkblue}" "${darkblue}" "${darkblue}" "${darkgreen}" "${darkgreen}" "${lightblue}" "${lightblue}" "${magenta}" "${orange}" "${orange}" "${orange}" "${orange}" "${purple}" "${purple}" "${purple}" "${purple}" "${red}" "${yellow}" )
+___prefix=("" "" "" "" "" "" "${darkblue}" "${darkblue}" "${darkblue}" "${darkblue}" "${darkgreen}" "${darkgreen}" "${lightblue}" "${lightblue}" "${magenta}" "${orange}" "${orange}" "${orange}" "${purple}" "${purple}" "${purple}" "${purple}" "${red}" "${yellow}" "${yellow}" )
 
 ___silent() {
     { 2>&3 "$@"& } 3>&2 2>/dev/null
