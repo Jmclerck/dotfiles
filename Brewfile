@@ -36,13 +36,13 @@ cask "parallels"
 cask "paw"
 cask "postgres"
 cask "postico"
+cask "safari-technology-preview"
 cask "sauce-connect"
 cask "spectacle"
 cask "tower"
 cask "visual-studio"
 cask "visual-studio-code"
 cask "webpack-dashboard"
-cask "homebrew/cask-versions/safari-technology-preview"
 mas "1Password 7", id: 1333542190
 mas "Affinity Designer", id: 824171161
 mas "Bear", id: 1091189122
