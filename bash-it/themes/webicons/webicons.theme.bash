@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-___prefix=("" "" "" "" "" "" "${darkblue}" "${darkblue}" "${darkblue}" "${darkblue}" "${darkgreen}" "${darkgreen}" "${lightblue}" "${lightblue}" "${magenta}" "${orange}" "${orange}" "${orange}" "${purple}" "${purple}" "${purple}" "${purple}" "${red}" "${yellow}" "${yellow}" )
+___prefix=("" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "")
+___colours=("${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${green}" "${magenta}" "${orange}" "${orange}" "${orange}" "${purple}" "${purple}" "${purple}" "${purple}" "${red}" "${yellow}" "${yellow}")
 
 ___silent() {
     { 2>&3 "$@"& } 3>&2 2>/dev/null
@@ -127,9 +128,18 @@ __versions() {
 function prompt_command() {
   index=$(( $RANDOM % ${#___prefix[@]} ))
   selection=${___prefix[$index]}
-  PS1="$selection $(__versions) ${green}\w${purple}$(__stat)${reset_color}\n${reset_color}${green}→${reset_color} "
+  colour=${___colours[$index]}
+
+  prompt="$colour$selection $(__versions) ${green}\w${purple}$(__stat)${reset_color}"
+  actual=${#prompt}
+  expected=$(tput cols)
+
+  # $prompt | perl -pe 's/\\\[\\e\[[;\dm]*\\\]//g')
+
+  PS1="$prompt\n${colour}→${reset_color} "
 }
 
 ___silent __updates
 
 safe_append_prompt_command prompt_command
+
