@@ -1,11 +1,21 @@
 #!/usr/bin/env bash
 
-___prefix=("" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "")
-___colours=("${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${green}" "${magenta}" "${orange}" "${orange}" "${orange}" "${purple}" "${purple}" "${purple}" "${purple}" "${red}" "${yellow}" "${yellow}")
+___prefix=("" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "")
+___colours=("${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${green}" "${green}" "${magenta}" "${orange}" "${orange}" "${orange}" "${orange}" "${purple}" "${purple}" "${purple}" "${purple}" "${red}" "${yellow}" "${yellow}")
 
 ___silent() {
     { 2>&3 "$@"& } 3>&2 2>/dev/null
     disown &>/dev/null
+}
+
+___trunc() {
+  path=~+
+  stripped=$prompt | perl -pe 's/\\\[\\e\[[;\dm]*\\\]//g'
+  expanded=${stripped//\w/$path}
+
+  actual=${#expanded}
+  expected=$(tput cols)
+  diff=$(( $actual - $expectd ))
 }
 
 __stat() {
@@ -131,10 +141,8 @@ function prompt_command() {
   colour=${___colours[$index]}
 
   prompt="$colour$selection $(__versions) ${green}\w${purple}$(__stat)${reset_color}"
-  actual=${#prompt}
-  expected=$(tput cols)
 
-  # $prompt | perl -pe 's/\\\[\\e\[[;\dm]*\\\]//g')
+  printf '\r' # Return cursor to start of line
 
   PS1="$prompt\n${colour}→${reset_color} "
 }
