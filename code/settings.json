@@ -14,6 +14,7 @@
   "files.trimTrailingWhitespace": true,
   "flow.enabled": false,
   "git.autofetch": true,
+  "npm.enableScriptExplorer": true,
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
   "problems.decorations.enabled": true,
