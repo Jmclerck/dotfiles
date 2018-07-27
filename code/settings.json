@@ -36,7 +36,7 @@
           "string.template.js",
           "support.function.dom.js",
           "support.function.promise.js",
-          "support.type.primitive.js"
+          "support.type.primitive.js",
         ],
         "settings": {
           "fontStyle": "italic"
@@ -50,11 +50,24 @@
           "support.constant.math.js",
           "support.variable.dom.js",
           "support.variable.property.dom.js",
+          "variable.language.this.js",
           "variable.other.object.js",
           "variable.other.object.property.js",
         ],
         "settings": {
           "fontStyle": ""
+        }
+      },
+      {
+        "scope": [
+          "token.debug-token",
+          "token.error-token",
+          "token.info-token",
+          "token.warn-token",
+        ],
+        "settings": {
+          "foreground": "#FF0000",
+          "fontStyle": "bold"
         }
       }
     ]
