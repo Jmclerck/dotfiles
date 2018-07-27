@@ -36,6 +36,7 @@
           "string.template.js",
           "support.function.dom.js",
           "support.function.promise.js",
+          "support.type.primitive.js"
         ],
         "settings": {
           "fontStyle": "italic"
@@ -45,6 +46,8 @@
         "scope": [
           "meta.definition.function.js",
           "support.class.promise.js",
+          "support.constant.json.js",
+          "support.constant.math.js",
           "support.variable.dom.js",
           "support.variable.property.dom.js",
           "variable.other.object.js",
