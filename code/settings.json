@@ -3,12 +3,75 @@
   "editor.cursorBlinking": "expand",
   "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "Operator Mono SSm, Monaco, monospace, webicons",
-  "editor.fontLigatures": true,
   "editor.fontSize": 17,
   "editor.formatOnSave": true,
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "constant",
+          "entity.name.type.js",
+          "keyword.control.conditional.js",
+          "keyword.control.export.js",
+          "keyword.control.flow.js",
+          "keyword.control.loop.js",
+          "keyword.control.trycatch.js",
+          "keyword.operator.new.js",
+          "keyword.other.debugger.js",
+          "meta.function-call.js",
+          "meta.import.js",
+          "meta.return.type.js",
+          "meta.tag.attributes.js",
+          "meta.type.declaration.js",
+          "storage.modifier.async.js",
+          "storage.modifier.js",
+          "storage.type.class.js",
+          "storage.type.function.js",
+          "string.quoted.single.js",
+          "string.regexp.js",
+          "string.template.js",
+          "support.function.dom.js",
+          "support.function.promise.js",
+          "support.type.primitive.js",
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          "meta.definition.function.js",
+          "support.class.promise.js",
+          "support.constant.json.js",
+          "support.constant.math.js",
+          "support.variable.dom.js",
+          "support.variable.property.dom.js",
+          "variable.language.this.js",
+          "variable.other.object.js",
+          "variable.other.object.property.js",
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      },
+      {
+        "scope": [
+          "token.debug-token",
+          "token.error-token",
+          "token.info-token",
+          "token.warn-token",
+        ],
+        "settings": {
+          "foreground": "#FF0000",
+          "fontStyle": "bold"
+        }
+      }
+    ]
+  },
   "eslint.alwaysShowStatus": true,
   "explorer.openEditors.visible": 0,
   "files.insertFinalNewline": true,
@@ -25,5 +88,5 @@
   "window.closeWhenEmpty": true,
   "window.title": "${rootName}${separator}${activeEditorShort} ${dirty}",
   "workbench.editor.revealIfOpen": true,
-  "workbench.statusBar.feedback.visible": false
+  "workbench.statusBar.feedback.visible": false,
 }
