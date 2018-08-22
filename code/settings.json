@@ -1,4 +1,15 @@
 {
+  "breadcrumbs.enabled": true,
+  "cSpell.language": "en-GB",
+  "cSpell.userWords": [
+    "camelcase",
+    "checkbox",
+    "emoji",
+    "flowtype",
+    "lcov",
+    "placeholder",
+    "unmount"
+  ],
   "diffEditor.ignoreTrimWhitespace": true,
   "editor.cursorBlinking": "expand",
   "editor.foldingStrategy": "indentation",
@@ -36,7 +47,7 @@
           "string.template.js",
           "support.function.dom.js",
           "support.function.promise.js",
-          "support.type.primitive.js",
+          "support.type.primitive.js"
         ],
         "settings": {
           "fontStyle": "italic"
@@ -52,7 +63,7 @@
           "support.variable.property.dom.js",
           "variable.language.this.js",
           "variable.other.object.js",
-          "variable.other.object.property.js",
+          "variable.other.object.property.js"
         ],
         "settings": {
           "fontStyle": ""
@@ -63,7 +74,7 @@
           "token.debug-token",
           "token.error-token",
           "token.info-token",
-          "token.warn-token",
+          "token.warn-token"
         ],
         "settings": {
           "foreground": "#FF0000",
@@ -88,5 +99,5 @@
   "window.closeWhenEmpty": true,
   "window.title": "${rootName}${separator}${activeEditorShort} ${dirty}",
   "workbench.editor.revealIfOpen": true,
-  "workbench.statusBar.feedback.visible": false,
+  "workbench.statusBar.feedback.visible": false
 }
