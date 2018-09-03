@@ -8,6 +8,8 @@
     "flowtype",
     "lcov",
     "placeholder",
+    "promisify",
+    "snaphot",
     "unmount"
   ],
   "diffEditor.ignoreTrimWhitespace": true,
