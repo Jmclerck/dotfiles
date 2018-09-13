@@ -3,6 +3,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "homebrew/services"
 cask "java"
 brew "carthage"
 brew "fasd"
@@ -12,6 +13,7 @@ brew "git-lfs"
 brew "icu4c"
 brew "node"
 brew "heroku"
+brew "ipfs"
 brew "mas"
 brew "ruby"
 brew "rust"
@@ -56,6 +58,7 @@ mas "MindNode", id: 1289197285
 mas "NordVPN IKE", id: 1116599239
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Pastebot", id: 1179623856
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 880001334
 mas "Tadam", id: 531349534
