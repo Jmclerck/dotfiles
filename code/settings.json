@@ -2,11 +2,13 @@
   "breadcrumbs.enabled": true,
   "cSpell.language": "en-GB",
   "cSpell.userWords": [
+    "browserslist",
     "camelcase",
     "checkbox",
     "emoji",
     "fallback",
     "flowtype",
+    "keyframes",
     "lcov",
     "placeholder",
     "promisify",
@@ -15,14 +17,17 @@
     "unmount",
     "workflow"
   ],
+  "debug.node.autoAttach": "on",
   "diffEditor.ignoreTrimWhitespace": true,
   "editor.cursorBlinking": "expand",
   "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "Operator Mono SSm, Monaco, monospace, webicons",
-  "editor.fontSize": 17,
+  "editor.fontSize": 16,
   "editor.formatOnSave": true,
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
+  "editor.suggest.localityBonus": true,
+  "editor.tabCompletion": "on",
   "editor.tabSize": 2,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -93,17 +98,39 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "flow.enabled": false,
+  "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
+  "github.hosts": [
+    {
+      "host": "https://github.com",
+      "username": "oauth",
+      "token": "system"
+    }
+  ],
+  "gitlens.blame.ignoreWhitespace": true,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.defaultGravatarsStyle": "retro",
+  "gitlens.historyExplorer.enabled": false,
+  "gitlens.hovers.currentLine.enabled": false,
+  "gitlens.statusBar.format": "${authorAgoOrDate} • ${id}",
   "npm.enableScriptExplorer": true,
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
   "problems.decorations.enabled": true,
-  "python.jediEnabled": false,
-  "python.pythonPath": "python3",
+  "ruby.lint": {
+    "fasterer": true,
+    "reek": true,
+    "rubocop": true,
+    "ruby": true
+  },
+  "ruby.lintDebounceTime": 500,
   "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontSize": 16,
   "window.closeWhenEmpty": true,
   "window.title": "${rootName}${separator}${activeEditorShort} ${dirty}",
   "workbench.editor.revealIfOpen": true,
-  "workbench.statusBar.feedback.visible": false
+  "workbench.statusBar.feedback.visible": false,
+  "ruby.intellisense": "rubyLocate",
+  "ruby.codeCompletion": "rcodetools"
 }
