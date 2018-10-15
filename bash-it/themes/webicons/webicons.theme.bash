@@ -8,16 +8,6 @@ ___silent() {
     disown &>/dev/null
 }
 
-___trunc() {
-  path=~+
-  stripped=$prompt | perl -pe 's/\\\[\\e\[[;\dm]*\\\]//g'
-  expanded=${stripped//\w/$path}
-
-  actual=${#expanded}
-  expected=$(tput cols)
-  diff=$(( $actual - $expectd ))
-}
-
 __stat() {
   local icons=''
   local git=$(git rev-parse --is-inside-work-tree 2> /dev/null)
@@ -26,99 +16,97 @@ __stat() {
     local stashes=$(git stash list | grep -o '@' |  tr -d ' ' | tr -d '\n')
     local numberOfStashes=${#stashes}
     if [[ $numberOfStashes -gt 0 ]]; then
-      icons="$icons  $numberOfStashes"
+      icons="$icons ${magenta} $numberOfStashes${reset_color}"
     fi
 
     local untracked=$(git status --porcelain | grep -o '^??\s' |  tr -d ' ' | tr -d '\n')
     local numberOfUntracked=${#untracked}
     if [[ $numberOfUntracked -gt 0 ]]; then
-      icons="$icons  $(($numberOfUntracked / 2))"
+      icons="$icons ${orange} $(($numberOfUntracked / 2))${reset_color}"
     fi
 
     local added=$(git status --porcelain | grep -oE '^\sA\s|^A\s{2}' |  tr -d ' ' | tr -d '\n')
     local numberOfAdded=${#added}
     if [[ $numberOfAdded -gt 0 ]]; then
-      icons="$icons  $numberOfAdded"
+      icons="$icons ${green} $numberOfAdded${reset_color}"
     fi
 
     local deleted=$(git status --porcelain | grep -oE '^\sD\s|^D\s{2}' |  tr -d ' ' | tr -d '\n')
     local numberOfDeleted=${#deleted}
     if [[ $numberOfDeleted -gt 0 ]]; then
-      icons="$icons  $numberOfDeleted"
+      icons="$icons ${red} $numberOfDeleted${reset_color}"
     fi
 
     local modified=$(git status --porcelain | grep -oE '^\sM\s|^M\s{2}' |  tr -d ' ' | tr -d '\n')
     local numberOfModified=${#modified}
     if [[ $numberOfModified -gt 0 ]]; then
-      icons="$icons  $numberOfModified"
+      icons="$icons ${orange} $numberOfModified${reset_color}"
     fi
 
     local renamed=$(git status --porcelain | grep -oE '^\sR\s|^R\s{2}' |  tr -d ' ' | tr -d '\n')
     local numberOfRenamed=${#renamed}
     if [[ $numberOfRenamed -gt 0 ]]; then
-      icons="$icons  $numberOfRenamed"
+      icons="$icons ${green} $numberOfRenamed${reset_color}"
     fi
 
     local conflicts=$(git status --porcelain | grep -oE '^UU\s' |  tr -d ' ' | tr -d '\n')
     local numberOfConflicts=${#conflicts}
     if [[ $numberOfConflicts -gt 0 ]]; then
-      icons="$icons  $(($numberOfConflicts / 2))"
+      icons="$icons ${red} $(($numberOfConflicts / 2))${reset_color}"
     fi
 
     local staged=$(git status --porcelain |  grep -oE '^A\s{2}|^D\s{2}|^M\s{2}|^R\s{2}' | tr -d ' ' | tr -d '\n')
     local numberOfStaged=${#staged}
     if [[ $numberOfStaged -gt 0 ]]; then
-      icons="$icons  $(($numberOfStaged))"
+      icons="$icons ${green} $(($numberOfStaged))${reset_color}"
     fi
 
     local remote=$(git show-ref origin/$(_git-branch) 2> /dev/null)
     if [[ -z $remote ]]; then
-      icons="$icons  "
+      icons="$icons ${red}${reset_color}"
     else
       local str=$(_git-upstream-behind-ahead)
       local counts=($(echo "$str" | tr ' ' '\n'))
-      local ahead=${counts[0]}
 
-      if [[ $ahead -gt 0 ]]; then
-        icons="$icons  $ahead"
+      local behind=${counts[0]}
+      if [[ $behind -gt 0 ]]; then
+        icons="$icons ${orange} $behind${reset_color}"
       fi
 
       local ahead=${counts[1]}
-      if [[ $behind -gt 0 ]]; then
-        icons="$icons  $behind"
+      if [[ $ahead -gt 0 ]]; then
+        icons="$icons ${green} $ahead${reset_color}"
       fi
 
       if [[ $(_git-branch) == "master" ]]; then
-        icons="$icons  "
+        icons="$icons ${blue}${reset_color}"
       else
-        icons="$icons  "
+        icons="$icons ${blue}${reset_color}"
       fi
     fi
 
-    printf "$reset_color at ${magenta}$(_git-branch)$reset_color$icons"
+    printf " at ${magenta}$(_git-branch)$icons"
   else
-    printf "$resetColor  "
+    printf "  "
   fi
 }
 
 __updates() {
-  local icons=''
-
   brew update > /dev/null 2>&1
 
-  local brew=$(brew outdated 2> /dev/null | wc -l | tr -d ' ')
-  local cask=$(brew cask outdated 2> /dev/null | wc -l | tr -d ' ')
-  local updates=($brew + $cask)
-  if [[ $updates -gt 0 ]]; then
-    icons=" $updates $icons"
+  local brews=$(brew outdated 2> /dev/null | wc -l | tr -d ' ')
+  if [[ $brews -eq 1 ]]; then
+    echo "$brews homebrew update" | terminal-notifier -activate 'com.apple.Terminal' -appIcon $BASH_IT_CUSTOM/themes/icons/homebrew.png -sound default -title 'webicons'
+  elif [[ $brews -ge 2 ]]; then
+    echo "$brews homebrew updates" | terminal-notifier -activate 'com.apple.Terminal' -appIcon $BASH_IT_CUSTOM/themes/icons/homebrew.png -sound default -title 'webicons'
   fi
 
-  local store=$(mas outdated 2> /dev/null | wc -l | tr -d ' ')
-  if [[ $store -gt 0 ]]; then
-    icons=" $store $icons"
+  local casks=$(brew cask outdated 2> /dev/null | wc -l | tr -d ' ')
+  if [[ $casks -eq 1 ]]; then
+    echo "$casks homebrew cask update" | terminal-notifier -activate 'com.apple.Terminal'  -appIcon $BASH_IT_CUSTOM/themes/icons/homebrew.png -sound default -title 'webicons'
+  elif [[ $casks -ge 2 ]]; then
+    echo "$casks homebrew cask updates" | terminal-notifier -activate 'com.apple.Terminal'  -appIcon $BASH_IT_CUSTOM/themes/icons/homebrew.png -sound default -title 'webicons'
   fi
-
-  printf "$icons"
 }
 
 __versions() {
@@ -150,4 +138,3 @@ function prompt_command() {
 ___silent __updates
 
 safe_append_prompt_command prompt_command
-
