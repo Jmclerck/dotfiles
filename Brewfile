@@ -1,23 +1,17 @@
-tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "homebrew/services"
-cask "java"
-brew "carthage"
+brew "exercism"
 brew "fasd"
 brew "flow"
 brew "git-flow"
 brew "git-lfs"
 brew "icu4c"
-brew "node"
-brew "heroku"
-brew "ipfs"
 brew "mas"
+brew "node"
 brew "ruby"
-brew "rust"
-brew "tailor"
+brew "terminal-notifier"
 brew "thefuck"
 brew "tldr"
 brew "watchman"
@@ -30,11 +24,10 @@ cask "docker"
 cask "firefox"
 cask "google-chrome"
 cask "handbrake"
-cask "kaleidoscope"
+cask "java"
 cask "little-snitch"
 cask "malwarebytes"
 cask "mono-mdk"
-cask "now"
 cask "parallels"
 cask "paw"
 cask "postgres"
@@ -52,6 +45,7 @@ mas "CARROT Weather", id: 993487541
 mas "Contrast", id: 1254981365
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
+mas "Kaleidoscope", id: 587512244
 mas "Keynote", id: 409183694
 mas "MacFamilyTree 8", id: 1037755919
 mas "MindNode", id: 1289197285
