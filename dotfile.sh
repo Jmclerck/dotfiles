@@ -33,7 +33,7 @@ cp com.apple.Terminal.plist ~/Library/Preferences
 
 # Copy WebIcons font (can't be symlinked, since macOS 10.13)
 rm ~/Library/Fonts/webicons.ttf
-cp "$(PWD)/webicons.zsh-theme/font/webicons.ttf" ~/Library/Fonts/
+ln -s "$(PWD)/bash-it/themes/webicons/font/webicons.ttf" ~/Library/Fonts/
 
 # Symlink Visual Studio Code snippets
 rm -rf ~/Library/Application\ Support/Code/User/snippets
@@ -58,7 +58,7 @@ sudo mv ./sudo /etc/pam.d/sudo
 reset-launchpad
 
 # remove existing vscode extensions
-for i in $(code --list-extensions | comm -13 ~/Documents/Github/dotfiles/vscode.ext -); do
+for i in $(code --list-extensions | comm -13 $(PWD)/vscode.ext -); do
   code --uninstall-extension $i
 done
 
