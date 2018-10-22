@@ -11,6 +11,7 @@
     "keyframes",
     "lcov",
     "placeholder",
+    "polyfill",
     "promisify",
     "snaphot",
     "spec",
@@ -95,18 +96,16 @@
   },
   "eslint.alwaysShowStatus": true,
   "explorer.openEditors.visible": 0,
+  "files.exclude": {
+    "**/coverage/**": true,
+    "**/dist/**": true,
+    "**/node_modules/**": true
+  },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "flow.enabled": false,
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
-  "github.hosts": [
-    {
-      "host": "https://github.com",
-      "username": "oauth",
-      "token": "system"
-    }
-  ],
   "gitlens.blame.ignoreWhitespace": true,
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
@@ -118,6 +117,8 @@
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
   "problems.decorations.enabled": true,
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.intellisense": "rubyLocate",
   "ruby.lint": {
     "fasterer": true,
     "reek": true,
@@ -125,12 +126,18 @@
     "ruby": true
   },
   "ruby.lintDebounceTime": 500,
+  "search.exclude": {
+    "**/bower_components": false,
+    "**/coverage/**": true,
+    "**/dist/**": true,
+    "**/node_modules": false,
+    "**/node_modules/**": true
+  },
+  "search.location": "panel",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 16,
   "window.closeWhenEmpty": true,
   "window.title": "${rootName}${separator}${activeEditorShort} ${dirty}",
   "workbench.editor.revealIfOpen": true,
-  "workbench.statusBar.feedback.visible": false,
-  "ruby.intellisense": "rubyLocate",
-  "ruby.codeCompletion": "rcodetools"
+  "workbench.statusBar.feedback.visible": false
 }
