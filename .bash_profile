@@ -1,9 +1,9 @@
 
 # Path to the bash it configuration
-export BASH_IT="/Users/jonathan/.bash_it"
+export BASH_IT="/Users/jonathanclerck/.bash_it"
 
 # Path to the bash it custom configuartion
-export BASH_IT_CUSTOM="/Users/jonathan/Documents/GitHub/dotfiles/bash-it"
+export BASH_IT_CUSTOM="/Users/jonathanclerck/Documents/GitHub/dotfiles/bash-it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
@@ -59,11 +59,8 @@ export PATH="/usr/local/sbin:$PATH"
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
 
-# Source PA file silently
-source ~/Documents/Particle/Particle.bash 2>/dev/null
-
 # Add SSH keys
-ssh-add -K ~/.ssh/id_rsa 2>/dev/null
+ssh-add -K ~/.ssh/id_rsa 2&>/dev/null
 
 if type brew 2&>/dev/null; then
   for completion_file in $(brew --prefix)/etc/bash_completion.d/*; do
