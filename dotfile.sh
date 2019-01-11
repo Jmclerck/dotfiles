@@ -33,14 +33,14 @@ cp com.apple.Terminal.plist ~/Library/Preferences
 
 # Copy WebIcons font (can't be symlinked, since macOS 10.13)
 rm ~/Library/Fonts/webicons.ttf
-ln -s "$(PWD)/bash-it/themes/webicons/font/webicons.ttf" ~/Library/Fonts/
+ln -s "$(PWD)/bash-it/themes/font/webicons.ttf" ~/Library/Fonts/
 
 # Symlink Visual Studio Code snippets
 rm -rf ~/Library/Application\ Support/Code/User/snippets
 ln -s "$(PWD)/code/snippets" ~/Library/Application\ Support/Code/User/snippets
 
 # Copy enabled bash-it plugins (can't be symlinked)
-rm -rf /Users/jonathan/.bash_it/enabled
+rm -rf ~/.bash_it/enabled
 cp -r "$(PWD)/bash-it/enabled" ~/.bash_it
 
 # Add webicons to monospace font fallbacks
@@ -54,15 +54,17 @@ sudo chown root ./sudo
 sudo mv /etc/pam.d/sudo /etc/pam.d/sudo~
 sudo mv ./sudo /etc/pam.d/sudo
 
-# execute reset-launchpad
-reset-launchpad
-
 # remove existing vscode extensions
-for i in $(code --list-extensions | comm -13 $(PWD)/vscode.ext -); do
+for i in $(code --list-extensions | comm -13 $(PWD)/vscode.extensions -); do
   code --uninstall-extension $i
 done
 
 # install expected vscode extensions
-for i in $(cat vscode.ext); do
+for i in $(cat vscode.extensions); do
   code --install-extension $i
+done
+
+#  install npm modules
+for i in $(cat npm.modules); do
+  npm i -g $i
 done
