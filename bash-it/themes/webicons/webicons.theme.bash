@@ -92,21 +92,42 @@ __stat() {
 }
 
 __updates() {
-  brew update > /dev/null 2>&1
+  ___homebrew_updates() {
+    brew update > /dev/null 2>&1
 
-  local brews=$(brew outdated 2> /dev/null | wc -l | tr -d ' ')
-  if [[ $brews -eq 1 ]]; then
-    echo "$brews homebrew update" | terminal-notifier -activate 'com.apple.Terminal' -appIcon $BASH_IT_CUSTOM/themes/icons/homebrew.png -sound default -title 'webicons'
-  elif [[ $brews -ge 2 ]]; then
-    echo "$brews homebrew updates" | terminal-notifier -activate 'com.apple.Terminal' -appIcon $BASH_IT_CUSTOM/themes/icons/homebrew.png -sound default -title 'webicons'
-  fi
+    ___cask_updates() {
+      local casks=$(brew cask outdated 2> /dev/null | wc -l | tr -d ' ')
+      if [[ $casks -eq 1 ]]; then
+        echo "$casks homebrew cask update" | terminal-notifier -activate 'com.apple.Terminal' -appIcon $BASH_IT_CUSTOM/themes/icons/homebrew.png -sound default -title 'webicons'
+      elif [[ $casks -ge 2 ]]; then
+        echo "$casks homebrew cask updates" | terminal-notifier -activate 'com.apple.Terminal' -appIcon $BASH_IT_CUSTOM/themes/icons/homebrew.png -sound default -title 'webicons'
+      fi
+    }
 
-  local casks=$(brew cask outdated 2> /dev/null | wc -l | tr -d ' ')
-  if [[ $casks -eq 1 ]]; then
-    echo "$casks homebrew cask update" | terminal-notifier -activate 'com.apple.Terminal'  -appIcon $BASH_IT_CUSTOM/themes/icons/homebrew.png -sound default -title 'webicons'
-  elif [[ $casks -ge 2 ]]; then
-    echo "$casks homebrew cask updates" | terminal-notifier -activate 'com.apple.Terminal'  -appIcon $BASH_IT_CUSTOM/themes/icons/homebrew.png -sound default -title 'webicons'
-  fi
+    ___brew_updates() {
+      local brews=$(brew outdated 2> /dev/null | wc -l | tr -d ' ')
+      if [[ $brews -eq 1 ]]; then
+        echo "$brews homebrew update" | terminal-notifier -activate 'com.apple.Terminal' -appIcon $BASH_IT_CUSTOM/themes/icons/homebrew.png -sound default -title 'webicons'
+      elif [[ $brews -ge 2 ]]; then
+        echo "$brews homebrew updates" | terminal-notifier -activate 'com.apple.Terminal' -appIcon $BASH_IT_CUSTOM/themes/icons/homebrew.png -sound default -title 'webicons'
+      fi
+    }
+
+    ___silent ___brew_updates
+    ___silent ___cask_updates
+  }
+
+  ___npm_updates() {
+    local npm=$(npm outdated -g --json=true | jq 'keys' | sed -E 's/[^a-z\-]//g' | sed '/^$/d' 2> /dev/null | wc -l | tr -d ' ')
+    if [[ $npm -eq 1 ]]; then
+      echo "$npm npm update" | terminal-notifier -activate 'com.apple.Terminal' -appIcon $BASH_IT_CUSTOM/themes/icons/npm.png -sound default -title 'webicons'
+    elif [[ $npm -ge 2 ]]; then
+      echo "$npm npm updates" | terminal-notifier -activate 'com.apple.Terminal' -appIcon $BASH_IT_CUSTOM/themes/icons/npm.png -sound default -title 'webicons'
+    fi
+  }
+
+  ___silent ___homebrew_updates
+  ___silent ___npm_updates
 }
 
 __versions() {
