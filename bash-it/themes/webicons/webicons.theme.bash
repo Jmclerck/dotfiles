@@ -1,11 +1,25 @@
 #!/usr/bin/env bash
 
+___power=("" "" "" "" "")
+___power_colours=("${red}" "${yellow}" "${yellow}" "${yellow}" "${green}")
 ___prefix=("" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "")
-___colours=("${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${green}" "${green}" "${magenta}" "${orange}" "${orange}" "${orange}" "${orange}" "${purple}" "${purple}" "${purple}" "${purple}" "${red}" "${yellow}" "${yellow}")
+___prefix_colours=("${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${reset_color}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${blue}" "${green}" "${green}" "${magenta}" "${orange}" "${orange}" "${orange}" "${orange}" "${purple}" "${purple}" "${purple}" "${purple}" "${red}" "${yellow}" "${yellow}")
 
 ___silent() {
     { 2>&3 "$@"& } 3>&2 2>/dev/null
     disown &>/dev/null
+}
+
+__power() {
+  local percent=$(( $(battery_percentage) / 25 ))
+
+  if [[ ac_adapter_connected -eq 1 ]]; then
+    echo "${colour}  $(battery_percentage)%${reset_color}"
+  else
+    colour=${___power_colours[$percent]}
+
+    echo "${colour}${___power[$percent]} $(battery_percentage)%${reset_color}"
+  fi
 }
 
 __stat() {
@@ -147,13 +161,13 @@ __versions() {
 function prompt_command() {
   index=$(( $RANDOM % ${#___prefix[@]} ))
   selection=${___prefix[$index]}
-  colour=${___colours[$index]}
+  colour=${___prefix_colours[$index]}
 
   prompt="$colour$selection $(__versions) ${green}\w${purple}$(__stat)${reset_color}"
 
   printf '\r' # Return cursor to start of line
 
-  PS1="$prompt\n${colour}→${reset_color} "
+  PS1="$prompt\n$(__power)${colour} →${reset_color} "
 }
 
 ___silent __updates
