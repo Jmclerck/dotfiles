@@ -102,6 +102,7 @@
     "**/dist/**": true,
     "**/node_modules/**": true
   },
+  "files.autoSave": "afterDelay",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "flow.enabled": false,
