@@ -14,11 +14,11 @@ __power() {
   local percent=$(( $(battery_percentage) / 25 ))
 
   if [[ ac_adapter_connected -eq 1 ]]; then
-    echo "${colour}  $(battery_percentage)%${reset_color}"
+    echo "${colour}   $(battery_percentage)%${reset_color}"
   else
     colour=${___power_colours[$percent]}
 
-    echo "${colour}${___power[$percent]} $(battery_percentage)%${reset_color}"
+    echo "${colour}${___power[$percent]}  $(battery_percentage)%${reset_color}"
   fi
 }
 
