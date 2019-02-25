@@ -129,9 +129,14 @@ module.exports = {
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
 
-    windowSize: [768, 512]
+    windowSize: [768, 512],
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+    hyperBorder: {
+      borderColors: ["#9ea133", "#932de2"],
+      borderWidth: "2px"
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -140,7 +145,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-pane", "hyper-tab-icons", "hyperpower"],
+  plugins: ["hyper-pane", "hyper-tab-icons", "hyperpower", "hyperborder"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
