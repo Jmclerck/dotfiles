@@ -1,9 +1,5 @@
 create-react-app
 eslint
-eslint-config-airbnb-base
-eslint-plugin-import
-eslint-plugin-react
 npm
 stylelint
 stylelint-config-recommended
-typescript
