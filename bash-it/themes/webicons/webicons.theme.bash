@@ -11,14 +11,20 @@ ___silent() {
 }
 
 __power() {
-  local percent=$(( $(battery_percentage) / 25 ))
+  local status=$(pmset -g batt)
 
-  if [[ ac_adapter_connected -eq 1 ]]; then
-    echo "${colour}   $(battery_percentage)%${reset_color}"
+  local charging=$(echo $status | grep -o "discharging")
+  local percent=$(echo $status | grep -o "[0-9]*%" | grep -o "[0-9]*")
+  local segment=$(( percent / 25 ))
+
+  if [[ -z $charging ]]; then
+    local time=$(echo $status | grep -o "[0-9]:[0-9]*")
+
+    echo "${green}   $time $percent%${reset_color}"
   else
-    colour=${___power_colours[$percent]}
+    colour=${___power_colours[$segment]}
 
-    echo "${colour}${___power[$percent]}  $(battery_percentage)%${reset_color}"
+    echo "${colour}${___power[$segment]}  $percent%${reset_color}"
   fi
 }
 
