@@ -27,10 +27,6 @@ ln -s "$(PWD)/.nanorc" ~
 rm ~/Library/Application\ Support/Code/User/settings.json
 ln -s "$(PWD)/code/settings.json" ~/Library/Application\ Support/Code/User/settings.json
 
-# Copy Terminal preferences (can't be symlinked)
-rm ~/Library/Preferences/com.apple.Terminal.plist
-cp com.apple.Terminal.plist ~/Library/Preferences
-
 # Copy WebIcons font (can't be symlinked, since macOS 10.13)
 rm ~/Library/Fonts/webicons.ttf
 ln -s "$(PWD)/bash-it/themes/font/webicons.ttf" ~/Library/Fonts/
@@ -39,12 +35,13 @@ ln -s "$(PWD)/bash-it/themes/font/webicons.ttf" ~/Library/Fonts/
 rm -rf ~/Library/Application\ Support/Code/User/snippets
 ln -s "$(PWD)/code/snippets" ~/Library/Application\ Support/Code/User/snippets
 
+# Symlink Hyper preferences
+rm ~/.hyper.js
+ln -s "$(PWD)/.hyper.js" ~/.hyper.js
+
 # Copy enabled bash-it plugins (can't be symlinked)
 rm -rf ~/.bash_it/enabled
 cp -r "$(PWD)/bash-it/enabled" ~/.bash_it
-
-# Add webicons to monospace font fallbacks
-sudo /usr/libexec/PlistBuddy -c "Add monospace:0 string 'webicons'" /System/Library/Frameworks/CoreText.framework/Versions/A/Resources/DefaultFontFallbacks.plist
 
 # Add TouchID as sudo authentication method
 touch ./sudo
