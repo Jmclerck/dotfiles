@@ -17,14 +17,14 @@ __power() {
   local percent=$(echo $status | grep -o "[0-9]*%" | grep -o "[0-9]*")
   local segment=$(( percent / 25 ))
 
+  local colour=${___power_colours[$segment]}
+
   if [[ -z $charging ]]; then
     local time=$(echo $status | grep -o "[0-9]:[0-9]*")
 
-    echo "${green}   $time $percent%${reset_color}"
+    echo "${colour}$percent%  ${reset_color}"
   else
-    colour=${___power_colours[$segment]}
-
-    echo "${colour}${___power[$segment]}  $percent%${reset_color}"
+    echo "${colour}$percent% ${___power[$segment]} ${reset_color}"
   fi
 }
 
@@ -173,7 +173,7 @@ function prompt_command() {
 
   printf '\r' # Return cursor to start of line
 
-  PS1="$prompt\n$(__power)${colour} →${reset_color} "
+  PS1="$prompt\n$(__power)${yellow} ⚡${reset_color} "
 }
 
 ___silent __updates
