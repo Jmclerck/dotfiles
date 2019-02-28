@@ -38,17 +38,17 @@ rm ~/.hyper.js
 ln -s "$(PWD)/.hyper.js" ~/.hyper.js
 
 # enable bash-it aliases
-for i in $(cat aliases.bash-it); do
+for i in $(cat bash-it.aliases); do
   bash-it enable alias $i
 done
 
 # enable bash-it completions
-for i in $(cat completions.bash-it); do
+for i in $(cat bash-it.completions); do
   bash-it enable completion $i
 done
 
 # enable bash-it plugins
-for i in $(cat plugins.bash-it); do
+for i in $(cat bash-it.plugins); do
   bash-it enable plugin $i
 done
 

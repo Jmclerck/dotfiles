@@ -14,17 +14,17 @@ source "$BASH_IT/bash_it.sh"
 bash-it show alias |
   grep -Eo "\S*\s*\[x\]" |
   grep -o "[a-z\-]*" |
-  sed '/^$/d' > aliases.bash-it
+  sed '/^$/d' > bash-it.aliases
 
 bash-it show completions |
   grep -Eo "\S*\s*\[x\]" |
   grep -o "[a-z\-]*" |
-  sed '/^$/d' > completions.bash-it
+  sed '/^$/d' > bash-it.completions
 
 bash-it show plugins |
   grep -Eo "\S*\s*\[x\]" |
   grep -o "[a-z\-]*" |
-  sed '/^$/d' > plugins.bash-it
+  sed '/^$/d' > bash-it.plugins
 
 git add .
 git status
