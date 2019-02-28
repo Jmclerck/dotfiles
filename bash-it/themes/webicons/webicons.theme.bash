@@ -13,18 +13,19 @@ ___silent() {
 __power() {
   local status=$(pmset -g batt)
 
-  local charging=$(echo $status | grep -o "discharging")
+  local charging=$(echo $status | grep -Eo "\scharg[ing|ed]")
+  local discharging=$(echo $status | grep -o "\sdischarging")
   local percent=$(echo $status | grep -o "[0-9]*%" | grep -o "[0-9]*")
   local segment=$(( percent / 25 ))
 
   local colour=${___power_colours[$segment]}
 
-  if [[ -z $charging ]]; then
+  if [[ -n $charging ]]; then
     local time=$(echo $status | grep -o "[0-9]:[0-9]*")
 
-    echo "${colour}$percent%  ${reset_color}"
-  else
-    echo "${colour}$percent% ${___power[$segment]} ${reset_color}"
+    echo "${colour}$percent%  ${reset_color} "
+  elif [[ -n $discharging ]]; then
+    echo "${colour}$percent% ${___power[$segment]} ${reset_color} "
   fi
 }
 
@@ -173,7 +174,7 @@ function prompt_command() {
 
   printf '\r' # Return cursor to start of line
 
-  PS1="$prompt\n$(__power)${yellow} ⚡${reset_color} "
+  PS1="$prompt\n$(__power)${yellow}⚡${reset_color} "
 }
 
 ___silent __updates
