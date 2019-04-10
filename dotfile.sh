@@ -37,6 +37,11 @@ ln -s "$(PWD)/code/snippets" ~/Library/Application\ Support/Code/User/snippets
 rm ~/.hyper.js
 ln -s "$(PWD)/.hyper.js" ~/.hyper.js
 
+# disable all bash-it aliases, completions & plugins
+bash-it disable alias all
+bash-it completion alias all
+bash-it disable plugin all
+
 # enable bash-it aliases
 for i in $(cat bash-it.aliases); do
   bash-it enable alias $i
