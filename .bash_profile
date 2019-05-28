@@ -71,3 +71,11 @@ fi
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
+
+export THEME_BREW_UPDATE=true
+export THEME_GIT_STATUS=true
+export THEME_NODE_VERSION=true
+export THEME_NPM_UPDATE=true
+export THEME_NPM_VERSION=false
+export THEME_POWER_MONITOR=true
+export THEME_RUBY_VERSION=true
