@@ -39,7 +39,7 @@ ln -s "$(PWD)/.hyper.js" ~/.hyper.js
 
 # disable all bash-it aliases, completions & plugins
 bash-it disable alias all
-bash-it completion alias all
+bash-it disable completion all
 bash-it disable plugin all
 
 # enable bash-it aliases
