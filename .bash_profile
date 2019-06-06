@@ -79,3 +79,4 @@ export THEME_NPM_UPDATE=true
 export THEME_NPM_VERSION=false
 export THEME_POWER_MONITOR=true
 export THEME_RUBY_VERSION=true
+export THEME_TERMINAL_APP="co.zeit.hyper"
