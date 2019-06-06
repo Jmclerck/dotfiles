@@ -2,13 +2,13 @@
   "metadata": {
     "name": "Webicons Project",
     "lastOpened": 0,
-    "created": 1558940994284
+    "created": 1559628252636
   },
   "iconSets": [
     {
       "selection": [
         {
-          "order": 864,
+          "order": 866,
           "id": 61,
           "name": "ruby1",
           "prevSize": 32,
@@ -16,7 +16,7 @@
           "tempChar": ""
         },
         {
-          "order": 863,
+          "order": 867,
           "id": 60,
           "name": "battery-6",
           "prevSize": 32,
@@ -24,7 +24,7 @@
           "tempChar": ""
         },
         {
-          "order": 862,
+          "order": 868,
           "id": 59,
           "name": "battery-5",
           "prevSize": 32,
@@ -32,7 +32,7 @@
           "tempChar": ""
         },
         {
-          "order": 861,
+          "order": 869,
           "id": 58,
           "name": "battery-4",
           "prevSize": 32,
@@ -40,7 +40,7 @@
           "tempChar": ""
         },
         {
-          "order": 860,
+          "order": 870,
           "id": 57,
           "name": "battery-2",
           "prevSize": 32,
@@ -48,7 +48,7 @@
           "tempChar": ""
         },
         {
-          "order": 859,
+          "order": 871,
           "id": 56,
           "name": "battery-3",
           "prevSize": 32,
@@ -56,7 +56,7 @@
           "tempChar": ""
         },
         {
-          "order": 858,
+          "order": 872,
           "id": 55,
           "name": "battery-1",
           "prevSize": 32,
@@ -64,7 +64,7 @@
           "tempChar": ""
         },
         {
-          "order": 857,
+          "order": 873,
           "id": 54,
           "name": "battery-0",
           "prevSize": 32,
@@ -72,7 +72,7 @@
           "tempChar": ""
         },
         {
-          "order": 856,
+          "order": 874,
           "id": 53,
           "name": "battery-charging",
           "prevSize": 32,
@@ -80,7 +80,7 @@
           "tempChar": ""
         },
         {
-          "order": 855,
+          "order": 875,
           "id": 52,
           "name": "airbrake",
           "prevSize": 32,
@@ -88,7 +88,7 @@
           "tempChar": ""
         },
         {
-          "order": 854,
+          "order": 876,
           "id": 51,
           "name": "polly",
           "prevSize": 32,
@@ -96,7 +96,7 @@
           "tempChar": ""
         },
         {
-          "order": 853,
+          "order": 877,
           "id": 50,
           "name": "snap",
           "prevSize": 32,
@@ -104,7 +104,7 @@
           "tempChar": ""
         },
         {
-          "order": 852,
+          "order": 878,
           "id": 49,
           "name": "homebrew",
           "prevSize": 32,
@@ -112,7 +112,7 @@
           "tempChar": ""
         },
         {
-          "order": 850,
+          "order": 879,
           "id": 48,
           "name": "Gulp",
           "prevSize": 32,
@@ -120,7 +120,7 @@
           "tempChar": ""
         },
         {
-          "order": 846,
+          "order": 880,
           "id": 46,
           "name": "n",
           "prevSize": 32,
@@ -128,7 +128,7 @@
           "tempChar": ""
         },
         {
-          "order": 838,
+          "order": 881,
           "id": 41,
           "name": "heroku",
           "prevSize": 32,
@@ -136,7 +136,7 @@
           "tempChar": ""
         },
         {
-          "order": 835,
+          "order": 882,
           "id": 39,
           "name": "wireless-headphones-5235_1f6b1eb5-9660-4b90-a262-941cdeedf8c3",
           "prevSize": 32,
@@ -144,7 +144,7 @@
           "tempChar": ""
         },
         {
-          "order": 836,
+          "order": 883,
           "id": 38,
           "name": "keyboard-1959_3b41bc91-9749-4f5e-a7f6-22c2083f87f5",
           "prevSize": 32,
@@ -152,7 +152,7 @@
           "tempChar": ""
         },
         {
-          "order": 623,
+          "order": 884,
           "id": 37,
           "name": "mouse-1956_ee6789f0-8588-4f73-8151-5bda12e78f00",
           "prevSize": 32,
@@ -160,7 +160,7 @@
           "tempChar": ""
         },
         {
-          "order": 624,
+          "order": 885,
           "id": 36,
           "name": "point-hand-1621_32563c63-23f8-4689-9ce0-0afec314cb12",
           "prevSize": 32,
@@ -168,7 +168,7 @@
           "tempChar": ""
         },
         {
-          "order": 625,
+          "order": 886,
           "id": 32,
           "name": "pwa",
           "prevSize": 32,
@@ -176,7 +176,7 @@
           "tempChar": ""
         },
         {
-          "order": 626,
+          "order": 887,
           "id": 31,
           "name": "webassembly",
           "prevSize": 32,
@@ -184,7 +184,7 @@
           "tempChar": ""
         },
         {
-          "order": 627,
+          "order": 888,
           "id": 30,
           "name": "graphql",
           "prevSize": 32,
@@ -192,7 +192,7 @@
           "tempChar": ""
         },
         {
-          "order": 628,
+          "order": 889,
           "id": 29,
           "name": "vscode",
           "prevSize": 32,
@@ -200,156 +200,148 @@
           "tempChar": ""
         },
         {
-          "order": 629,
-          "id": 28,
-          "name": "flow",
-          "prevSize": 32,
-          "code": 59676,
-          "tempChar": ""
-        },
-        {
-          "order": 630,
+          "order": 890,
           "id": 27,
           "name": "swift",
           "prevSize": 32,
           "code": 59675,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 631,
+          "order": 891,
           "id": 26,
           "name": "rollbar",
           "prevSize": 32,
           "code": 59674,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 642,
+          "order": 892,
           "id": 15,
           "name": "apple",
           "prevSize": 32,
           "code": 59658,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 643,
+          "order": 893,
           "id": 14,
           "name": "atom",
           "prevSize": 32,
           "code": 59659,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 644,
+          "order": 894,
           "id": 13,
           "name": "bitbucket",
           "prevSize": 32,
           "code": 59660,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 645,
+          "order": 895,
           "id": 12,
           "name": "circleci",
           "prevSize": 32,
           "code": 59661,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 646,
+          "order": 896,
           "id": 11,
           "name": "css3",
           "prevSize": 32,
           "code": 59662,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 647,
+          "order": 897,
           "id": 10,
           "name": "docker",
           "prevSize": 32,
           "code": 59663,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 648,
+          "order": 898,
           "id": 9,
           "name": "git",
           "prevSize": 32,
           "code": 59664,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 649,
+          "order": 899,
           "id": 8,
           "name": "html5",
           "prevSize": 32,
           "code": 59665,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 650,
+          "order": 900,
           "id": 7,
           "name": "javascript",
           "prevSize": 32,
           "code": 59666,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 651,
+          "order": 901,
           "id": 6,
           "name": "nodejs",
           "prevSize": 32,
           "code": 59667,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 652,
+          "order": 902,
           "id": 5,
           "name": "react",
           "prevSize": 32,
           "code": 59668,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 653,
+          "order": 903,
           "id": 4,
           "name": "redux",
           "prevSize": 32,
           "code": 59669,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 654,
+          "order": 904,
           "id": 3,
           "name": "rkt",
           "prevSize": 32,
           "code": 59670,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 655,
+          "order": 905,
           "id": 2,
           "name": "sentry",
           "prevSize": 32,
           "code": 59671,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 656,
+          "order": 906,
           "id": 1,
           "name": "slack",
           "prevSize": 32,
           "code": 59672,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
-          "order": 657,
+          "order": 907,
           "id": 0,
           "name": "Yarn",
           "prevSize": 32,
           "code": 59673,
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 2,
@@ -1037,72 +1029,6 @@
           }
         },
         {
-          "id": 28,
-          "paths": [
-            "M931.799 442.388l-341.103-341.063h341.103v341.063z",
-            "M351.789 0.345h193.364l147.78 147.74h-341.144v-147.74z",
-            "M362.861 341.489l-341.103-341.144h410.127v341.103l-69.024 0.041zM662.518 682.551l341.103 341.103h-341.103v-341.103z",
-            "M431.884 682.592l-341.063-341.144h341.103v341.103l-0.041 0.041zM799.226 509.952l-271.917-272.080h272.039l-0.122 272.080zM831.021 991.901l-309.349-309.309h309.349v309.309z",
-            "M431.884 272.059l-271.715-271.715h271.715v271.715z",
-            "M523.051 682.551l341.103 341.103h-341.103v-341.103z",
-            "M868.291 818.733l-340.657-340.657h340.657v340.657z",
-            "M527.309 237.872l336.967 336.967h-336.967v-336.967z",
-            "M431.884 1022.316l-411.506-411.587h411.506v411.587z"
-          ],
-          "attrs": [
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {},
-            {}
-          ],
-          "isMulticolor": false,
-          "isMulticolor2": false,
-          "grid": 0,
-          "tags": [
-            "flow"
-          ],
-          "colorPermutations": {
-            "11001": [
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ],
-            "12552552551": [
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ],
-            "10012552552551": [
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {}
-            ]
-          }
-        },
-        {
           "id": 27,
           "paths": [
             "M765.056 897.203c-119.475 69.018-283.75 76.109-449.024 5.274-133.811-56.934-244.864-156.595-316.032-270.464 34.176 28.467 74.035 51.251 116.736 71.168 170.675 80 341.325 74.522 461.414 0.205-0.077-0.077-0.128-0.128-0.179-0.205-170.829-130.97-316.032-301.798-424.218-441.293-22.784-22.784-39.885-51.251-56.96-76.877 130.97 119.578 338.816 270.464 412.826 313.19-156.57-165.146-296.090-370.125-290.406-364.442 247.706 250.547 478.336 392.909 478.336 392.909 7.629 4.301 13.517 7.885 18.253 11.085 4.992-12.698 9.37-25.882 13.056-39.552 39.859-145.203-5.683-310.349-105.344-447.002 230.605 139.52 367.283 401.434 310.323 620.672-1.485 5.914-3.098 11.75-4.838 17.485 0.666 0.794 1.331 1.613 1.997 2.458 113.869 142.362 82.56 293.248 68.326 264.781-61.773-120.883-176.128-83.917-234.266-59.392v0z"
@@ -1678,7 +1604,7 @@
           "prevSize": 32,
           "code": 61485,
           "name": "alert",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 2,
@@ -1686,7 +1612,7 @@
           "prevSize": 32,
           "code": 61578,
           "name": "alignment-align",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 3,
@@ -1694,7 +1620,7 @@
           "prevSize": 32,
           "code": 61582,
           "name": "alignment-aligned-to",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 4,
@@ -1702,7 +1628,7 @@
           "prevSize": 32,
           "code": 61579,
           "name": "alignment-unalign",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 5,
@@ -1710,7 +1636,7 @@
           "prevSize": 32,
           "code": 61503,
           "name": "arrow-down",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 6,
@@ -1718,7 +1644,7 @@
           "prevSize": 32,
           "code": 61504,
           "name": "arrow-left",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 7,
@@ -1726,7 +1652,7 @@
           "prevSize": 32,
           "code": 61502,
           "name": "arrow-right",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 8,
@@ -1734,7 +1660,7 @@
           "prevSize": 32,
           "code": 61600,
           "name": "arrow-small-down",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 9,
@@ -1742,7 +1668,7 @@
           "prevSize": 32,
           "code": 61601,
           "name": "arrow-small-left",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 10,
@@ -1750,7 +1676,7 @@
           "prevSize": 32,
           "code": 61553,
           "name": "arrow-small-right",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 11,
@@ -1758,7 +1684,7 @@
           "prevSize": 32,
           "code": 61599,
           "name": "arrow-small-up",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 12,
@@ -1766,7 +1692,7 @@
           "prevSize": 32,
           "code": 61501,
           "name": "arrow-up",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 13,
@@ -1774,7 +1700,7 @@
           "prevSize": 32,
           "code": 61545,
           "name": "beer",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 14,
@@ -1782,7 +1708,7 @@
           "prevSize": 32,
           "code": 61447,
           "name": "book",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 15,
@@ -1790,7 +1716,7 @@
           "prevSize": 32,
           "code": 61563,
           "name": "bookmark",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 16,
@@ -1798,7 +1724,7 @@
           "prevSize": 32,
           "code": 61651,
           "name": "briefcase",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 17,
@@ -1806,7 +1732,7 @@
           "prevSize": 32,
           "code": 61512,
           "name": "broadcast",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 18,
@@ -1814,7 +1740,7 @@
           "prevSize": 32,
           "code": 61637,
           "name": "browser",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 19,
@@ -1822,7 +1748,7 @@
           "prevSize": 32,
           "code": 61585,
           "name": "bug",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 20,
@@ -1830,7 +1756,7 @@
           "prevSize": 32,
           "code": 61544,
           "name": "calendar",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 21,
@@ -1838,7 +1764,7 @@
           "prevSize": 32,
           "code": 61498,
           "name": "check",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 22,
@@ -1846,7 +1772,7 @@
           "prevSize": 32,
           "code": 61558,
           "name": "checklist",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 23,
@@ -1854,7 +1780,7 @@
           "prevSize": 32,
           "code": 61603,
           "name": "chevron-down",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 24,
@@ -1862,7 +1788,7 @@
           "prevSize": 32,
           "code": 61604,
           "name": "chevron-left",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 25,
@@ -1870,7 +1796,7 @@
           "prevSize": 32,
           "code": 61560,
           "name": "chevron-right",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 26,
@@ -1878,7 +1804,7 @@
           "prevSize": 32,
           "code": 61602,
           "name": "chevron-up",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 27,
@@ -1886,7 +1812,7 @@
           "prevSize": 32,
           "code": 61572,
           "name": "circle-slash",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 28,
@@ -1894,7 +1820,7 @@
           "prevSize": 32,
           "code": 61654,
           "name": "circuit-board",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 29,
@@ -1902,7 +1828,7 @@
           "prevSize": 32,
           "code": 61493,
           "name": "clippy",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 30,
@@ -1910,7 +1836,7 @@
           "prevSize": 32,
           "code": 61510,
           "name": "clock",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 31,
@@ -1918,7 +1844,7 @@
           "prevSize": 32,
           "code": 61451,
           "name": "cloud-download",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 32,
@@ -1926,7 +1852,7 @@
           "prevSize": 32,
           "code": 61452,
           "name": "cloud-upload",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 33,
@@ -1934,7 +1860,7 @@
           "prevSize": 32,
           "code": 61535,
           "name": "code",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 34,
@@ -1942,7 +1868,7 @@
           "prevSize": 32,
           "code": 61541,
           "name": "color-mode",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 35,
@@ -1950,7 +1876,7 @@
           "prevSize": 32,
           "code": 61483,
           "name": "comment",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 36,
@@ -1958,7 +1884,7 @@
           "prevSize": 32,
           "code": 61519,
           "name": "comment-discussion",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 37,
@@ -1966,7 +1892,7 @@
           "prevSize": 32,
           "code": 61509,
           "name": "credit-card",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 38,
@@ -1974,7 +1900,7 @@
           "prevSize": 32,
           "code": 61642,
           "name": "dash",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 39,
@@ -1982,7 +1908,7 @@
           "prevSize": 32,
           "code": 61565,
           "name": "dashboard",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 40,
@@ -1990,7 +1916,7 @@
           "prevSize": 32,
           "code": 61590,
           "name": "database",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 41,
@@ -1998,7 +1924,7 @@
           "prevSize": 32,
           "code": 61526,
           "name": "device-camera",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 42,
@@ -2006,7 +1932,7 @@
           "prevSize": 32,
           "code": 61527,
           "name": "device-camera-video",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 43,
@@ -2014,7 +1940,7 @@
           "prevSize": 32,
           "code": 62076,
           "name": "device-desktop",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 44,
@@ -2022,7 +1948,7 @@
           "prevSize": 32,
           "code": 61496,
           "name": "device-mobile",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 45,
@@ -2030,7 +1956,7 @@
           "prevSize": 32,
           "code": 61517,
           "name": "diff",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 46,
@@ -2038,7 +1964,7 @@
           "prevSize": 32,
           "code": 61547,
           "name": "diff-added",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 47,
@@ -2046,7 +1972,7 @@
           "prevSize": 32,
           "code": 61593,
           "name": "diff-ignored",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 48,
@@ -2054,7 +1980,7 @@
           "prevSize": 32,
           "code": 61549,
           "name": "diff-modified",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 49,
@@ -2062,7 +1988,7 @@
           "prevSize": 32,
           "code": 61548,
           "name": "diff-removed",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 50,
@@ -2070,7 +1996,7 @@
           "prevSize": 32,
           "code": 61550,
           "name": "diff-renamed",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 51,
@@ -2078,7 +2004,7 @@
           "prevSize": 32,
           "code": 61594,
           "name": "ellipsis",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 52,
@@ -2086,7 +2012,7 @@
           "prevSize": 32,
           "code": 61518,
           "name": "eye",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 53,
@@ -2094,7 +2020,7 @@
           "prevSize": 32,
           "code": 61588,
           "name": "file-binary",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 54,
@@ -2102,7 +2028,7 @@
           "prevSize": 32,
           "code": 61456,
           "name": "file-code",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 55,
@@ -2110,7 +2036,7 @@
           "prevSize": 32,
           "code": 61462,
           "name": "file-directory",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 56,
@@ -2118,7 +2044,7 @@
           "prevSize": 32,
           "code": 61458,
           "name": "file-media",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 57,
@@ -2126,7 +2052,7 @@
           "prevSize": 32,
           "code": 61460,
           "name": "file-pdf",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 58,
@@ -2134,7 +2060,7 @@
           "prevSize": 32,
           "code": 61463,
           "name": "file-submodule",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 59,
@@ -2142,7 +2068,7 @@
           "prevSize": 32,
           "code": 61617,
           "name": "file-symlink-directory",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 60,
@@ -2150,7 +2076,7 @@
           "prevSize": 32,
           "code": 61616,
           "name": "file-symlink-file",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 61,
@@ -2158,7 +2084,7 @@
           "prevSize": 32,
           "code": 61457,
           "name": "file-text",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 62,
@@ -2166,7 +2092,7 @@
           "prevSize": 32,
           "code": 61459,
           "name": "file-zip",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 63,
@@ -2174,7 +2100,7 @@
           "prevSize": 32,
           "code": 61650,
           "name": "flame",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 64,
@@ -2182,7 +2108,7 @@
           "prevSize": 32,
           "code": 61644,
           "name": "fold",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 65,
@@ -2190,7 +2116,7 @@
           "prevSize": 32,
           "code": 61487,
           "name": "gear",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 66,
@@ -2198,7 +2124,7 @@
           "prevSize": 32,
           "code": 61506,
           "name": "gift",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 67,
@@ -2206,7 +2132,7 @@
           "prevSize": 32,
           "code": 61454,
           "name": "gist",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 68,
@@ -2214,7 +2140,7 @@
           "prevSize": 32,
           "code": 61580,
           "name": "gist-secret",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 69,
@@ -2222,7 +2148,7 @@
           "prevSize": 32,
           "code": 61472,
           "name": "git-branch",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 70,
@@ -2230,7 +2156,7 @@
           "prevSize": 32,
           "code": 61471,
           "name": "git-commit",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 71,
@@ -2238,7 +2164,7 @@
           "prevSize": 32,
           "code": 61612,
           "name": "git-compare",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 72,
@@ -2246,7 +2172,7 @@
           "prevSize": 32,
           "code": 61475,
           "name": "git-merge",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 73,
@@ -2254,7 +2180,7 @@
           "prevSize": 32,
           "code": 61449,
           "name": "git-pull-request",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 74,
@@ -2262,7 +2188,7 @@
           "prevSize": 32,
           "code": 61622,
           "name": "globe",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 75,
@@ -2270,7 +2196,7 @@
           "prevSize": 32,
           "code": 61507,
           "name": "graph",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 76,
@@ -2278,7 +2204,7 @@
           "prevSize": 32,
           "code": 9829,
           "name": "heart",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 77,
@@ -2286,7 +2212,7 @@
           "prevSize": 32,
           "code": 61566,
           "name": "history",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 78,
@@ -2294,7 +2220,7 @@
           "prevSize": 32,
           "code": 61581,
           "name": "home",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 79,
@@ -2302,7 +2228,7 @@
           "prevSize": 32,
           "code": 61552,
           "name": "horizontal-rule",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 80,
@@ -2310,7 +2236,7 @@
           "prevSize": 32,
           "code": 61598,
           "name": "hourglass",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 81,
@@ -2318,7 +2244,7 @@
           "prevSize": 32,
           "code": 61597,
           "name": "hubot",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 82,
@@ -2326,7 +2252,7 @@
           "prevSize": 32,
           "code": 61647,
           "name": "inbox",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 83,
@@ -2334,7 +2260,7 @@
           "prevSize": 32,
           "code": 61529,
           "name": "info",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 84,
@@ -2342,7 +2268,7 @@
           "prevSize": 32,
           "code": 61480,
           "name": "issue-closed",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 85,
@@ -2350,7 +2276,7 @@
           "prevSize": 32,
           "code": 61478,
           "name": "issue-opened",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 86,
@@ -2358,7 +2284,7 @@
           "prevSize": 32,
           "code": 61479,
           "name": "issue-reopened",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 87,
@@ -2366,7 +2292,7 @@
           "prevSize": 32,
           "code": 61465,
           "name": "jersey",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 88,
@@ -2374,7 +2300,7 @@
           "prevSize": 32,
           "code": 61554,
           "name": "jump-down",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 89,
@@ -2382,7 +2308,7 @@
           "prevSize": 32,
           "code": 61605,
           "name": "jump-left",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 90,
@@ -2390,7 +2316,7 @@
           "prevSize": 32,
           "code": 61606,
           "name": "jump-right",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 91,
@@ -2398,7 +2324,7 @@
           "prevSize": 32,
           "code": 61555,
           "name": "jump-up",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 92,
@@ -2406,7 +2332,7 @@
           "prevSize": 32,
           "code": 61513,
           "name": "key",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 93,
@@ -2414,7 +2340,7 @@
           "prevSize": 32,
           "code": 61453,
           "name": "keyboard",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 94,
@@ -2422,7 +2348,7 @@
           "prevSize": 32,
           "code": 61656,
           "name": "law",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 95,
@@ -2430,7 +2356,7 @@
           "prevSize": 32,
           "code": 61440,
           "name": "light-bulb",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 96,
@@ -2438,7 +2364,7 @@
           "prevSize": 32,
           "code": 61532,
           "name": "link",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 97,
@@ -2446,7 +2372,7 @@
           "prevSize": 32,
           "code": 61567,
           "name": "link-external",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 98,
@@ -2454,7 +2380,7 @@
           "prevSize": 32,
           "code": 61538,
           "name": "list-ordered",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 99,
@@ -2462,7 +2388,7 @@
           "prevSize": 32,
           "code": 61537,
           "name": "list-unordered",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 100,
@@ -2470,7 +2396,7 @@
           "prevSize": 32,
           "code": 61536,
           "name": "location",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 101,
@@ -2478,7 +2404,7 @@
           "prevSize": 32,
           "code": 61546,
           "name": "lock",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 102,
@@ -2486,7 +2412,7 @@
           "prevSize": 32,
           "code": 61586,
           "name": "logo-github",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 103,
@@ -2494,7 +2420,7 @@
           "prevSize": 32,
           "code": 61499,
           "name": "mail",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 104,
@@ -2502,7 +2428,7 @@
           "prevSize": 32,
           "code": 61500,
           "name": "mail-read",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 105,
@@ -2510,7 +2436,7 @@
           "prevSize": 32,
           "code": 61521,
           "name": "mail-reply",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 106,
@@ -2518,7 +2444,7 @@
           "prevSize": 32,
           "code": 61450,
           "name": "mark-github",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 107,
@@ -2526,7 +2452,7 @@
           "prevSize": 32,
           "code": 61641,
           "name": "markdown",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 108,
@@ -2534,7 +2460,7 @@
           "prevSize": 32,
           "code": 61559,
           "name": "megaphone",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 109,
@@ -2542,7 +2468,7 @@
           "prevSize": 32,
           "code": 61630,
           "name": "mention",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 110,
@@ -2550,7 +2476,7 @@
           "prevSize": 32,
           "code": 61577,
           "name": "microscope",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 111,
@@ -2558,7 +2484,7 @@
           "prevSize": 32,
           "code": 61557,
           "name": "milestone",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 112,
@@ -2566,7 +2492,7 @@
           "prevSize": 32,
           "code": 61476,
           "name": "mirror",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 113,
@@ -2574,7 +2500,7 @@
           "prevSize": 32,
           "code": 61655,
           "name": "mortar-board",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 114,
@@ -2582,7 +2508,7 @@
           "prevSize": 32,
           "code": 61608,
           "name": "move-down",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 115,
@@ -2590,7 +2516,7 @@
           "prevSize": 32,
           "code": 61556,
           "name": "move-left",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 116,
@@ -2598,7 +2524,7 @@
           "prevSize": 32,
           "code": 61609,
           "name": "move-right",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 117,
@@ -2606,7 +2532,7 @@
           "prevSize": 32,
           "code": 61607,
           "name": "move-up",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 118,
@@ -2614,7 +2540,7 @@
           "prevSize": 32,
           "code": 61568,
           "name": "mute",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 119,
@@ -2622,7 +2548,7 @@
           "prevSize": 32,
           "code": 61596,
           "name": "no-newline",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 120,
@@ -2630,7 +2556,7 @@
           "prevSize": 32,
           "code": 61448,
           "name": "octoface",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 121,
@@ -2638,7 +2564,7 @@
           "prevSize": 32,
           "code": 61495,
           "name": "organization",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 122,
@@ -2646,7 +2572,7 @@
           "prevSize": 32,
           "code": 61636,
           "name": "package",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 123,
@@ -2654,7 +2580,7 @@
           "prevSize": 32,
           "code": 61649,
           "name": "paintcan",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 124,
@@ -2662,7 +2588,7 @@
           "prevSize": 32,
           "code": 61528,
           "name": "pencil",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 125,
@@ -2670,7 +2596,7 @@
           "prevSize": 32,
           "code": 61464,
           "name": "person",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 126,
@@ -2678,7 +2604,7 @@
           "prevSize": 32,
           "code": 61505,
           "name": "pin",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 127,
@@ -2686,7 +2612,7 @@
           "prevSize": 32,
           "code": 61629,
           "name": "playback-fast-forward",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 128,
@@ -2694,7 +2620,7 @@
           "prevSize": 32,
           "code": 61627,
           "name": "playback-pause",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 129,
@@ -2702,7 +2628,7 @@
           "prevSize": 32,
           "code": 61631,
           "name": "playback-play",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 130,
@@ -2710,7 +2636,7 @@
           "prevSize": 32,
           "code": 61628,
           "name": "playback-rewind",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 131,
@@ -2718,7 +2644,7 @@
           "prevSize": 32,
           "code": 61652,
           "name": "plug",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 132,
@@ -2726,7 +2652,7 @@
           "prevSize": 32,
           "code": 61533,
           "name": "plus",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 133,
@@ -2734,7 +2660,7 @@
           "prevSize": 32,
           "code": 61615,
           "name": "podium",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 134,
@@ -2742,7 +2668,7 @@
           "prevSize": 32,
           "code": 61522,
           "name": "primitive-dot",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 135,
@@ -2750,7 +2676,7 @@
           "prevSize": 32,
           "code": 61523,
           "name": "primitive-square",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 136,
@@ -2758,7 +2684,7 @@
           "prevSize": 32,
           "code": 61573,
           "name": "pulse",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 137,
@@ -2766,7 +2692,7 @@
           "prevSize": 32,
           "code": 61632,
           "name": "puzzle",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 138,
@@ -2774,7 +2700,7 @@
           "prevSize": 32,
           "code": 61484,
           "name": "question",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 139,
@@ -2782,7 +2708,7 @@
           "prevSize": 32,
           "code": 61539,
           "name": "quote",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 140,
@@ -2790,7 +2716,7 @@
           "prevSize": 32,
           "code": 61488,
           "name": "radio-tower",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 141,
@@ -2798,7 +2724,7 @@
           "prevSize": 32,
           "code": 61441,
           "name": "repo",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 142,
@@ -2806,7 +2732,7 @@
           "prevSize": 32,
           "code": 61516,
           "name": "repo-clone",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 143,
@@ -2814,7 +2740,7 @@
           "prevSize": 32,
           "code": 61514,
           "name": "repo-force-push",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 144,
@@ -2822,7 +2748,7 @@
           "prevSize": 32,
           "code": 61442,
           "name": "repo-forked",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 145,
@@ -2830,7 +2756,7 @@
           "prevSize": 32,
           "code": 61446,
           "name": "repo-pull",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 146,
@@ -2838,7 +2764,7 @@
           "prevSize": 32,
           "code": 61445,
           "name": "repo-push",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 147,
@@ -2846,7 +2772,7 @@
           "prevSize": 32,
           "code": 61491,
           "name": "rocket",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 148,
@@ -2854,7 +2780,7 @@
           "prevSize": 32,
           "code": 61492,
           "name": "rss",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 149,
@@ -2862,7 +2788,7 @@
           "prevSize": 32,
           "code": 61511,
           "name": "ruby",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 150,
@@ -2870,7 +2796,7 @@
           "prevSize": 32,
           "code": 61542,
           "name": "screen-full",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 151,
@@ -2878,7 +2804,7 @@
           "prevSize": 32,
           "code": 61543,
           "name": "screen-normal",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 152,
@@ -2886,7 +2812,7 @@
           "prevSize": 32,
           "code": 61486,
           "name": "search",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 153,
@@ -2894,7 +2820,7 @@
           "prevSize": 32,
           "code": 61591,
           "name": "server",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 154,
@@ -2902,7 +2828,7 @@
           "prevSize": 32,
           "code": 61564,
           "name": "settings",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 155,
@@ -2910,7 +2836,7 @@
           "prevSize": 32,
           "code": 61494,
           "name": "sign-in",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 156,
@@ -2918,7 +2844,7 @@
           "prevSize": 32,
           "code": 61490,
           "name": "sign-out",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 157,
@@ -2926,7 +2852,7 @@
           "prevSize": 32,
           "code": 61638,
           "name": "split",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 158,
@@ -2934,7 +2860,7 @@
           "prevSize": 32,
           "code": 61618,
           "name": "squirrel",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 159,
@@ -2942,7 +2868,7 @@
           "prevSize": 32,
           "code": 61482,
           "name": "star",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 160,
@@ -2950,7 +2876,7 @@
           "prevSize": 32,
           "code": 61639,
           "name": "steps",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 161,
@@ -2958,7 +2884,7 @@
           "prevSize": 32,
           "code": 61583,
           "name": "stop",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 162,
@@ -2966,7 +2892,7 @@
           "prevSize": 32,
           "code": 61575,
           "name": "sync",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 163,
@@ -2974,7 +2900,7 @@
           "prevSize": 32,
           "code": 61461,
           "name": "tag",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 164,
@@ -2982,7 +2908,7 @@
           "prevSize": 32,
           "code": 61576,
           "name": "telescope",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 165,
@@ -2990,7 +2916,7 @@
           "prevSize": 32,
           "code": 61640,
           "name": "terminal",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 166,
@@ -2998,7 +2924,7 @@
           "prevSize": 32,
           "code": 61534,
           "name": "three-bars",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 167,
@@ -3006,7 +2932,7 @@
           "prevSize": 32,
           "code": 61489,
           "name": "tools",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 168,
@@ -3014,7 +2940,7 @@
           "prevSize": 32,
           "code": 61648,
           "name": "trashcan",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 169,
@@ -3022,7 +2948,7 @@
           "prevSize": 32,
           "code": 61531,
           "name": "triangle-down",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 170,
@@ -3030,7 +2956,7 @@
           "prevSize": 32,
           "code": 61508,
           "name": "triangle-left",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 171,
@@ -3038,7 +2964,7 @@
           "prevSize": 32,
           "code": 61530,
           "name": "triangle-right",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 172,
@@ -3046,7 +2972,7 @@
           "prevSize": 32,
           "code": 61610,
           "name": "triangle-up",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 173,
@@ -3054,7 +2980,7 @@
           "prevSize": 32,
           "code": 61497,
           "name": "unfold",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 174,
@@ -3062,7 +2988,7 @@
           "prevSize": 32,
           "code": 61626,
           "name": "unmute",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 175,
@@ -3070,7 +2996,7 @@
           "prevSize": 32,
           "code": 61540,
           "name": "versions",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 176,
@@ -3078,7 +3004,7 @@
           "prevSize": 32,
           "code": 61569,
           "name": "x",
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "id": 177,
@@ -3086,7 +3012,7 @@
           "prevSize": 32,
           "code": 9889,
           "name": "zap",
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 1,
