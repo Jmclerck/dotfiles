@@ -3,35 +3,32 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 brew "automake"
-brew "bison"
-brew "chruby"
+brew "python"
 brew "chruby"
 brew "exercism"
 brew "fasd"
-brew "git-lfs"
+brew "ffmpeg"
 brew "gnupg"
 brew "jq"
-brew "libpq"
-brew "libyaml"
-brew "node"
 brew "ruby-install"
 brew "terminal-notifier"
 brew "thefuck"
 brew "tldr"
 brew "wget"
 brew "yarn"
+brew "zplug"
 cask "aerial"
 cask "backblaze"
 cask "cleanmymac"
 cask "docker"
 cask "firefox"
-cask "github"
+cask "gemini"
 cask "google-chrome"
-cask "handbrake"
 cask "hyper"
 cask "little-snitch"
 cask "malwarebytes"
-cask "now"
+cask "ngrok"
+cask "notion"
 cask "parallels"
 cask "paw"
 cask "postgres"
@@ -40,20 +37,3 @@ cask "sauce-connect"
 cask "spectacle"
 cask "tower"
 cask "visual-studio-code"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
