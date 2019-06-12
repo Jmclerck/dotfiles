@@ -4,9 +4,6 @@
 rm ~/Library/Fonts/webicons.ttf
 ln -s "$(PWD)/bash-it/themes/font/webicons.ttf" ~/Library/Fonts/
 
-# Symlink Bash/Bash-IT configuration
-rm ~/.bash_profile
-ln -s "$(PWD)/.bash_profile" ~
 
 # Symlink Visual Studio Code settings
 rm ~/Library/Application\ Support/Code/User/settings.json
