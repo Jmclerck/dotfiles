@@ -4,6 +4,9 @@
 rm ~/Library/Fonts/webicons.ttf
 ln -s "$(PWD)/bash-it/themes/font/webicons.ttf" ~/Library/Fonts/
 
+# Symlink zshrc configuration
+rm ~/.zshrc
+ln -s "$(PWD)/.zshrc" ~
 
 # Symlink Visual Studio Code settings
 rm ~/Library/Application\ Support/Code/User/settings.json
