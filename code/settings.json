@@ -154,14 +154,15 @@
   },
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 16,
+  "terminal.integrated.shell.osx": "/bin/zsh",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.closeWhenEmpty": true,
   "window.title": "${rootName}${separator}${activeEditorShort} ${dirty}",
   "workbench.colorCustomizations": {
     "statusBar.background": "#16825d",
     "statusBar.debuggingBackground": "#407886",
-    "statusBar.noFolderBackground": "#7f007f",
+    "statusBar.noFolderBackground": "#7f007f"
   },
   "workbench.editor.revealIfOpen": true,
-  "workbench.statusBar.feedback.visible": false
+  "workbench.statusBar.feedback.visible": false,
 }
