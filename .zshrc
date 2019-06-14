@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/usr/local/sbin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/jonathanclerck/.oh-my-zsh"
@@ -95,9 +95,11 @@ source $ZPLUG_HOME/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
 zplug "zsh-users/zsh-autosuggestions", from:"github", use:"zsh-autosuggestions.zsh"
+zplug "zsh-users/zsh-completions", from:"github", use:"zsh-completions.plugin.zsh"
 zplug "plugins/chruby", from:oh-my-zsh
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/gem", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/node", from:oh-my-zsh
 zplug "plugins/npm", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh
@@ -123,6 +125,6 @@ export THEME_NODE_VERSION=true
 export THEME_NPM_VERSION=false
 export THEME_RUBY_VERSION=true
 export THEME_POWER_MONITOR=true
-export THEME_TERMINAL_APP="co.zeit.hyper"
+export UP_DATA_TERMINAL_APP="co.zeit.hyper"
 
 eval $(thefuck --alias)
