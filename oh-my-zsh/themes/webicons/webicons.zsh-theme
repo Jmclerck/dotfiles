@@ -6,7 +6,7 @@ local magenta="%{$FG[201]%}"
 local orange="%{$FG[202]%}"
 local red="%{$FG[196]%}"
 local resetColor="%{$reset_color%}"
-local yellow="%{$FG[190]%}"
+local yellow="%{$FG[226]%}"
 
 ___power=("" "" "" "" "")
 ___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$green")
@@ -96,7 +96,7 @@ function __stat() {
 
       local remote=$(git show-ref origin/$(git_current_branch) 2> /dev/null)
       if [[ -z $remote ]]; then
-        icons="$icons $red"
+        icons="$icons $grey"
       else
         local ahead=$(git_commits_ahead)
         if [[ $ahead -gt 0 ]]; then
@@ -115,9 +115,9 @@ function __stat() {
         fi
       fi
 
-      echo "$resetColor at $magenta$(git_current_branch)$icons "
+      echo "$resetColor at $magenta$(git_current_branch)$icons $resetColor"
     else
-      echo "$magenta  "
+      echo "$magenta  $resetColor"
     fi
   fi
 }
