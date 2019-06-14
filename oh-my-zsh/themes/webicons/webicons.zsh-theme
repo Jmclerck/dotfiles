@@ -1,19 +1,17 @@
-local resetColor="%{$reset_color%}"
-local black="%{$FG[000]%}"
-local red="%{$FG[001]%}"
-local green="%{$FG[002]%}"
-local yellow="%{$FG[003]%}"
-local blue="%{$FG[004]%}"
-local magenta="%{$FG[005]%}"
-local cyan="%{$FG[006]%}"
-local white="%{$FG[007]%}"
-local purple="%{$FG[201]%}"
+local cyan="%{$FG[123]%}"
+local blue="%{$FG[027]%}"
+local green="%{$FG[118]%}"
+local grey="%{$FG[008]%}"
+local magenta="%{$FG[201]%}"
 local orange="%{$FG[202]%}"
+local red="%{$FG[196]%}"
+local resetColor="%{$reset_color%}"
+local yellow="%{$FG[190]%}"
 
 ___power=("" "" "" "" "")
 ___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$green")
 ___prefix=("" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "")
-___prefix_colours=("$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$blue" "$blue" "$blue" "$blue" "$blue" "$blue" "$blue" "$green" "$green" "$magenta" "$orange" "$orange" "$orange" "$orange" "$purple" "$purple" "$purple" "$purple" "$red" "$red" "$yellow")
+___prefix_colours=("$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$blue" "$blue" "$blue" "$blue" "$blue" "$blue" "$blue" "$green" "$green" "$magenta" "$orange" "$orange" "$orange" "$orange" "$magenta" "$magenta" "$magenta" "$magenta" "$red" "$red" "$yellow")
 
 function __iconography() {
   local index=$(( $RANDOM % ${#___prefix[@]} + 1 ))
@@ -117,7 +115,7 @@ function __stat() {
         fi
       fi
 
-      echo " at $magenta$(git_current_branch)$icons "
+      echo "$resetColor at $magenta$(git_current_branch)$icons "
     else
       echo "$magenta  "
     fi
