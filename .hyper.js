@@ -36,7 +36,7 @@ module.exports = {
     cursorShape: "BLOCK",
 
     // set to `true` (without backticks and without quotes) for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
     foregroundColor: "#fff",
@@ -126,15 +126,25 @@ module.exports = {
     // selection is present (`true` by default on Windows and disables the context menu feature)
     // quickEdit: true,
 
+    // choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
+    // or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
+    // (inside tmux or vim with mouse mode enabled for example).
+    macOptionSelectionMode: "vertical",
+
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
 
+    // Whether to use the WebGL renderer. Set it to false to use canvas-based
+    // rendering (slower, but supports transparent backgrounds)
+    webGLRenderer: true,
+
+    // for advanced config flags please refer to https://hyper.is/#cfg
     windowSize: [768, 512],
 
     // for advanced config flags please refer to https://hyper.is/#cfg
 
     hyperBorder: {
-      borderColors: ["#9ea133", "#932de2"],
+      borderColors: ["#fc1da7", "#fba506"],
       borderWidth: "2px"
     }
   },
