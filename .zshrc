@@ -2,7 +2,7 @@
 export PATH="/usr/local/sbin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/jonathanclerck/.oh-my-zsh"
+export ZSH="/Users/$(whoami)/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -61,7 +61,7 @@ ZSH_THEME="webicons/webicons"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=/Users/jonathanclerck/Documents/GitHub/dotfiles/oh-my-zsh
+ZSH_CUSTOM="/Users/$(whoami)/Documents/GitHub/dotfiles/oh-my-zsh"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -128,3 +128,5 @@ export THEME_POWER_MONITOR=true
 export UP_DATA_TERMINAL_APP="co.zeit.hyper"
 
 eval $(thefuck --alias)
+
+ssh-add -K ~/.ssh/id_rsa 2&>/dev/null
