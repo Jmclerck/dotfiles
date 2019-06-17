@@ -126,12 +126,16 @@ function __stat() {
 function __versions() {
   local icons=''
 
-  if [[ $THEME_NPM_VERSION != false ]]; then
-    icons="$icons$red  $(npm --version)"
+  if [[ $THEME_DOCKER_VERSION != false ]]; then
+    icons="$icons$blue  $(docker --version | grep -o "\d*\.\d*\.\d*")"
   fi
 
   if [[ $THEME_NODE_VERSION != false ]]; then
     icons="$icons$green  $(npm config get node-version)"
+  fi
+
+  if [[ $THEME_NPM_VERSION != false ]]; then
+    icons="$icons$red  $(npm --version)"
   fi
 
   if [[ $THEME_RUBY_VERSION != false ]]; then
