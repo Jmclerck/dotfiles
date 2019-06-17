@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME="/Users/$(whoami)/.zplug"
 source $ZPLUG_HOME/init.zsh
 
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
