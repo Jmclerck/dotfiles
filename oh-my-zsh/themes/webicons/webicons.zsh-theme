@@ -1,12 +1,13 @@
-local cyan="%{$FG[123]%}"
-local blue="%{$FG[027]%}"
-local green="%{$FG[118]%}"
+local blue="%{$fg[blue]%}"
+local cyan="%{$fg[cyan]%}"
+local green="%{$fg[green]%}"
+local magenta="%{$fg[magenta]%}"
+local red="%{$fg[red]%}"
+local yellow="%{$fg[yellow]%}"
+
 local grey="%{$FG[008]%}"
-local magenta="%{$FG[201]%}"
 local orange="%{$FG[202]%}"
-local red="%{$FG[196]%}"
 local resetColor="%{$reset_color%}"
-local yellow="%{$FG[226]%}"
 
 ___power=("" "" "" "" "")
 ___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$green")
