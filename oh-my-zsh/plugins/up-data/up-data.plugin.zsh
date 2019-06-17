@@ -8,54 +8,109 @@ if [[ -z $UP_DATA_TERMINAL_APP ]]; then
 fi
 
 function __updates() {
+  local title='Updata ☝️'
+
   if [[ $THEME_BREW_UPDATE != false ]]; then
     brew update > /dev/null 2>&1
 
-    local casks=$(brew cask outdated 2> /dev/null | wc -l | tr -d ' ')
+    local caskList=$(brew cask outdated 2> /dev/null)
+    local casks=$(echo $caskList | wc -l | tr -d ' ')
     if [[ $casks -eq 1 ]]; then
-      echo "$casks homebrew cask update" | terminal-notifier \
+      terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -message $caskList \
         -sound submarine \
-        -title 'webicons'
-    elif [[ $casks -ge 2 ]]; then
-      echo "$casks homebrew cask updates" | terminal-notifier \
+        -subtitle "$casks homebrew cask update" \
+        -title $title
+    elif [[ $casks -eq 2 ]]; then
+      local joined=$(echo $caskList | tr '\n' '&' | sed -E 's/&/ & /g' | rev | cut -c 3- | rev)
+
+      terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -message $joined \
         -sound submarine \
-        -title 'webicons'
+        -subtitle "$casks homebrew cask updates" \
+        -title $title
+    elif [[ $casks -ge 3 ]]; then
+      local joined="$(echo $caskList | head -n 2 | tr '\n' '&' | sed -E 's/&/, /g' | rev | cut -c 3- | rev) and $(($casks - 2)) more"
+
+      terminal-notifier \
+        -activate $UP_DATA_TERMINAL_APP \
+        -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -message $joined \
+        -sound submarine \
+        -subtitle "$casks homebrew cask updates" \
+        -title $title
     fi
 
-    local brews=$(brew outdated 2> /dev/null | wc -l | tr -d ' ')
+    local brewList=$(brew outdated 2> /dev/null)
+    local brews=$(echo $brewList | wc -l | tr -d ' ')
+
     if [[ $brews -eq 1 ]]; then
-      echo "$brews homebrew update" | terminal-notifier
+      terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -message $brewList \
         -sound submarine \
-        -title 'webicons'
-    elif [[ $brews -ge 2 ]]; then
-      echo "$brews homebrew updates" | terminal-notifier \
+        -subtitle "$brews homebrew update" \
+        -title $title
+    elif [[ $brews -eq 2 ]]; then
+      local joined=$(echo $brewList | tr '\n' '&' | sed -E 's/&/ & /g' | rev | cut -c 3- | rev)
+
+      terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -message $joined \
         -sound submarine \
-        -title 'webicons'
+        -subtitle "$brews homebrew updates" \
+        -title $title
+    elif [[ $brews -ge 3 ]]; then
+      local joined="$(echo $brewList | head -n 2 | tr '\n' '&' | sed -E 's/&/, /g' | rev | cut -c 3- | rev) and $(($brews - 2)) more"
+
+      terminal-notifier \
+        -activate $UP_DATA_TERMINAL_APP \
+        -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -message $joined \
+        -sound submarine \
+        -subtitle "$brews homebrew updates" \
+        -title $title
     fi
   fi
 
   if [[ $THEME_NPM_UPDATE != false ]]; then
-    local npm=$(npm outdated -g --json=true | jq 'keys' | sed -E 's/[^a-z\-]//g' | sed '/^$/d' 2> /dev/null | wc -l | tr -d ' ')
+    local list=$(npm outdated -g --json=true | jq 'keys' | sed -E 's/[^a-z\-]//g' | sed '/^$/d' 2> /dev/null)
+    local npm=$(echo $list | sed '/^$/d'| wc -l | tr -d ' ')
+
     if [[ $npm -eq 1 ]]; then
-      echo "$npm npm update" | terminal-notifier \
+      terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/npm.png \
+        -message $list \
         -sound submarine \
-        -title 'webicons'
-    elif [[ $npm -ge 2 ]]; then
-      echo "$npm npm updates" | terminal-notifier \
+        -subtitle "$npm npm update" \
+        -title $title
+    elif [[ $npm -eq 2 ]]; then
+      local joined=$(echo $list | tr '\n' '&' | sed -E 's/&/ & /g' | rev | cut -c 3- | rev)
+
+      terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/npm.png \
+        -message $joined \
         -sound submarine \
-        -title 'webicons'
+        -subtitle "$npm npm updates" \
+        -title $title
+    elif [[ $npm -ge 3 ]]; then
+      local joined="$(echo $list | head -n 2 | tr '\n' '&' | sed -E 's/&/, /g' | rev | cut -c 3- | rev) and $(($npm - 2)) more"
+
+      terminal-notifier \
+        -activate $UP_DATA_TERMINAL_APP \
+        -appIcon $ZSH_CUSTOM/plugins/up-data/icons/npm.png \
+        -message $joined \
+        -sound submarine \
+        -subtitle "$npm npm updates" \
+        -title $title
     fi
   fi
 }

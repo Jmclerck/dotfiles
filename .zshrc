@@ -126,7 +126,7 @@ export THEME_NODE_VERSION=true
 export THEME_NPM_VERSION=false
 export THEME_RUBY_VERSION=true
 export THEME_POWER_MONITOR=true
-export UP_DATA_TERMINAL_APP="co.zeit.hyper"
+export UP_DATA_TERMINAL_APP="co.zeit.Hyper"
 
 eval $(thefuck --alias)
 
