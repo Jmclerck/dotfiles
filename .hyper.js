@@ -146,6 +146,23 @@ module.exports = {
     hyperBorder: {
       borderColors: ["#fc1da7", "#fba506"],
       borderWidth: "2px"
+    },
+
+    touchbarSwitcher: {
+      tabs: {
+        "~/**": {
+          icon: "",
+          iconPosition: "center",
+          colour: "#555555",
+          label: "none"
+        },
+        "~/Documents/GitHub/**": {
+          icon: "~/Documents/GitHub/dotfiles/hyper/GitHub-Light@2x.png",
+          iconPosition: "center",
+          colour: "#555555",
+          label: "none"
+        }
+      }
     }
   },
 
@@ -155,12 +172,12 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-pane", "hyper-tab-icons", "hyperborder", "hyperpower"],
+  plugins: ["hyper-pane", "hyperborder", "hyperpower"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: [],
+  localPlugins: ["hyper-touchbar-switcher"],
 
   keymaps: {
     // Example
