@@ -7,18 +7,19 @@ if [[ -z $UP_DATA_TERMINAL_APP ]]; then
   export UP_DATA_TERMINAL_APP='com.apple.terminal'
 fi
 
-function __updates() {
-  local title='Updata ☝️'
+function main() {
+  local title='Up-data ☝️'
 
   if [[ $THEME_BREW_UPDATE != false ]]; then
     brew update > /dev/null 2>&1
 
     local caskList=$(brew cask outdated 2> /dev/null)
-    local casks=$(echo $caskList | wc -l | tr -d ' ')
+    local casks=$(echo $caskList | sed '/^$/d' | wc -l | tr -d ' ')
     if [[ $casks -eq 1 ]]; then
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -group "com.updata.cask" \
         -message $caskList \
         -sound submarine \
         -subtitle "$casks homebrew cask update" \
@@ -29,6 +30,7 @@ function __updates() {
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -group "com.updata.cask" \
         -message $joined \
         -sound submarine \
         -subtitle "$casks homebrew cask updates" \
@@ -39,6 +41,7 @@ function __updates() {
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -group "com.updata.cask" \
         -message $joined \
         -sound submarine \
         -subtitle "$casks homebrew cask updates" \
@@ -46,12 +49,13 @@ function __updates() {
     fi
 
     local brewList=$(brew outdated 2> /dev/null)
-    local brews=$(echo $brewList | wc -l | tr -d ' ')
+    local brews=$(echo $brewList | sed '/^$/d' | wc -l | tr -d ' ')
 
     if [[ $brews -eq 1 ]]; then
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -group "com.updata.brew" \
         -message $brewList \
         -sound submarine \
         -subtitle "$brews homebrew update" \
@@ -62,6 +66,7 @@ function __updates() {
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -group "com.updata.brew" \
         -message $joined \
         -sound submarine \
         -subtitle "$brews homebrew updates" \
@@ -72,6 +77,7 @@ function __updates() {
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -group "com.updata.brew" \
         -message $joined \
         -sound submarine \
         -subtitle "$brews homebrew updates" \
@@ -87,6 +93,7 @@ function __updates() {
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/npm.png \
+        -group "com.updata.npm" \
         -message $list \
         -sound submarine \
         -subtitle "$npm npm update" \
@@ -97,6 +104,7 @@ function __updates() {
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/npm.png \
+        -group "com.updata.npm" \
         -message $joined \
         -sound submarine \
         -subtitle "$npm npm updates" \
@@ -107,6 +115,7 @@ function __updates() {
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
         -appIcon $ZSH_CUSTOM/plugins/up-data/icons/npm.png \
+        -group "com.updata.npm" \
         -message $joined \
         -sound submarine \
         -subtitle "$npm npm updates" \
@@ -118,4 +127,4 @@ function __updates() {
 async_init
 async_start_worker up_data_worker
 async_flush_jobs up_data_worker
-async_job up_data_worker __updates
+async_job up_data_worker main
