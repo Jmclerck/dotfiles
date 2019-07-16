@@ -108,6 +108,8 @@ zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/rails", from:oh-my-zsh
 zplug "plugins/ruby", from:oh-my-zsh
 zplug "plugins/rust", from:oh-my-zsh
+zplug "plugins/virtualenv", from:oh-my-zsh
+zplug "plugins/virtualenvwrapper", from:oh-my-zsh
 zplug "plugins/thefuck", from:oh-my-zsh
 zplug "plugins/yarn", from:oh-my-zsh
 zplug "plugins/z", from:oh-my-zsh
@@ -133,7 +135,7 @@ export THEME_RUBY_VERSION=true
 export THEME_YARN_VERSION=false
 export THEME_POWER_MONITOR=true
 export UP_DATA_TERMINAL_APP="co.zeit.Hyper"
-export VIRTUAL_ENV_DISABLE_PROMPT=true
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
@@ -141,8 +143,9 @@ export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 [ -f $HOME/.ruby-version ] && chruby $(cat $HOME/.ruby-version)
 
+nvs auto on
 nvs use latest
 
-source /Users/jonathanclerck/Documents/GitHub/dotfiles/.python/bin/activate
+workon python
 
 ssh-add -K ~/.ssh/id_rsa 2&> /dev/null
