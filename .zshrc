@@ -144,7 +144,6 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 [ -f $HOME/.ruby-version ] && chruby $(cat $HOME/.ruby-version)
 
 nvs auto on
-nvs use latest
 
 workon python
 
