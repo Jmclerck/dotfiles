@@ -3,6 +3,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export NVS_HOME="$HOME/.nvs"
+export UP_DATA_TERMINAL_APP="co.zeit.Hyper"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -133,9 +135,8 @@ export THEME_PYTHON_VERSION=false
 export THEME_RUBY_VERSION=true
 export THEME_YARN_VERSION=false
 export THEME_POWER_MONITOR=true
-export UP_DATA_TERMINAL_APP="co.zeit.Hyper"
 
-[ -f $HOME/.nvs/nvs.sh ] && source "$HOME/.nvs/nvs.sh"
+[ -f $HOME/.nvs/nvs.sh ] && source $HOME/.nvs/nvs.sh
 [ -f $HOME/.ruby-version ] && chruby $(cat $HOME/.ruby-version)
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
