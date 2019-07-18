@@ -3,5 +3,3 @@
 
 logs/*.err
 logs/*.out
-
-.python/
