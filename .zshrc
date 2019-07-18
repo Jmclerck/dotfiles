@@ -107,7 +107,7 @@ zplug "plugins/node", from:oh-my-zsh
 zplug "plugins/npm", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
-zplug "plugins/pyenv", from:oh-my-zsh
+zplug "plugins/python", from:oh-my-zsh
 zplug "plugins/rails", from:oh-my-zsh
 zplug "plugins/ruby", from:oh-my-zsh
 zplug "plugins/rust", from:oh-my-zsh
@@ -135,9 +135,12 @@ export THEME_PYTHON_VERSION=false
 export THEME_RUBY_VERSION=true
 export THEME_YARN_VERSION=false
 export THEME_POWER_MONITOR=true
+export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 [ -f $HOME/.nvs/nvs.sh ] && source $HOME/.nvs/nvs.sh
 [ -f $HOME/.ruby-version ] && chruby $(cat $HOME/.ruby-version)
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+source ~/.python/bin/activate
 
 ssh-add -K ~/.ssh/id_rsa 2&> /dev/null
