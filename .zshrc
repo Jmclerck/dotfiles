@@ -94,7 +94,6 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "zplug/zplug", hook-build:'zplug --self-manage'
 zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
-zplug "b4b4r07/enhancd", from:"github", use:init.sh
 zplug "zsh-users/zsh-autosuggestions", from:"github", use:"zsh-autosuggestions.zsh"
 zplug "zsh-users/zsh-completions", from:"github", use:"zsh-completions.plugin.zsh"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -105,11 +104,11 @@ zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/node", from:oh-my-zsh
 zplug "plugins/npm", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh
+zplug "plugins/pip", from:oh-my-zsh
+zplug "plugins/pyenv", from:oh-my-zsh
 zplug "plugins/rails", from:oh-my-zsh
 zplug "plugins/ruby", from:oh-my-zsh
 zplug "plugins/rust", from:oh-my-zsh
-zplug "plugins/virtualenv", from:oh-my-zsh
-zplug "plugins/virtualenvwrapper", from:oh-my-zsh
 zplug "plugins/thefuck", from:oh-my-zsh
 zplug "plugins/yarn", from:oh-my-zsh
 zplug "plugins/z", from:oh-my-zsh
@@ -135,16 +134,9 @@ export THEME_RUBY_VERSION=true
 export THEME_YARN_VERSION=false
 export THEME_POWER_MONITOR=true
 export UP_DATA_TERMINAL_APP="co.zeit.Hyper"
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 [ -f $HOME/.nvs/nvs.sh ] && source "$HOME/.nvs/nvs.sh"
-
 [ -f $HOME/.ruby-version ] && chruby $(cat $HOME/.ruby-version)
-
-nvs auto on
-
-workon python
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 ssh-add -K ~/.ssh/id_rsa 2&> /dev/null
