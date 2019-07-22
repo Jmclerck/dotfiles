@@ -90,6 +90,20 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+export THEME_BREW_UPDATE=true
+export THEME_NPM_UPDATE=true
+export THEME_GIT_STATUS=true
+export THEME_DOCKER_VERSION=false
+export THEME_NODE_VERSION=true
+export THEME_NPM_VERSION=false
+export THEME_PYTHON_VERSION=false
+export THEME_RUBY_VERSION=true
+export THEME_YARN_VERSION=true
+export THEME_POWER_MONITOR=true
+export VIRTUAL_ENV_DISABLE_PROMPT=true
+
+source ~/.python/bin/activate
+
 export ZPLUG_HOME="$HOME/.zplug"
 source $ZPLUG_HOME/init.zsh
 
@@ -124,19 +138,5 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
-
-export THEME_BREW_UPDATE=true
-export THEME_NPM_UPDATE=true
-export THEME_GIT_STATUS=true
-export THEME_DOCKER_VERSION=false
-export THEME_NODE_VERSION=true
-export THEME_NPM_VERSION=false
-export THEME_PYTHON_VERSION=false
-export THEME_RUBY_VERSION=true
-export THEME_YARN_VERSION=false
-export THEME_POWER_MONITOR=true
-export VIRTUAL_ENV_DISABLE_PROMPT=true
-
-source ~/.python/bin/activate
 
 ssh-add -K ~/.ssh/id_rsa 2&> /dev/null

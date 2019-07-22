@@ -1,5 +1,4 @@
-# Add your own custom plugins in the custom/plugins directory. Plugins placed
-# here will override ones with the same name in the main plugins directory.
+#!/bin/zsh
 
 source $ZPLUG_HOME/repos/mafredri/zsh-async/async.zsh
 
