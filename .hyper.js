@@ -141,8 +141,6 @@ module.exports = {
     // for advanced config flags please refer to https://hyper.is/#cfg
     windowSize: [768, 512],
 
-    // for advanced config flags please refer to https://hyper.is/#cfg
-
     hyperBorder: {
       borderColors: ["#fc1da7", "#fba506"],
       borderWidth: "2px"
@@ -156,10 +154,20 @@ module.exports = {
           colour: "#555555",
           label: "none"
         },
-        "~/Documents/GitHub/**": {
+        "~/Documents/GitHub/": {
           icon: "~/Documents/GitHub/dotfiles/hyper/GitHub-Light@2x.png",
           iconPosition: "center",
-          colour: "#555555",
+          label: "none"
+        },
+        "~/Documents/GitHub/!(biteable-*)/**": {
+          icon: "~/Documents/GitHub/dotfiles/hyper/GitHub-Light@2x.png",
+          iconPosition: "center",
+          label: "none"
+        },
+        "~/Documents/GitHub/biteable-*/**": {
+          icon: "~/Documents/GitHub/dotfiles/hyper/biteable@2x.png",
+          iconPosition: "center",
+          colour: "#1be9b6",
           label: "none"
         }
       }
