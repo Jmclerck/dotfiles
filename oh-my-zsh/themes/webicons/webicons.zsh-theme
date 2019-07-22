@@ -141,22 +141,6 @@ function __versions() {
     fi
   fi
 
-  if [[ $THEME_NPM_VERSION != false ]]; then
-    npmVersion=$(npm --version) &> /dev/null
-
-    if [[ -n $npmVersion ]]; then
-      icons="$icons$red  $npmVersion"
-    fi
-  fi
-
-  if [[ $THEME_YARN_VERSION != false ]]; then
-    yarnVersion=$(yarn --version) &> /dev/null
-
-    if [[ -n $yarnVersion ]]; then
-      icons="$icons$blue  $yarnVersion"
-    fi
-  fi
-
   if [[ $THEME_NODE_VERSION != false ]]; then
     nodeVersion=$(npm config get node-version) &> /dev/null
 
@@ -165,12 +149,16 @@ function __versions() {
     fi
   fi
 
-  if [[ $THEME_PYTHON_VERSION != false ]]; then
-    pythonVersion=$(python --version) &> /dev/null
+  if [[ $THEME_NPM_VERSION != false ]]; then
+    npmVersion=$(npm --version) &> /dev/null
 
-    if [[ -z $pythonVersion ]]; then
-      pythonVersion=$(python3 --version) &> /dev/null
+    if [[ -n $npmVersion ]]; then
+      icons="$icons$red  $npmVersion"
     fi
+  fi
+
+  if [[ $THEME_PYTHON_VERSION != false ]]; then
+    pythonVersion=$(python --version | grep -o "\d*\.\d*\.\d*") &> /dev/null
 
     if [[ -n $pythonVersion ]]; then
       icons="$icons$yellow  $pythonVersion"
@@ -182,6 +170,14 @@ function __versions() {
 
     if [[ -n $rubyVerison ]]; then
       icons="$icons$red  $rubyVerison"
+    fi
+  fi
+
+  if [[ $THEME_YARN_VERSION != false ]]; then
+    yarnVersion=$(yarn --version) &> /dev/null
+
+    if [[ -n $yarnVersion ]]; then
+      icons="$icons$blue  $yarnVersion"
     fi
   fi
 
