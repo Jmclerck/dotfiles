@@ -139,7 +139,7 @@ module.exports = {
     webGLRenderer: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
-    windowSize: [768, 512],
+    windowSize: [1024, 640],
 
     hyperBorder: {
       borderColors: ["#fc1da7", "#fba506"],
