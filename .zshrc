@@ -3,7 +3,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export NVS_HOME="$HOME/.nvs"
 export UP_DATA_TERMINAL_APP="co.zeit.Hyper"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -114,6 +113,7 @@ zplug "plugins/rust", from:oh-my-zsh
 zplug "plugins/thefuck", from:oh-my-zsh
 zplug "plugins/yarn", from:oh-my-zsh
 zplug "plugins/z", from:oh-my-zsh
+zplug "$ZSH_CUSTOM/plugins/fnm", from:local
 zplug "$ZSH_CUSTOM/plugins/up-data", from:local
 
 if ! zplug check --verbose; then
@@ -136,10 +136,6 @@ export THEME_RUBY_VERSION=true
 export THEME_YARN_VERSION=false
 export THEME_POWER_MONITOR=true
 export VIRTUAL_ENV_DISABLE_PROMPT=true
-
-[ -f $HOME/.nvs/nvs.sh ] && source $HOME/.nvs/nvs.sh
-[ -f $HOME/.ruby-version ] && chruby $(cat $HOME/.ruby-version)
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 source ~/.python/bin/activate
 
