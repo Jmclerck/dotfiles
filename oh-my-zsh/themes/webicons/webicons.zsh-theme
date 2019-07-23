@@ -18,8 +18,8 @@ local resetColor="%{$reset_color%}"
 
 ___power=("" "" "" "" "")
 ___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$green")
-___prefix=("" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "")
-___prefix_colours=("$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$blue" "$blue" "$blue" "$blue" "$blue" "$blue" "$blue" "$green" "$green" "$magenta" "$orange" "$orange" "$orange" "$orange" "$magenta" "$magenta" "$magenta" "$magenta" "$red" "$red" "$yellow" "$yellow")
+___prefix=("" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "")
+___prefix_colours=("$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$blue" "$blue" "$blue" "$blue" "$blue" "$blue" "$cyan" "$green" "$green" "$green" "$magenta" "$orange" "$orange" "$orange" "$orange" "$magenta" "$magenta" "$magenta" "$magenta" "$red" "$red" "$yellow" "$yellow")
 
 function __iconography() {
   local index=$(( $RANDOM % ${#___prefix[@]} + 1 ))
@@ -177,7 +177,7 @@ function __versions() {
     yarnVersion=$(yarn --version) &> /dev/null
 
     if [[ -n $yarnVersion ]]; then
-      icons="$icons$blue  $yarnVersion"
+      icons="$icons$cyan  $yarnVersion"
     fi
   fi
 
