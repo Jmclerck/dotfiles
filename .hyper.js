@@ -148,27 +148,29 @@ module.exports = {
 
     touchbarSwitcher: {
       tabs: {
-        "~/**": {
-          icon: "",
-          iconPosition: "center",
-          colour: "#555555",
-          label: "none"
+        "~/Documents/": {
+          colour: "#beffbe",
+          colourEffect: {
+            rotate: 90
+          },
+          icon: "🏠",
+          label: "directory"
         },
         "~/Documents/GitHub/": {
-          icon: "~/Documents/GitHub/dotfiles/hyper/GitHub-Light@2x.png",
-          iconPosition: "center",
-          label: "none"
-        },
-        "~/Documents/GitHub/!(biteable-*)/**": {
-          icon: "~/Documents/GitHub/dotfiles/hyper/GitHub-Light@2x.png",
-          iconPosition: "center",
-          label: "none"
+          colour: "#ffffff",
+          colourEffect: {
+            darken: 0.5
+          },
+          icon: "~/Documents/GitHub/dotfiles/hyper/GitHub@2x.png",
+          label: "directory"
         },
         "~/Documents/GitHub/biteable-*/**": {
-          icon: "~/Documents/GitHub/dotfiles/hyper/biteable@2x.png",
-          iconPosition: "center",
           colour: "#1be9b6",
-          label: "none"
+          colourEffect: {
+            rotate: 90
+          },
+          icon: "~/Documents/GitHub/dotfiles/hyper/biteable@2x.png",
+          label: "directory"
         }
       }
     }
