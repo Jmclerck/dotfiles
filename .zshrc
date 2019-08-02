@@ -125,6 +125,7 @@ zplug "plugins/rails", from:oh-my-zsh
 zplug "plugins/ruby", from:oh-my-zsh
 zplug "plugins/rust", from:oh-my-zsh
 zplug "plugins/thefuck", from:oh-my-zsh
+zplug "plugins/wd", from:oh-my-zsh
 zplug "plugins/yarn", from:oh-my-zsh
 zplug "plugins/z", from:oh-my-zsh
 zplug "$ZSH_CUSTOM/plugins/fnm", from:local
