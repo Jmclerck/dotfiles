@@ -182,7 +182,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-pane", "hyperborder", "hyperpower"],
+  plugins: ["hyper-pane", "hyper-search", "hyperborder", "hyperpower"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
