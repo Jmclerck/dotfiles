@@ -85,7 +85,7 @@ function main() {
   fi
 
   if [[ $THEME_NPM_UPDATE != false ]]; then
-    local list=$(npm outdated -g --json=true | jq 'keys' | sed -E 's/[^a-z\-]//g' | sed '/^$/d' 2> /dev/null)
+    local list=$(npm outdated -g --json=true | jq 'keys' | sed -E 's/[^a-z\@\/\-]//g' | sed '/^$/d' 2> /dev/null)
     local npm=$(echo $list | sed '/^$/d'| wc -l | tr -d ' ')
 
     if [[ $npm -eq 1 ]]; then
