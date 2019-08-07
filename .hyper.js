@@ -148,7 +148,7 @@ module.exports = {
 
     touchbarSwitcher: {
       tabs: {
-        "~/Documents/": {
+        "~/Documents/**": {
           colour: "#beffbe",
           colourEffect: {
             rotate: 90
@@ -156,7 +156,7 @@ module.exports = {
           icon: "🏠",
           label: "directory"
         },
-        "~/Documents/GitHub/": {
+        "~/Documents/GitHub/**": {
           colour: "#ffffff",
           colourEffect: {
             darken: 0.5
