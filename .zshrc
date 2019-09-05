@@ -93,6 +93,7 @@ source $ZSH/oh-my-zsh.sh
 export THEME_BREW_UPDATE=true
 export THEME_NPM_UPDATE=true
 export THEME_GIT_STATUS=true
+export THEME_DENO_VERSION=true
 export THEME_DOCKER_VERSION=false
 export THEME_NODE_VERSION=true
 export THEME_NPM_VERSION=false

@@ -18,8 +18,8 @@ local resetColor="%{$reset_color%}"
 
 ___power=("" "" "" "" "")
 ___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$green")
-___prefix=("" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "")
-___prefix_colours=("$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$blue" "$blue" "$blue" "$blue" "$blue" "$blue" "$cyan" "$green" "$green" "$green" "$orange" "$orange" "$orange" "$orange" "$magenta" "$magenta" "$magenta" "$magenta" "$magenta" "$magenta" "$red" "$red" "$yellow" "$yellow")
+___prefix=("" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "")
+___prefix_colours=("$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$blue" "$blue" "$blue" "$blue" "$blue" "$blue" "$cyan" "$green" "$green" "$green" "$orange" "$orange" "$orange" "$orange" "$magenta" "$magenta" "$magenta" "$magenta" "$magenta" "$magenta" "$red" "$red" "$yellow" "$yellow")
 
 function __iconography() {
   local index=$(( $RANDOM % ${#___prefix[@]} + 1 ))
@@ -133,8 +133,16 @@ function __stat() {
 function __versions() {
   local icons=''
 
+  if [[ $THEME_DENO_VERSION != false ]]; then
+    denoVersion=$(deno --version | rg -o "deno: (\d*\.\d*\.\d*)" -r '$1') &> /dev/null
+
+    if [[ -n $denoVersion ]]; then
+      icons="$icons$resetColor  $denoVersion"
+    fi
+  fi
+
   if [[ $THEME_DOCKER_VERSION != false ]]; then
-    dockerVersion=$(docker --version | grep -o "\d*\.\d*\.\d*") &> /dev/null
+    dockerVersion=$(docker --version | rg -o "\d*\.\d*\.\d*") &> /dev/null
 
     if [[ -n $dockerVersion ]]; then
       icons="$icons$blue  $dockerVersion"
