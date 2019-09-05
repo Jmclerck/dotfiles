@@ -1,10 +1,12 @@
 dbaeumer.vscode-eslint
-eamodio.gitlens
 esbenp.prettier-vscode
+firefox-devtools.vscode-firefox-debug
 GitHub.vscode-pull-request-github
+glitch.glitch
 johnpapa.vscode-peacock
 karigari.chat
 ms-azuretools.vscode-docker
+ms-edgedevtools.vscode-edge-devtools
 ms-ossdata.vscode-postgresql
 ms-vscode-remote.remote-containers
 ms-vscode-remote.remote-ssh
@@ -15,7 +17,8 @@ ms-vscode-remote.vscode-remote-extensionpack
 ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-audio
 ms-vsliveshare.vsliveshare-pack
-shinnn.stylelint
+msjsdiag.debugger-for-chrome
+msjsdiag.debugger-for-edge
 streetsidesoftware.code-spell-checker
 VisualStudioExptTeam.vscodeintellicode
 WallabyJs.quokka-vscode
