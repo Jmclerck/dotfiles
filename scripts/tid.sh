@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-csr=$(csrutil status | grep -o enabled)
+csr=$(csrutil status | rg -o enabled)
 
 if [[ -z $csr ]]; then
   # Add TouchID as sudo authentication method
