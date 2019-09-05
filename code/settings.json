@@ -47,6 +47,7 @@
   "cSpell.language": "en-GB",
   "cSpell.userWords": [
     "Macbook",
+    "airbrake",
     "apple",
     "browserslist",
     "builtins",
@@ -55,6 +56,7 @@
     "clerck",
     "com",
     "corejs",
+    "crossorigin",
     "dialog",
     "dotfiles",
     "edilis",
@@ -103,9 +105,9 @@
     "touchbar",
     "unmount",
     "versioning",
+    "webp",
     "workflow"
   ],
-  "debug.node.autoAttach": "on",
   "diffEditor.ignoreTrimWhitespace": true,
   "editor.cursorBlinking": "expand",
   "editor.foldingStrategy": "indentation",
@@ -205,8 +207,7 @@
   },
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
-  "gitlens.mode.active": "zen",
-  "npm.enableScriptExplorer": true,
+  "glitch.token": "a4a238be-f1c5-4e08-b3aa-4f412b083dcb",
   "peacock.favoriteColors": [
     {
       "name": "Angular Red",
@@ -273,6 +274,7 @@
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.shell.osx": "/bin/zsh",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "webhint.enableTelemetry": "enabled",
   "window.closeWhenEmpty": true,
   "window.title": "${rootName}${separator}${activeEditorShort} ${dirty}",
   "window.zoomLevel": 0,
