@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-percent=$(pmset -g batt | rg -o "[0-9]*%" | rg -o "[0-9]*")
+percent=$(pmset -g batt | /usr/local/bin/rg -o "[0-9]*%" | /usr/local/bin/rg -o "[0-9]*")
 percentShown=$(defaults read com.apple.menuextra.battery ShowPercent)
 
 # cleanup logs
