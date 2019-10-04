@@ -13,18 +13,18 @@ local bRed="%{$fg_bold[red]%}"
 local bYellow="%{$fg_bold[yellow]%}"
 
 local grey="%{$FG[008]%}"
-local orange="%{$FG[202]%}"
+local orange="%{$FG[009]%}"
 local resetColor="%{$reset_color%}"
 
 ___power=("" "" "" "" "")
-
 ___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$green")
 
 ___prefix=(
-  "" "" "" "" "" ""
-  "" "" "" "" "" ""
-  "" "" "" "" "" "" ""
-  "" "" "" ""
+  "" "" "" "" ""
+  "" "" "" "" ""
+  "" "" "" "" "" ""
+  ""
+  "" ""
   "" "" "" ""
   "" "" "" "" "" ""
   "" "" ""
@@ -32,10 +32,11 @@ ___prefix=(
 )
 
 ___prefix_colours=(
-  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
-  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
-  "$blue" "$blue" "$blue" "$blue" "$blue" "$blue" "$blue"
-  "$green" "$green" "$green" "$green"
+  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
+  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
+  "$blue" "$blue" "$blue" "$blue" "$blue" "$blue"
+  "$cyan"
+  "$green" "$green"
   "$orange" "$orange" "$orange" "$orange"
   "$magenta" "$magenta" "$magenta" "$magenta" "$magenta" "$magenta"
   "$red" "$red" "$red"
