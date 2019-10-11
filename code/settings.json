@@ -114,6 +114,7 @@
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
   "problems.decorations.enabled": true,
+  "scm.defaultViewMode": "tree",
   "search.exclude": {
     "**/.nyc_output/**": true,
     "**/bower_components/**": true,
@@ -129,9 +130,13 @@
   "window.title": "${rootName}${separator}${activeEditorShort} ${dirty}",
   "window.zoomLevel": 0,
   "workbench.colorCustomizations": {
-    "statusBar.background": "#16825d",
-    "statusBar.debuggingBackground": "#407886",
-    "statusBar.noFolderBackground": "#7f007f"
+    "activityBar.background": "#24292e",
+    "activityBar.foreground": "#f3f3f3",
+    "activityBar.inactiveForeground": "#a3a5a8",
+    "activityBarBadge.background": "#d64926",
+    "activityBarBadge.foreground": "#f3f3f3",
+    "statusBar.background": "#24292e",
+    "statusBar.foreground": "#f3f3f3"
   },
   "workbench.editor.revealIfOpen": true,
   "workbench.tree.indent": 16,
