@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 brew bundle dump --force
 
 code --list-extensions > vscode.extensions

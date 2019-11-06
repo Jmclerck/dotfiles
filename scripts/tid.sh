@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 csr=$(csrutil status | rg -o enabled)
 
 if [[ -z $csr ]]; then

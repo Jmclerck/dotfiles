@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Copy WebIcons font (can't be symlinked, since macOS 10.13)
 rm ~/Library/Fonts/webicons.ttf 2&> /dev/null
 ln -s "$(pwd)/bash-it/themes/font/webicons.ttf" ~/Library/Fonts/
