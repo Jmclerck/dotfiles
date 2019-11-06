@@ -141,5 +141,3 @@ fi
 zplug load
 
 ssh-add -K ~/.ssh/id_rsa 2&> /dev/null
-# fnm
-eval "$(fnm env --multi)"
