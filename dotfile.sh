@@ -16,4 +16,4 @@ brew bundle cleanup --force
 # install brew apps
 brew bundle
 
-for file in "symlinks" "plugins" "macOS" "tid" "builder"; do "./scripts/${file}.sh" &> /dev/null; done
+for file in "symlinks" "plugins" "macOS" "tid"; do "./scripts/${file}.sh" &> /dev/null; done
