@@ -141,3 +141,6 @@ fi
 zplug load
 
 ssh-add -K ~/.ssh/id_rsa 2&> /dev/null
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
