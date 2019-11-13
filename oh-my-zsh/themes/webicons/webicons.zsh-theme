@@ -82,7 +82,7 @@ function __stat() {
         icons="$icons $magenta $numberOfStashes"
       fi
 
-      local untracked=$(git status --porcelain | rg -o '^??\s' |  tr -d ' ' | tr -d '\n')
+      local untracked=$(git status --porcelain | rg -o '^\?\?\s' |  tr -d ' ' | tr -d '\n')
       local numberOfUntracked=${#untracked}
       if [[ $numberOfUntracked -gt 0 ]]; then
         icons="$icons $orange $(($numberOfUntracked / 2))"
