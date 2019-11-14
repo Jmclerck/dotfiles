@@ -100,6 +100,7 @@ export THEME_PYTHON_VERSION=false
 export THEME_RUBY_VERSION=true
 export THEME_YARN_VERSION=true
 export THEME_POWER_MONITOR=true
+export UP_DATA_TERMINAL_APP='com.googlecode.iterm2'
 export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 source ~/.python/bin/activate
