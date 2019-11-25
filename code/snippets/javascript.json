@@ -44,12 +44,12 @@
     "prefix": "jst",
   },
   "Insert Debugger Statement": {
-    "body": "debugger; // eslint-disable-line",
+    "body": "debugger; // eslint-disable-line:no-debugger",
     "description": "Insert debug breakpoint",
     "prefix": "dbg",
   },
   "Insert Log Statement": {
-    "body": "console.log($1); // eslint-disable-line",
+    "body": "console.log($1); // eslint-disable-line:no-console",
     "description": "Insert Console Log statement",
     "prefix": "log",
   },
