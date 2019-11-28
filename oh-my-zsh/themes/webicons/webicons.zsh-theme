@@ -156,7 +156,7 @@ function __versions() {
   local icons=''
 
   if [[ $THEME_DENO_VERSION != false ]]; then
-    denoVersion=$(deno --version | rg -o "deno: (\d*\.\d*\.\d*)" -r '$1') &> /dev/null
+    denoVersion=$(deno --version | rg -o "deno (\d*\.\d*\.\d*)" -r '$1') &> /dev/null
 
     if [[ -n $denoVersion ]]; then
       icons="$icons$resetColor  $denoVersion"
