@@ -7,8 +7,3 @@ done
 for i in $(cat vscode.extensions); do
   code --install-extension $i
 done
-
-#  install npm modules
-for i in $(cat npm.modules); do
-  npm i -g $i
-done
