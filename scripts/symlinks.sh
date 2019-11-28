@@ -13,7 +13,3 @@ ln -s "$(pwd)/code/settings.json" ~/Library/Application\ Support/Code/User/setti
 # Symlink Visual Studio Code snippets
 rm -rf ~/Library/Application\ Support/Code/User/snippets 2&> /dev/null
 ln -s "$(pwd)/code/snippets" ~/Library/Application\ Support/Code/User/snippets
-
-# Symlink Hyper preferences
-rm ~/.hyper.js 2&> /dev/null
-ln -s "$(pwd)/.hyper.js" ~/.hyper.js
