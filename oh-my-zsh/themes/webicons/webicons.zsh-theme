@@ -16,31 +16,33 @@ local grey="%{$FG[008]%}"
 local orange="%{$FG[009]%}"
 local resetColor="%{$reset_color%}"
 
-___power=("" "" "" "" "")
+
+___power=("" "" "" "" "" "")
 ___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$green")
 
 ___prefix=(
-  "" "" "" "" ""
-  "" "" "" "" ""
-  "" "" "" "" "" ""
-  ""
-  "" ""
-  "" "" "" ""
-  "" "" "" "" "" ""
-  "" "" ""
-  "" ""
+  "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+  "" "" "" "" "" ""
+  "" "" "" ""
+  ""
+  "" "" "" "" ""
+  "" "" "" "" "" ""
+  "" ""
+  "" "" ""
+  "" ""
 )
 
 ___prefix_colours=(
-  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
-  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
-  "$blue" "$blue" "$blue" "$blue" "$blue" "$blue"
-  "$cyan"
-  "$green" "$green"
+  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
+  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
+  "$red" "$red" "$red" "$red" "$red" "$red"
   "$orange" "$orange" "$orange" "$orange"
+  "$green"
+  "$blue" "$blue" "$blue" "$blue" "$blue"
   "$magenta" "$magenta" "$magenta" "$magenta" "$magenta" "$magenta"
-  "$red" "$red" "$red"
   "$yellow" "$yellow"
+  "$green" "$green" "$green"
+  "$cyan" "$cyan"
 )
 
 function __iconography() {
@@ -159,7 +161,7 @@ function __versions() {
     denoVersion=$(deno --version | rg -o "deno (\d*\.\d*\.\d*)" -r '$1') &> /dev/null
 
     if [[ -n $denoVersion ]]; then
-      icons="$icons$resetColor  $denoVersion"
+      icons="$icons$resetColor  $denoVersion"
     fi
   fi
 
@@ -175,7 +177,7 @@ function __versions() {
     nodeVersion=$(npm config get node-version) &> /dev/null
 
     if [[ -n $nodeVersion ]]; then
-      icons="$icons$green  $nodeVersion"
+      icons="$icons$green  $nodeVersion"
     fi
   fi
 
@@ -183,7 +185,7 @@ function __versions() {
     npmVersion=$(npm --version) &> /dev/null
 
     if [[ -n $npmVersion ]]; then
-      icons="$icons$red  $npmVersion"
+      icons="$icons$red  $npmVersion"
     fi
   fi
 
@@ -191,7 +193,7 @@ function __versions() {
     pythonVersion=$(python --version | rg -o "\d*\.\d*\.\d*") &> /dev/null
 
     if [[ -n $pythonVersion ]]; then
-      icons="$icons$yellow  $pythonVersion"
+      icons="$icons$yellow  $pythonVersion"
     fi
   fi
 
@@ -199,7 +201,7 @@ function __versions() {
     rubyVerison=$(ruby --version | rg -o "\d*\.\d*\.\d*") &> /dev/null
 
     if [[ -n $rubyVerison ]]; then
-      icons="$icons$red  $rubyVerison"
+      icons="$icons$red  $rubyVerison"
     fi
   fi
 
@@ -207,7 +209,7 @@ function __versions() {
     yarnVersion=$(yarn --version) &> /dev/null
 
     if [[ -n $yarnVersion ]]; then
-      icons="$icons$cyan  $yarnVersion"
+      icons="$icons$cyan  $yarnVersion"
     fi
   fi
 
