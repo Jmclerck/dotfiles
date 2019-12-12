@@ -15,7 +15,7 @@ function main() {
     if [[ $casks -eq 1 ]]; then
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -appIcon ./icons/homebrew.png \
         -group "com.updata.cask" \
         -message $caskList \
         -sound submarine \
@@ -26,7 +26,7 @@ function main() {
 
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -appIcon ./icons/homebrew.png \
         -group "com.updata.cask" \
         -message $joined \
         -sound submarine \
@@ -37,7 +37,7 @@ function main() {
 
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -appIcon ./icons/homebrew.png \
         -group "com.updata.cask" \
         -message $joined \
         -sound submarine \
@@ -51,7 +51,7 @@ function main() {
     if [[ $brews -eq 1 ]]; then
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -appIcon ./icons/homebrew.png \
         -group "com.updata.brew" \
         -message $brewList \
         -sound submarine \
@@ -62,7 +62,7 @@ function main() {
 
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -appIcon ./icons/homebrew.png \
         -group "com.updata.brew" \
         -message $joined \
         -sound submarine \
@@ -73,7 +73,7 @@ function main() {
 
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon $ZSH_CUSTOM/plugins/up-data/icons/homebrew.png \
+        -appIcon ./icons/homebrew.png \
         -group "com.updata.brew" \
         -message $joined \
         -sound submarine \
@@ -89,7 +89,7 @@ function main() {
     if [[ $npm -eq 1 ]]; then
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon $ZSH_CUSTOM/plugins/up-data/icons/npm.png \
+        -appIcon ./icons/npm.png \
         -group "com.updata.npm" \
         -message $list \
         -sound submarine \
@@ -100,7 +100,7 @@ function main() {
 
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon $ZSH_CUSTOM/plugins/up-data/icons/npm.png \
+        -appIcon ./icons/npm.png \
         -group "com.updata.npm" \
         -message $joined \
         -sound submarine \
@@ -111,7 +111,7 @@ function main() {
 
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon $ZSH_CUSTOM/plugins/up-data/icons/npm.png \
+        -appIcon ./icons/npm.png \
         -group "com.updata.npm" \
         -message $joined \
         -sound submarine \
