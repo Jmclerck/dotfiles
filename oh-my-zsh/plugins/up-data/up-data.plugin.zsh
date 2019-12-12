@@ -1,6 +1,4 @@
-#!/bin/zsh
-
-source $ZPLUG_HOME/repos/mafredri/zsh-async/async.zsh
+source "$(antibody path mafredri/zsh-async)/async.zsh"
 
 if [[ -z $UP_DATA_TERMINAL_APP ]]; then
   export UP_DATA_TERMINAL_APP='com.apple.terminal'

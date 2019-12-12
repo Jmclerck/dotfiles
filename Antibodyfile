@@ -1,0 +1,26 @@
+mafredri/zsh-async
+
+robbyrussell/oh-my-zsh path:plugins/chruby
+robbyrussell/oh-my-zsh path:plugins/docker
+robbyrussell/oh-my-zsh path:plugins/gem
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/node
+robbyrussell/oh-my-zsh path:plugins/npm
+robbyrussell/oh-my-zsh path:plugins/osx
+robbyrussell/oh-my-zsh path:plugins/pip
+robbyrussell/oh-my-zsh path:plugins/python
+robbyrussell/oh-my-zsh path:plugins/rails
+robbyrussell/oh-my-zsh path:plugins/ruby
+robbyrussell/oh-my-zsh path:plugins/rust
+robbyrussell/oh-my-zsh path:plugins/thefuck
+robbyrussell/oh-my-zsh path:plugins/wd
+robbyrussell/oh-my-zsh path:plugins/yarn
+robbyrussell/oh-my-zsh path:plugins/z
+
+Jmclerck/dotfiles path:oh-my-zsh/plugins/fnm
+Jmclerck/dotfiles path:oh-my-zsh/plugins/up-data
+Jmclerck/dotfiles path:oh-my-zsh/themes/webicons
+
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-syntax-highlighting

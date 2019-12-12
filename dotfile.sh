@@ -1,9 +1,6 @@
 # zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
 
-# zplug
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-
 # yarn
 curl -o- -L https://yarnpkg.com/install.sh | bash
 
@@ -17,3 +14,7 @@ brew bundle cleanup --force
 brew bundle
 
 for file in "symlinks" "plugins" "macOS" "tid"; do "./scripts/${file}.sh" &> /dev/null; done
+# antibody
+antibody bundle < Antibodyfile > ~/.zsh_plugins.sh
+
+for file in "symlinks" "plugins" "macOS" "touch"; do "./scripts/${file}.sh" &> /dev/null; done

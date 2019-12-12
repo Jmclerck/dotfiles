@@ -105,41 +105,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 source ~/.python/bin/activate
 
-export ZPLUG_HOME="$HOME/.zplug"
-source $ZPLUG_HOME/init.zsh
-
-zplug "zplug/zplug", hook-build:'zplug --self-manage'
-zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
-zplug "zsh-users/zsh-autosuggestions", from:"github", use:"zsh-autosuggestions.zsh"
-zplug "zsh-users/zsh-completions", from:"github", use:"zsh-completions.plugin.zsh"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "plugins/chruby", from:oh-my-zsh
-zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/gem", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/node", from:oh-my-zsh
-zplug "plugins/npm", from:oh-my-zsh
-zplug "plugins/osx", from:oh-my-zsh
-zplug "plugins/pip", from:oh-my-zsh
-zplug "plugins/python", from:oh-my-zsh
-zplug "plugins/rails", from:oh-my-zsh
-zplug "plugins/ruby", from:oh-my-zsh
-zplug "plugins/rust", from:oh-my-zsh
-zplug "plugins/thefuck", from:oh-my-zsh
-zplug "plugins/wd", from:oh-my-zsh
-zplug "plugins/yarn", from:oh-my-zsh
-zplug "plugins/z", from:oh-my-zsh
-zplug "$ZSH_CUSTOM/plugins/fnm", from:local
-zplug "$ZSH_CUSTOM/plugins/up-data", from:local
-
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-fi
-
-zplug load
+source ~/.zsh_plugins.sh
 
 ssh-add -K ~/.ssh/id_rsa 2&> /dev/null
 
