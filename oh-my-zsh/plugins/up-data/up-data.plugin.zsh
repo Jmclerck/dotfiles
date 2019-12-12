@@ -8,6 +8,8 @@ function main() {
   local title='Up-data ☝️'
 
   if [[ $THEME_BREW_UPDATE != false ]]; then
+    local icon="$(antibody path Jmclerck/dotfiles)/oh-my-zsh/plugins/up-data/icons/homebrew.png"
+
     brew update > /dev/null 2>&1
 
     local caskList=$(brew cask outdated 2> /dev/null)
@@ -15,7 +17,7 @@ function main() {
     if [[ $casks -eq 1 ]]; then
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon ./icons/homebrew.png \
+        -appIcon $icon \
         -group "com.updata.cask" \
         -message $caskList \
         -sound submarine \
@@ -26,7 +28,7 @@ function main() {
 
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon ./icons/homebrew.png \
+        -appIcon $icon \
         -group "com.updata.cask" \
         -message $joined \
         -sound submarine \
@@ -37,7 +39,7 @@ function main() {
 
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon ./icons/homebrew.png \
+        -appIcon $icon \
         -group "com.updata.cask" \
         -message $joined \
         -sound submarine \
@@ -51,7 +53,7 @@ function main() {
     if [[ $brews -eq 1 ]]; then
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon ./icons/homebrew.png \
+        -appIcon $icon \
         -group "com.updata.brew" \
         -message $brewList \
         -sound submarine \
@@ -62,7 +64,7 @@ function main() {
 
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon ./icons/homebrew.png \
+        -appIcon $icon \
         -group "com.updata.brew" \
         -message $joined \
         -sound submarine \
@@ -73,7 +75,7 @@ function main() {
 
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon ./icons/homebrew.png \
+        -appIcon $icon \
         -group "com.updata.brew" \
         -message $joined \
         -sound submarine \
@@ -83,13 +85,14 @@ function main() {
   fi
 
   if [[ $THEME_NPM_UPDATE != false ]]; then
+    local icon="$(antibody path Jmclerck/dotfiles)/oh-my-zsh/plugins/up-data/icons/npm.png"
     local list=$(npm outdated -g --json=true | jq 'keys' | sed -E 's/[^a-z\@\/\-]//g' | sed '/^$/d' 2> /dev/null)
     local npm=$(echo $list | sed '/^$/d'| wc -l | tr -d ' ')
 
     if [[ $npm -eq 1 ]]; then
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon ./icons/npm.png \
+        -appIcon $icon \
         -group "com.updata.npm" \
         -message $list \
         -sound submarine \
@@ -100,7 +103,7 @@ function main() {
 
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon ./icons/npm.png \
+        -appIcon $icon \
         -group "com.updata.npm" \
         -message $joined \
         -sound submarine \
@@ -111,7 +114,7 @@ function main() {
 
       terminal-notifier \
         -activate $UP_DATA_TERMINAL_APP \
-        -appIcon ./icons/npm.png \
+        -appIcon $icon \
         -group "com.updata.npm" \
         -message $joined \
         -sound submarine \
