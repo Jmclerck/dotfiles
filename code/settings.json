@@ -114,7 +114,9 @@
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
   "problems.decorations.enabled": true,
+  "problems.showCurrentInStatus": true,
   "scm.defaultViewMode": "tree",
+  "search.enableSearchEditorPreview": true,
   "search.exclude": {
     "**/.nyc_output/**": true,
     "**/bower_components/**": true,
