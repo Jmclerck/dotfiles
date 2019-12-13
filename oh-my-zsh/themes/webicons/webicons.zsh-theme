@@ -5,45 +5,37 @@ local magenta="%{$fg[magenta]%}"
 local red="%{$fg[red]%}"
 local yellow="%{$fg[yellow]%}"
 
-local bBlue="%{$fg_bold[blue]%}"
-local bCyan="%{$fg_bold[cyan]%}"
-local bGreen="%{$fg_bold[green]%}"
-local bMagenta="%{$fg_bold[magenta]%}"
-local bRed="%{$fg_bold[red]%}"
-local bYellow="%{$fg_bold[yellow]%}"
-
 local grey="%{$FG[008]%}"
 local orange="%{$FG[009]%}"
 local resetColor="%{$reset_color%}"
 
 
 ___power=("" "" "" "" "" "")
-___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$green")
-
+___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$yellow" "$green")
 ___prefix=(
-  "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+  "" "" "" "" "" "" "" "" "" "" "" "" ""
   "" "" "" "" "" ""
   "" "" "" ""
   ""
   "" "" "" "" ""
   "" "" "" "" "" ""
-  "" ""
+  "" "" ""
   "" "" ""
   "" ""
 )
-
 ___prefix_colours=(
   "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
-  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
+  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
   "$red" "$red" "$red" "$red" "$red" "$red"
   "$orange" "$orange" "$orange" "$orange"
   "$green"
   "$blue" "$blue" "$blue" "$blue" "$blue"
   "$magenta" "$magenta" "$magenta" "$magenta" "$magenta" "$magenta"
-  "$yellow" "$yellow"
+  "$yellow" "$yellow" "$yellow"
   "$green" "$green" "$green"
   "$cyan" "$cyan"
 )
+
 
 function __iconography() {
   local index=$(( $RANDOM % ${#___prefix[@]} + 1 ))
