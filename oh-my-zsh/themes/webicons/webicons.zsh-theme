@@ -161,7 +161,7 @@ function __versions() {
     dockerVersion=$(docker --version | rg -o "\d*\.\d*\.\d*") &> /dev/null
 
     if [[ -n $dockerVersion ]]; then
-      icons="$icons$blue  $dockerVersion"
+      icons="$icons$cyan  $dockerVersion"
     fi
   fi
 
