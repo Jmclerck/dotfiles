@@ -15,6 +15,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "diffEditor.ignoreTrimWhitespace": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   "editor.cursorBlinking": "expand",
   "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "Operator Mono SSm, Monaco, monospace, webicons",
@@ -91,7 +94,6 @@
     ]
   },
   "eslint.alwaysShowStatus": true,
-  "eslint.autoFixOnSave": true,
   "explorer.openEditors.visible": 0,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 2500,
