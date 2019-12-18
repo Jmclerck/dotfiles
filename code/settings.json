@@ -4,6 +4,7 @@
     "source.fixAll": true
   },
   "editor.cursorBlinking": "expand",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "Operator Mono SSm, Monaco, monospace, webicons",
   "editor.fontSize": 16,
