@@ -79,7 +79,6 @@
       }
     ]
   },
-  "eslint.alwaysShowStatus": true,
   "explorer.openEditors.visible": 0,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 2500,
