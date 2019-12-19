@@ -7,6 +7,7 @@ local yellow="%{$fg[yellow]%}"
 
 local grey="%{$FG[008]%}"
 local orange="%{$FG[009]%}"
+local purple="%{$FG[093]%}"
 local resetColor="%{$reset_color%}"
 
 
@@ -18,7 +19,8 @@ ___prefix=(
   "" "" "" ""
   ""
   "" "" "" "" ""
-  "" "" "" "" "" ""
+  "" ""
+  "" "" "" "" ""
   "" "" ""
   "" "" ""
   "" ""
@@ -30,7 +32,8 @@ ___prefix_colours=(
   "$orange" "$orange" "$orange" "$orange"
   "$green"
   "$blue" "$blue" "$blue" "$blue" "$blue"
-  "$magenta" "$magenta" "$magenta" "$magenta" "$magenta" "$magenta"
+  "$magenta" "$magenta"
+  "$purple" "$purple" "$purple" "$purple" "$purple"
   "$yellow" "$yellow" "$yellow"
   "$green" "$green" "$green"
   "$cyan" "$cyan"
