@@ -144,7 +144,7 @@ function __stat() {
 
       echo "$resetColor at $magenta$(git_current_branch)$icons $resetColor"
     else
-      echo "$magenta  $resetColor"
+      echo "$purple  $resetColor"
     fi
   fi
 }
