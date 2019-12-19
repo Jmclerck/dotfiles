@@ -6,7 +6,7 @@ local red="%{$fg[red]%}"
 local yellow="%{$fg[yellow]%}"
 
 local grey="%{$FG[008]%}"
-local orange="%{$FG[009]%}"
+local orange="%{$FG[208]%}"
 local purple="%{$FG[093]%}"
 local resetColor="%{$reset_color%}"
 
