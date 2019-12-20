@@ -680,7 +680,7 @@
 				<real>0.10000000149011612</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/jonathanclerck/Documents/GitHub/dotfiles/oh-my-zsh/themes/webicons/background.png</string>
+			<string>/Users/jonathanclerck/Documents/GitHub/dotfiles/oh-my-zsh/themes/webicons/backdrop.png</string>
 			<key>Background Image Mode</key>
 			<integer>2</integer>
 			<key>Badge Color</key>
@@ -1207,7 +1207,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>A8A8D75F-F1F4-4E43-917B-02BFDB11B8E9</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>113</integer>
+	<integer>114</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
