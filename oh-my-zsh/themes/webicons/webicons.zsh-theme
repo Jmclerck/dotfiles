@@ -11,8 +11,8 @@ local purple="%{$FG[093]%}"
 local resetColor="%{$reset_color%}"
 
 
-___power=("" "" "" "" "" "")
-___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$yellow" "$green")
+___power=("" "" "" "" "" "" "")
+___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$yellow" "$yellow" "$green")
 ___prefix=(
   "" "" "" "" "" "" "" "" "" "" "" "" ""
   "" "" "" "" "" ""
@@ -53,14 +53,14 @@ function __power() {
     local charging=$(echo $stat | rg -o "\scharg[ing|ed]")
     local discharging=$(echo $stat | rg -o "\sdischarging")
     local percent=$(echo $stat | rg -o "[0-9]*%" | rg -o "[0-9]*")
-    local segment=$(( ($percent / 25) + 1 ))
+    local segment=$(( ($percent / 14.3) + 1 ))
 
     local colour=${___power_colours[$segment]}
 
     if [[ -n $charging ]]; then
       local time=$(echo $stat | rg -o "[0-9]:[0-9]*")
 
-      echo "${colour}  $time"
+      echo "${colour}  $time"
     elif [[ -n $discharging ]]; then
       echo "${colour} ${___power[$segment]} $percent%%"
     fi
@@ -144,7 +144,7 @@ function __stat() {
 
       echo "$resetColor at $magenta$(git_current_branch)$icons $resetColor"
     else
-      echo "$purple  $resetColor"
+      echo "$magenta  $resetColor"
     fi
   fi
 }
