@@ -114,6 +114,8 @@ export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 source ~/.python/bin/activate
 
+source ~/.zsh_aliases.sh
+
 source ~/.zsh_plugins.sh
 
 ssh-add -K ~/.ssh/id_rsa 2&> /dev/null
