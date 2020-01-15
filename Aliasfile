@@ -1,4 +1,3 @@
 alias gcl="git clone "
 alias gs="git switch "
-alias kibana="ssh -i ~/.ssh/terraform-us-east-1.pem -N -L 5044:localhost:5044 -L 8080:logs.biteable.com:80 -L 8081:logs.biteable.com:80 ubuntu@logindexer.biteable.com &"
 alias npmi="npm install"
