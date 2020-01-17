@@ -118,6 +118,6 @@ source ~/.zsh_aliases.sh
 
 source ~/.zsh_plugins.sh
 
-ssh-add -K ~/.ssh/id_rsa 2&> /dev/null
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+ssh-add -K ~/.ssh/id_rsa 2&> /dev/null
