@@ -2,6 +2,9 @@
 
 import iterm2
 import random
+from pathlib import Path
+
+home = Path.home()
 
 async def SetPresetInSession(session):
     profile = await session.async_get_profile()
@@ -9,9 +12,9 @@ async def SetPresetInSession(session):
     if not profile:
         return
 
-    index = random.randrange(1, 4)
-
-    await profile.async_set_background_image_location(f'/Users/jonathanclerck/Documents/GitHub/dotfiles/oh-my-zsh/themes/webicons/backdrop-{index}.png')
+    path = f'{home}/Documents/GitHub/dotfiles/oh-my-zsh/themes/webicons/backdrop-{random.randrange(1, 4)}.png'
+    
+    await profile.async_set_background_image_location(path)
 
 async def main(connection):
     app = await iterm2.async_get_app(connection)
