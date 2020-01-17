@@ -14,4 +14,4 @@ antibody bundle < Antibodyfile > ~/.zsh_plugins.sh
 
 cat Aliasfile > ~/.zsh_aliases.sh
 
-for file in "symlinks" "plugins" "macOS" "touch"; do "./scripts/${file}.sh" &> /dev/null; done
+for file in "symlinks" "macOS" "touch"; do "./scripts/${file}.sh" &> /dev/null; done
