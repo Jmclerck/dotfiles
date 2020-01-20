@@ -2,6 +2,7 @@ mafredri/zsh-async
 
 robbyrussell/oh-my-zsh path:plugins/chruby
 robbyrussell/oh-my-zsh path:plugins/docker
+robbyrussell/oh-my-zsh path:plugins/extract
 robbyrussell/oh-my-zsh path:plugins/gem
 robbyrussell/oh-my-zsh path:plugins/git
 robbyrussell/oh-my-zsh path:plugins/node
