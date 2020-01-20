@@ -1,3 +1,4 @@
+alias cat="ccat"
 alias gcl="git clone "
 alias gs="git switch "
 alias npmi="npm install"
