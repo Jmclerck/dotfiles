@@ -12,6 +12,10 @@ brew bundle
 # antibody
 antibody bundle < Antibodyfile > ~/.zsh_plugins.sh
 
+# aliases
 cat Aliasfile > ~/.zsh_aliases.sh
 
-for file in "symlinks" "macOS" "touch"; do "./scripts/${file}.sh" &> /dev/null; done
+# logs directory
+mkdir logs
+
+for file in "builder" "symlinks" "macOS" "touch"; do "./scripts/${file}.sh" &> /dev/null; done
