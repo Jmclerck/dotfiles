@@ -1,10 +1,6 @@
 #!/bin/sh
 
-#  percentage.sh
-#  
-#
-#  Created by Jonathan Clerck on 27/01/2020.
-#
+# Battery indicator switch
 
 percent=$(pmset -g batt | /usr/local/bin/rg -o "[0-9]*%" | /usr/local/bin/rg -o "[0-9]*")
 percentShown=$(defaults read com.apple.menuextra.battery ShowPercent)

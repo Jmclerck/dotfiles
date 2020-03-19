@@ -1,8 +1,10 @@
-csr=$(csrutil status | rg -o enabled)
+#!/bin/sh
+
+# Add TouchID as sudo authentication method
+
 csr=$(csrutil status | /usr/local/bin/rg -o enabled)
 
 if [[ -z $csr ]]; then
-  # Add TouchID as sudo authentication method
   touch ./sudo
   sudo sed $'2i\\\nauth       sufficient     pam_tid.so\n' /etc/pam.d/sudo > ./sudo
   sudo chmod -w ./sudo

@@ -1,8 +1,6 @@
-# Symlink zshrc configuration
-rm ~/.zshrc 2&> /dev/null
-ln -s "$(pwd)/.zshrc" ~
+#!/bin/sh
 
-# Copy webicons font
+# Symlink & Copy configuration and data files
 
 ln -sf "$(pwd)/.zshrc" ~
 
