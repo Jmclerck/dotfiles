@@ -10,33 +10,19 @@ local orange="%{$FG[208]%}"
 local purple="%{$FG[093]%}"
 local resetColor="%{$reset_color%}"
 
-
-___power=("" "" "" "" "" "" "")
+___power=(" " " " " " " " " " " " " ")
 ___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$yellow" "$yellow" "$green")
 ___prefix=(
-  "" "" "" "" "" "" "" "" "" "" "" "" ""
-  "" "" "" "" "" ""
-  "" "" "" ""
-  ""
-  "" "" "" "" ""
-  "" ""
-  "" "" "" "" ""
-  "" "" ""
-  "" "" ""
-  "" ""
+" " " " " " " " " " " " " " " "
+" " " " " " " " " " " " " " " "
+" " " " " " " " " " " " " " " "
+" " " " " " " " " " " " " " " "
 )
 ___prefix_colours=(
-  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
-  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
-  "$red" "$red" "$red" "$red" "$red" "$red"
-  "$orange" "$orange" "$orange" "$orange"
-  "$green"
-  "$blue" "$blue" "$blue" "$blue" "$blue"
-  "$magenta" "$magenta"
-  "$purple" "$purple" "$purple" "$purple" "$purple"
-  "$yellow" "$yellow" "$yellow"
-  "$green" "$green" "$green"
-  "$cyan" "$cyan"
+  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
+  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
+  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
+  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
 )
 
 
@@ -60,9 +46,9 @@ function __power() {
     if [[ -n $charging ]]; then
       local time=$(echo $stat | rg -o "[0-9]:[0-9]*")
 
-      echo "${colour}  $time"
+      echo "${colour}  $time"
     elif [[ -n $discharging ]]; then
-      echo "${colour} ${___power[$segment]} $percent%%"
+      echo "${colour} ${___power[$segment]}$percent%%"
     fi
   fi
 }
@@ -76,75 +62,75 @@ function __stat() {
       local stashes=$(git stash list | rg -o '@' |  tr -d ' ' | tr -d '\n')
       local numberOfStashes=${#stashes}
       if [[ $numberOfStashes -gt 0 ]]; then
-        icons="$icons $magenta $numberOfStashes"
+        icons="$icons $magenta  $numberOfStashes"
       fi
 
       local untracked=$(git status --porcelain | rg -o '^\?\?\s' |  tr -d ' ' | tr -d '\n')
       local numberOfUntracked=${#untracked}
       if [[ $numberOfUntracked -gt 0 ]]; then
-        icons="$icons $orange $(($numberOfUntracked / 2))"
+        icons="$icons $orange  $(($numberOfUntracked / 2))"
       fi
 
       local added=$(git status --porcelain | rg -o '^\sA\s|^A\s{2}' |  tr -d ' ' | tr -d '\n')
       local numberOfAdded=${#added}
       if [[ $numberOfAdded -gt 0 ]]; then
-        icons="$icons $green $numberOfAdded"
+        icons="$icons $green  $numberOfAdded"
       fi
 
       local deleted=$(git status --porcelain | rg -o '^\sD\s|^D\s{2}' |  tr -d ' ' | tr -d '\n')
       local numberOfDeleted=${#deleted}
       if [[ $numberOfDeleted -gt 0 ]]; then
-        icons="$icons $red $numberOfDeleted"
+        icons="$icons $red  $numberOfDeleted"
       fi
 
       local modified=$(git status --porcelain | rg -o '^\sM\s|^M\s{2}' |  tr -d ' ' | tr -d '\n')
       local numberOfModified=${#modified}
       if [[ $numberOfModified -gt 0 ]]; then
-        icons="$icons $orange $numberOfModified"
+        icons="$icons $orange  $numberOfModified"
       fi
 
       local renamed=$(git status --porcelain | rg -o '^\sR\s|^R\s{2}' |  tr -d ' ' | tr -d '\n')
       local numberOfRenamed=${#renamed}
       if [[ $numberOfRenamed -gt 0 ]]; then
-        icons="$icons $green $numberOfRenamed"
+        icons="$icons $green  $numberOfRenamed"
       fi
 
       local conflicts=$(git status --porcelain | rg -o '^UU\s' |  tr -d ' ' | tr -d '\n')
       local numberOfConflicts=${#conflicts}
       if [[ $numberOfConflicts -gt 0 ]]; then
-        icons="$icons $red $(($numberOfConflicts / 2))"
+        icons="$icons $red  $(($numberOfConflicts / 2))"
       fi
 
       local staged=$(git status --porcelain |  rg -o '^A\s{2}|^D\s{2}|^M\s{2}|^R\s{2}' | tr -d ' ' | tr -d '\n')
       local numberOfStaged=${#staged}
       if [[ $numberOfStaged -gt 0 ]]; then
-        icons="$icons $green $(($numberOfStaged))"
+        icons="$icons $green $(($numberOfStaged))"
       fi
 
       local remote=$(git show-ref origin/$(git_current_branch) 2> /dev/null)
       if [[ -z $remote ]]; then
-        icons="$icons $grey"
+        icons="$icons $grey "
       else
         local ahead=$(git_commits_ahead)
         if [[ $ahead -gt 0 ]]; then
-          icons="$icons $orange $ahead"
+          icons="$icons $orange $ahead"
         fi
 
         local behind=$(git_commits_behind)
         if [[ $behind -gt 0 ]]; then
-          icons="$icons $green $behind"
+          icons="$icons $green $behind"
         fi
 
         if [[ $(git_current_branch) == "master" ]]; then
-          icons="$icons $blue"
+          icons="$icons $blue "
         else
-          icons="$icons $blue"
+          icons="$icons $blue "
         fi
       fi
 
       echo "$resetColor at $magenta$(git_current_branch)$icons $resetColor"
     else
-      echo "$magenta  $resetColor"
+      echo "$magenta   $resetColor"
     fi
   fi
 }
@@ -156,7 +142,7 @@ function __versions() {
     denoVersion=$(deno --version | rg -o "deno (\d*\.\d*\.\d*)" -r '$1') &> /dev/null
 
     if [[ -n $denoVersion ]]; then
-      icons="$icons$resetColor  $denoVersion"
+      icons="$icons$resetColor  $denoVersion"
     fi
   fi
 
@@ -164,7 +150,7 @@ function __versions() {
     dockerVersion=$(docker --version | rg -o "\d*\.\d*\.\d*") &> /dev/null
 
     if [[ -n $dockerVersion ]]; then
-      icons="$icons$cyan  $dockerVersion"
+      icons="$icons$cyan  $dockerVersion"
     fi
   fi
 
@@ -172,7 +158,7 @@ function __versions() {
     nodeVersion=$(npm config get node-version) &> /dev/null
 
     if [[ -n $nodeVersion ]]; then
-      icons="$icons$green  $nodeVersion"
+      icons="$icons$green  $nodeVersion"
     fi
   fi
 
@@ -180,7 +166,7 @@ function __versions() {
     npmVersion=$(npm --version) &> /dev/null
 
     if [[ -n $npmVersion ]]; then
-      icons="$icons$red  $npmVersion"
+      icons="$icons$red  $npmVersion"
     fi
   fi
 
@@ -188,7 +174,7 @@ function __versions() {
     pythonVersion=$(python --version | rg -o "\d*\.\d*\.\d*") &> /dev/null
 
     if [[ -n $pythonVersion ]]; then
-      icons="$icons$yellow  $pythonVersion"
+      icons="$icons$yellow  $pythonVersion"
     fi
   fi
 
@@ -196,7 +182,7 @@ function __versions() {
     rubyVerison=$(ruby --version | rg -o "\d*\.\d*\.\d*") &> /dev/null
 
     if [[ -n $rubyVerison ]]; then
-      icons="$icons$red  $rubyVerison"
+      icons="$icons$red  $rubyVerison"
     fi
   fi
 
@@ -204,7 +190,7 @@ function __versions() {
     yarnVersion=$(yarn --version) &> /dev/null
 
     if [[ -n $yarnVersion ]]; then
-      icons="$icons$cyan  $yarnVersion"
+      icons="$icons$cyan  $yarnVersion"
     fi
   fi
 
