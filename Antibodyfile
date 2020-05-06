@@ -1,5 +1,6 @@
 mafredri/zsh-async
 
+robbyrussell/oh-my-zsh path:plugins/brew
 robbyrussell/oh-my-zsh path:plugins/chruby
 robbyrussell/oh-my-zsh path:plugins/docker
 robbyrussell/oh-my-zsh path:plugins/extract
