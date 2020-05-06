@@ -109,7 +109,7 @@ export THEME_PYTHON_VERSION=true
 export THEME_RUBY_VERSION=true
 export THEME_YARN_VERSION=true
 export THEME_POWER_MONITOR=true
-export UP_DATA_TERMINAL_APP='com.googlecode.iterm2'
+export UP_DATA_TERMINAL_APP='com.apple.terminal'
 export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 source ~/.python/bin/activate
@@ -117,7 +117,5 @@ source ~/.python/bin/activate
 source ~/.zsh_aliases.sh
 
 source ~/.zsh_plugins.sh
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 ssh-add -K ~/.ssh/id_rsa 2&> /dev/null
