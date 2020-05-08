@@ -13,23 +13,16 @@ local resetColor="%{$reset_color%}"
 ___power=(" " " " " " " " " " " " " ")
 ___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$yellow" "$yellow" "$green")
 ___prefix=(
-" " " " " " " " " " " " " " " "
-" " " " " " " " " " " " " " " "
-" " " " " " " " " " " " " " " "
-" " " " " " " " " " " " " " " "
+  " " " " " " " " " " " " " " " "
+  " " " " " " " " " " " " " " " "
+  " " " " " " " " " " " " " " " "
+  " " " " " " " " " " " " " " " "
 )
-___prefix_colours=(
-  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
-  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
-  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
-  "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor" "$resetColor"
-)
-
 
 function __iconography() {
   local index=$(( $RANDOM % ${#___prefix[@]} + 1 ))
 
-  echo "${___prefix_colours[$index]}${___prefix[$index]} "
+  __next_icon="${___prefix[$index]} "
 }
 
 function __power() {
@@ -197,5 +190,7 @@ function __versions() {
   echo "$icons"
 }
 
-PROMPT='$(__iconography)%U%c%u$(__stat)'
+PROMPT='$__next_icon%U%c%u$(__stat)'
 RPROMPT='$(__versions)$(__power)$resetColor'
+
+precmd_functions+=(__iconography)
