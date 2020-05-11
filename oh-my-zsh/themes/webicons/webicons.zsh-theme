@@ -10,7 +10,7 @@ local orange="%{$FG[208]%}"
 local purple="%{$FG[093]%}"
 local resetColor="%{$reset_color%}"
 
-___power=(" " " " " " " " " " " " " ")
+___power=(" " " " " " " " " ")
 ___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$yellow" "$yellow" "$green")
 ___prefix=(
   " " " " " " " " " " " " " " " "
@@ -32,14 +32,14 @@ function __power() {
     local charging=$(echo $stat | rg -o "\scharg[ing|ed]")
     local discharging=$(echo $stat | rg -o "\sdischarging")
     local percent=$(echo $stat | rg -o "[0-9]*%" | rg -o "[0-9]*")
-    local segment=$(( ($percent / 14.3) + 1 ))
+    local segment=$(( ($percent / 20) + 1 ))
 
     local colour=${___power_colours[$segment]}
 
     if [[ -n $charging ]]; then
       local time=$(echo $stat | rg -o "[0-9]:[0-9]*")
 
-      echo "${colour}  $time"
+      echo "${colour}  $time"
     elif [[ -n $discharging ]]; then
       echo "${colour} ${___power[$segment]}$percent%%"
     fi
@@ -55,43 +55,43 @@ function __stat() {
       local stashes=$(git stash list | rg -o '@' |  tr -d ' ' | tr -d '\n')
       local numberOfStashes=${#stashes}
       if [[ $numberOfStashes -gt 0 ]]; then
-        icons="$icons $magenta  $numberOfStashes"
+        icons="$icons $magenta $numberOfStashes"
       fi
 
       local untracked=$(git status --porcelain | rg -o '^\?\?\s' |  tr -d ' ' | tr -d '\n')
       local numberOfUntracked=${#untracked}
       if [[ $numberOfUntracked -gt 0 ]]; then
-        icons="$icons $orange  $(($numberOfUntracked / 2))"
+        icons="$icons $orange $(($numberOfUntracked / 2))"
       fi
 
       local added=$(git status --porcelain | rg -o '^\sA\s|^A\s{2}' |  tr -d ' ' | tr -d '\n')
       local numberOfAdded=${#added}
       if [[ $numberOfAdded -gt 0 ]]; then
-        icons="$icons $green  $numberOfAdded"
+        icons="$icons $green $numberOfAdded"
       fi
 
       local deleted=$(git status --porcelain | rg -o '^\sD\s|^D\s{2}' |  tr -d ' ' | tr -d '\n')
       local numberOfDeleted=${#deleted}
       if [[ $numberOfDeleted -gt 0 ]]; then
-        icons="$icons $red  $numberOfDeleted"
+        icons="$icons $red $numberOfDeleted"
       fi
 
       local modified=$(git status --porcelain | rg -o '^\sM\s|^M\s{2}' |  tr -d ' ' | tr -d '\n')
       local numberOfModified=${#modified}
       if [[ $numberOfModified -gt 0 ]]; then
-        icons="$icons $orange  $numberOfModified"
+        icons="$icons $orange $numberOfModified"
       fi
 
       local renamed=$(git status --porcelain | rg -o '^\sR\s|^R\s{2}' |  tr -d ' ' | tr -d '\n')
       local numberOfRenamed=${#renamed}
       if [[ $numberOfRenamed -gt 0 ]]; then
-        icons="$icons $green  $numberOfRenamed"
+        icons="$icons $green $numberOfRenamed"
       fi
 
       local conflicts=$(git status --porcelain | rg -o '^UU\s' |  tr -d ' ' | tr -d '\n')
       local numberOfConflicts=${#conflicts}
       if [[ $numberOfConflicts -gt 0 ]]; then
-        icons="$icons $red  $(($numberOfConflicts / 2))"
+        icons="$icons $red $(($numberOfConflicts / 2))"
       fi
 
       local staged=$(git status --porcelain |  rg -o '^A\s{2}|^D\s{2}|^M\s{2}|^R\s{2}' | tr -d ' ' | tr -d '\n')
