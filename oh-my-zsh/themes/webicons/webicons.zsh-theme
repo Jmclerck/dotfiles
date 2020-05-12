@@ -10,13 +10,13 @@ local orange="%{$FG[208]%}"
 local purple="%{$FG[093]%}"
 local resetColor="%{$reset_color%}"
 
-___power=(" " " " " " " " " ")
+___power=("" "" "" "" "")
 ___power_colours=("$red" "$yellow" "$yellow" "$yellow" "$yellow" "$yellow" "$green")
 ___prefix=(
-  " " " " " " " " " " " " " " " "
-  " " " " " " " " " " " " " " " "
-  " " " " " " " " " " " " " " " "
-  " " " " " " " " " " " " " " " "
+  "" "" "" "" "" "" "" ""
+  "" "" "" "" "" "" "" ""
+  "" "" "" "" "" "" "" ""
+  "" "" "" "" "" "" "" ""
 )
 
 function __iconography() {
@@ -41,7 +41,7 @@ function __power() {
 
       echo "${colour}  $time"
     elif [[ -n $discharging ]]; then
-      echo "${colour} ${___power[$segment]}$percent%%"
+      echo "${colour} ${___power[$segment]} $percent%%"
     fi
   fi
 }
@@ -123,7 +123,7 @@ function __stat() {
 
       echo "$resetColor at $magenta$(git_current_branch)$icons $resetColor"
     else
-      echo "$magenta   $resetColor"
+      echo "$magenta  $resetColor"
     fi
   fi
 }
