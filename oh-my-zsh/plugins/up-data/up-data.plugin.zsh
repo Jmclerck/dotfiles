@@ -7,7 +7,7 @@ fi
 function main() {
   local title='Up-data ☝️'
 
-  if [[ $THEME_BREW_UPDATE != false ]]; then
+  if [[ $UP_DATA_BREW_UPDATE != false ]]; then
     local icon="$(antibody path Jmclerck/dotfiles)/oh-my-zsh/plugins/up-data/icons/homebrew.png"
 
     brew update > /dev/null 2>&1
@@ -84,7 +84,7 @@ function main() {
     fi
   fi
 
-  if [[ $THEME_NPM_UPDATE != false ]]; then
+  if [[ $UP_DATA_NPM_UPDATE != false ]]; then
     local icon="$(antibody path Jmclerck/dotfiles)/oh-my-zsh/plugins/up-data/icons/npm.png"
     local list=$(npm outdated -g --json=true | jq 'keys' | sed -E 's/[^a-z\@\/\-]//g' | sed '/^$/d' 2> /dev/null)
     local npm=$(echo $list | sed '/^$/d'| wc -l | tr -d ' ')

@@ -98,9 +98,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export THEME_BREW_UPDATE=true
-export THEME_NPM_UPDATE=true
-export THEME_GIT_STATUS=true
 export THEME_DENO_VERSION=true
 export THEME_DOCKER_VERSION=false
 export THEME_NODE_VERSION=true
@@ -108,9 +105,14 @@ export THEME_NPM_VERSION=false
 export THEME_PYTHON_VERSION=true
 export THEME_RUBY_VERSION=true
 export THEME_YARN_VERSION=true
+
+export THEME_GIT_STATUS=true
 export THEME_POWER_MONITOR=true
-export UP_DATA_TERMINAL_APP='com.apple.terminal'
 export VIRTUAL_ENV_DISABLE_PROMPT=true
+
+export UP_DATA_BREW_UPDATE=true
+export UP_DATA_NPM_UPDATE=true
+export UP_DATA_TERMINAL_APP='com.apple.terminal'
 
 source ~/.python/bin/activate
 
