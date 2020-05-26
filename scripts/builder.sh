@@ -12,7 +12,7 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
   <key>ProgramArguments</key>
   <array>
     <string>$(pwd)/scripts/percentage.sh</string>
-    <string>$(pwd)/logs</string>
+    <string>$(pwd)</string>
   </array>
 
   <key>StartInterval</key>
@@ -22,10 +22,10 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
   <true/>
 
   <key>StandardErrorPath</key>
-  <string>$(pwd)/logs/percentage.err</string>
+  <string>$(pwd)/percentage.err</string>
 
   <key>StandardOutPath</key>
-  <string>$(pwd)/logs/percentage.out</string>
+  <string>$(pwd)/percentage.out</string>
 </dict>
 </plist>" > io.jclerck.percentage.plist
 

@@ -15,8 +15,6 @@ antibody bundle < Antibodyfile > ~/.zsh_plugins.sh
 # aliases
 cat Aliasfile > ~/.zsh_aliases.sh
 
-# logs directory
-mkdir logs
 # zshrc
 ln -sf "$(pwd)/.zshrc" ~
 

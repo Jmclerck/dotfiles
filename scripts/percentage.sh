@@ -6,8 +6,8 @@ percent=$(pmset -g batt | /usr/local/bin/rg -o "[0-9]*%" | /usr/local/bin/rg -o 
 percentShown=$(defaults read com.apple.menuextra.battery ShowPercent)
 
 # cleanup logs
-find $1 -maxdepth 1 -name "*.out" -type file -size +250k -delete
-find $1 -maxdepth 1 -name "*.err" -type file -size +250k -delete
+find $1 -maxdepth 1 -name "*.out" -type file -size +10k -delete
+find $1 -maxdepth 1 -name "*.err" -type file -size +10k -delete
 
 if [[ $percent -lt 20 ]]; then
     if [[ $percentShown == 0 || $percentShown == "NO" || $percentShown == false ]]; then
