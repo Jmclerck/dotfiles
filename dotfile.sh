@@ -17,5 +17,7 @@ cat Aliasfile > ~/.zsh_aliases.sh
 
 # logs directory
 mkdir logs
+# zshrc
+ln -sf "$(pwd)/.zshrc" ~
 
-for file in "builder" "symlinks" "macOS" "touch"; do "./scripts/${file}.sh" &> /dev/null; done
+for file in "builder" "macOS" "touch"; do "./scripts/${file}.sh" &> /dev/null; done
