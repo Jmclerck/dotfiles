@@ -32,7 +32,7 @@ function __power() {
     local charging=$(echo $stat | rg -o "\scharg[ing|ed]")
     local discharging=$(echo $stat | rg -o "\sdischarging")
     local percent=$(echo $stat | rg -o "[0-9]*%" | rg -o "[0-9]*")
-    local segment=$(( $percent / 20 ))
+    local segment=$(( ($percent / 20) + 1 ))
 
     local colour=${___power_colours[$segment]}
 
