@@ -110,10 +110,6 @@ export THEME_GIT_STATUS=true
 export THEME_POWER_MONITOR=true
 export VIRTUAL_ENV_DISABLE_PROMPT=true
 
-export UP_DATA_BREW_UPDATE=true
-export UP_DATA_NPM_UPDATE=true
-export UP_DATA_TERMINAL_APP='com.apple.terminal'
-
 source ~/.python/bin/activate
 
 source ~/.zsh_aliases.sh
@@ -121,3 +117,5 @@ source ~/.zsh_aliases.sh
 source ~/.zsh_plugins.sh
 
 ssh-add -K ~/.ssh/id_rsa 2&> /dev/null
+
+eval "$(fnm env --log-level=quiet --multi --shell=zsh --use-on-cd)"
