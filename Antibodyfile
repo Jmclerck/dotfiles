@@ -1,7 +1,6 @@
 Jmclerck/dotfiles path:oh-my-zsh/themes/webicons
 
 robbyrussell/oh-my-zsh path:plugins/chruby
-robbyrussell/oh-my-zsh path:plugins/sudo
 robbyrussell/oh-my-zsh path:plugins/thefuck
 robbyrussell/oh-my-zsh path:plugins/wd
 robbyrussell/oh-my-zsh path:plugins/yarn
