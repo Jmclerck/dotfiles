@@ -1,5 +1,1 @@
 alias cat="ccat"
-alias gcl="git clone "
-alias gs="git status"
-alias gsw="git switch "
-alias npmi="npm install"
