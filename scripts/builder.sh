@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# Build battery indicator switch .plist
-
 echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
 <plist version=\"1.0\">
@@ -29,13 +27,9 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 </dict>
 </plist>" > io.jclerck.percentage.plist
 
-pushd ~/Library/LaunchAgents &> /dev/null
 launchctl unload io.jclerck.percentage.plist 2&> /dev/null
-popd &> /dev/null
-
 rm ~/Library/LaunchAgents/io.jclerck.percentage.plist 2&> /dev/null
-ln -s "$(pwd)/io.jclerck.percentage.plist" ~/Library/LaunchAgents/io.jclerck.percentage.plist
 
-pushd ~/Library/LaunchAgents &> /dev/null
+mv -f "$(pwd)/io.jclerck.percentage.plist" ~/Library/LaunchAgents/io.jclerck.percentage.plist
+pushd ~/Library/LaunchAgents/ 2&> /dev/null
 launchctl load -w io.jclerck.percentage.plist
-popd &> /dev/null
