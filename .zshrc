@@ -21,7 +21,7 @@ source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -u
 gpgconf --kill gpg-agent
 ssh-add -K ~/.ssh/id_rsa
 
