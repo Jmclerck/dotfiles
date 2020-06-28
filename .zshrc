@@ -1,6 +1,7 @@
 setopt prompt_subst
 
 export PATH="$HOME/.cargo/bin:/usr/local/sbin:/usr/local/opt/mozjpeg/bin:$PATH"
+export FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
 export DENO_VERSION=true
 export NODE_VERSION=true
@@ -20,6 +21,7 @@ source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
+autoload -Uz compinit && compinit
 gpgconf --kill gpg-agent
 ssh-add -K ~/.ssh/id_rsa
 
