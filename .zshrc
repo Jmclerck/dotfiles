@@ -10,6 +10,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 source ~/.python/bin/activate
 source ~/.zsh/zsh-async/async.plugin.zsh
+source ~/.zsh/zsh-battery-status/zsh-battery-status.zsh
 source ~/.zsh/zsh-git-status/zsh-git-status.zsh
 source ~/.zsh/zsh-versions/zsh-versions.zsh
 source ~/.zsh/zsh-webicons/zsh-webicons.zsh
@@ -29,9 +30,10 @@ eval "$(fnm env --log-level=quiet --multi --shell=zsh --use-on-cd)"
 eval "$(jump shell)"
 
 PROMPT='$NEXT_WEBICON $NEXT_GIT_STATUS %c> '
-RPROMPT+=$(versions)
+RPROMPT='$(versions) $NEXT_BATTERY_STATUS'
 
 precmd() {
   git_status $(pwd)
+  battery
   webicons
 }
