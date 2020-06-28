@@ -33,7 +33,7 @@ PROMPT='$NEXT_WEBICON $NEXT_GIT_STATUS %c> '
 RPROMPT='$(versions) $NEXT_BATTERY_STATUS'
 
 precmd() {
-  git_status $(pwd)
   battery
+  git_status $(pwd)
   webicons
 }
