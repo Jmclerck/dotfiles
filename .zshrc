@@ -27,7 +27,6 @@ gpgconf --kill gpg-agent
 ssh-add -K ~/.ssh/id_rsa
 
 eval "$(fnm env --log-level=quiet --multi --shell=zsh --use-on-cd)"
-eval "$(jump shell)"
 
 PROMPT='$NEXT_WEBICON $NEXT_GIT_STATUS %c> '
 RPROMPT='$(versions) $NEXT_BATTERY_STATUS'
