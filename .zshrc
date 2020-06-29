@@ -3,9 +3,9 @@ setopt prompt_subst
 export PATH="$HOME/.cargo/bin:/usr/local/sbin:/usr/local/opt/mozjpeg/bin:$PATH"
 export FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
-export DENO_VERSION=true
-export NODE_VERSION=true
-export RUBY_VERSION=true
+export ZSH_DENO_VERSION=true
+export ZSH_NODE_VERSION=true
+export ZSH_RUBY_VERSION=true
 export VIRTUAL_ENV_DISABLE_PROMPT=true
 
 source ~/.python/bin/activate
