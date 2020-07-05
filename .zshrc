@@ -1,7 +1,7 @@
 setopt prompt_subst
 
 export PATH="$HOME/.cargo/bin:/usr/local/sbin:/usr/local/opt/mozjpeg/bin:$PATH"
-export FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+export FPATH="$HOME/.zsh/wd:$(brew --prefix)/share/zsh/site-functions:$FPATH"
 
 export ZSH_DENO_VERSION=true
 export ZSH_NODE_VERSION=true
@@ -28,11 +28,15 @@ ssh-add -K ~/.ssh/id_rsa
 
 eval "$(fnm env --log-level=quiet --multi --shell=zsh --use-on-cd)"
 
-PROMPT='$NEXT_WEBICON $NEXT_GIT_STATUS %c> '
+PROMPT='$NEXT_WEBICON $NEXT_GIT_STATUS%c> '
 RPROMPT='$(versions) $NEXT_BATTERY_STATUS'
 
 precmd() {
   battery
   git_status $(pwd)
   webicons
+}
+
+wd() {
+  source ~/.zsh/wd/wd.sh
 }
