@@ -10,6 +10,7 @@ export ZSH_RUBY_VERSION=true
 
 source ~/.zsh/zsh-async/async.plugin.zsh
 source ~/.zsh/zsh-battery-status/zsh-battery-status.zsh
+source ~/.zsh/zsh-ci-status/zsh-ci-status.zsh
 source ~/.zsh/zsh-command-status/zsh-command-status.zsh
 source ~/.zsh/zsh-git-status/zsh-git-status.zsh
 source ~/.zsh/zsh-versions/zsh-versions.zsh
@@ -29,10 +30,11 @@ ssh-add -K ~/.ssh/id_rsa
 eval "$(fnm env --log-level=quiet --multi --shell=zsh --use-on-cd)"
 
 PROMPT='$NEXT_WEBICON $NEXT_GIT_STATUS%c> '
-RPROMPT='$(command_status)$(versions)$NEXT_BATTERY_STATUS'
+RPROMPT='$(command_status)$NEXT_CI_STATUS$(versions)$NEXT_BATTERY_STATUS'
 
 precmd() {
   battery_status
+  ci_status $(pwd)
   git_status $(pwd)
   webicons
 }
