@@ -1,7 +1,7 @@
 setopt prompt_subst
 
 export PATH="$HOME/.cargo/bin:$HOME/Library/Python/3.8/bin:/usr/local/sbin:/usr/local/opt/mozjpeg/bin:$PATH"
-export FPATH="$HOME/.zsh/wd:$(brew --prefix)/share/zsh/site-functions:$FPATH"
+export FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
 
 export ZSH_DENO_VERSION=true
 export ZSH_NODE_VERSION=true
