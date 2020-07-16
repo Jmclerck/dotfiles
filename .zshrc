@@ -3,10 +3,7 @@ setopt prompt_subst
 export PATH="$HOME/.cargo/bin:$HOME/Library/Python/3.8/bin:/usr/local/sbin:/usr/local/opt/mozjpeg/bin:$PATH"
 export FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
 
-export ZSH_DENO_VERSION=true
-export ZSH_NODE_VERSION=true
-export ZSH_YARN_VERSION=true
-
+source ~/.zprofile
 source ~/.zsh/zsh-async/async.plugin.zsh
 source ~/.zsh/zsh-battery-status/zsh-battery-status.zsh
 source ~/.zsh/zsh-ci-status/zsh-ci-status.zsh
