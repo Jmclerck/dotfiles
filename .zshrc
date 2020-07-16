@@ -26,7 +26,7 @@ ssh-add -K ~/.ssh/id_rsa
 eval "$(fnm env --log-level=quiet --multi --shell=zsh --use-on-cd)"
 
 PROMPT='$NEXT_WEBICON$NEXT_GIT_STATUS%c> '
-RPROMPT='$(command_status)$NEXT_CI_STATUS$(versions)$NEXT_BATTERY_STATUS'
+RPROMPT='$NEXT_CI_STATUS$(versions)$NEXT_BATTERY_STATUS'
 
 precmd() {
   battery_status
