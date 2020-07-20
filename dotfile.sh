@@ -16,7 +16,7 @@
     git clone git@github.com:zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
     git clone git@github.com:zsh-users/zsh-completions.git ~/.zsh/zsh-completions
     git clone git@github.com:zsh-users/zsh-history-substring-search.git ~/.zsh/zsh-history-substring-search
-    git clone git@github.com:zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+    git clone git@github.com:zdharma/fast-syntax-highlighting ~/.zsh/fast-syntax-highlighting
 
 # preferences
     # Close any open System Preferences panes, to prevent them from overriding
