@@ -1,6 +1,6 @@
 setopt prompt_subst
 
-export PATH="$HOME/.cargo/bin:$HOME/Library/Python/3.8/bin:/usr/local/sbin:/usr/local/opt/mozjpeg/bin:$PATH"
+export PATH="$HOME/.deno/bin:$PATH:$HOME/.cargo/bin:$HOME/Library/Python/3.8/bin:/usr/local/sbin:/usr/local/opt/mozjpeg/bin:$PATH"
 export FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
 
 source ~/.zsh/zsh-async/async.plugin.zsh
