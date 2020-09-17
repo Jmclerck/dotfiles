@@ -93,6 +93,8 @@
     defaults write com.apple.commerce AutoUpdate -bool true
 
     # Allow the App Store to reboot machine on macOS updates
-    defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
+    defaults write com.apple.commerce AutoUpdateRestartRequired -bool 
+    
+    defaults write com.tapbots.Pastebot2Mac UIVisibilityState 10
 
-    for app in "Activity Monitor" "cfprefsd" "Dock" "Finder" "Safari"; do killall "${app}" &> /dev/null; done
+    for app in "Activity Monitor" "cfprefsd" "Dock" "Finder" "Safari" "Pastebot"; do killall "${app}" &> /dev/null; done
