@@ -1,6 +1,6 @@
 setopt prompt_subst
 
-export PATH="$HOME/.deno/bin:$PATH:$HOME/.cargo/bin:$HOME/Library/Python/3.8/bin:/usr/local/sbin:/usr/local/opt/mozjpeg/bin:$PATH"
+export PATH="$HOME/.deno/bin:$PATH"
 export FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
 
 source ~/.zsh/zsh-async/async.plugin.zsh
@@ -11,20 +11,15 @@ source ~/.zsh/zsh-command-status/zsh-command-status.zsh
 source ~/.zsh/zsh-completions/zsh-completions.plugin.zsh
 source ~/.zsh/zsh-git-status/zsh-git-status.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.zsh/zsh-pg-status/zsh-pg-status.zsh
 source ~/.zsh/zsh-versions/zsh-versions.zsh
 source ~/.zsh/zsh-webicons/zsh-webicons.zsh
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source ~/.zprofile
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-
 autoload -Uz compinit && compinit -u
-gpgconf --kill gpg-agent
-ssh-add -K ~/.ssh/id_rsa
 
 eval "$(fnm env --shell=zsh --use-on-cd)"
-eval $(thefuck --alias)
 
 PROMPT='$NEXT_WEBICON $NEXT_GIT_STATUS%c> '
 RPROMPT='$NEXT_CI_STATUS $(versions) $NEXT_BATTERY_STATUS'
