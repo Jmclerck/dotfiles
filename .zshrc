@@ -11,6 +11,7 @@ source ~/.zsh/zsh-command-status/zsh-command-status.zsh
 source ~/.zsh/zsh-completions/zsh-completions.plugin.zsh
 source ~/.zsh/zsh-git-status/zsh-git-status.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.zsh/zsh-pg-status/zsh-pg-status.zsh
 source ~/.zsh/zsh-versions/zsh-versions.zsh
 source ~/.zsh/zsh-webicons/zsh-webicons.zsh
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
