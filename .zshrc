@@ -1,8 +1,5 @@
 setopt prompt_subst
 
-export PATH="$HOME/.deno/bin:$HOME/.cargo/bin:$HOME/Library/Python/3.8/bin:/usr/local/sbin:/usr/local/opt/mozjpeg/bin:$PATH"
-export FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
-
 source ~/.zsh/zsh-async/async.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-battery-status/zsh-battery-status.zsh
@@ -17,13 +14,10 @@ source ~/.zsh/zsh-webicons/zsh-webicons.zsh
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source ~/.zprofile
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+autoload -Uz compinit
+compinit -u
 
-autoload -Uz compinit && compinit -u
-
-eval "$(fnm env --shell=zsh --use-on-cd)"
-eval $(thefuck --alias)
+eval "$(fnm env --use-on-cd)"
 
 PROMPT='$NEXT_WEBICON $NEXT_GIT_STATUS%c> '
 RPROMPT='$NEXT_CI_STATUS $(versions) $NEXT_BATTERY_STATUS'
