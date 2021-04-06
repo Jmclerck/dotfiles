@@ -17,7 +17,7 @@ source ~/.zprofile
 autoload -Uz compinit
 compinit -u
 
-eval "$(fnm env --use-on-cd)"
+eval "$(fnm env --shell=zsh --use-on-cd)"
 
 PROMPT='$NEXT_WEBICON $NEXT_GIT_STATUS%c> '
 RPROMPT='$NEXT_CI_STATUS $(versions) $NEXT_BATTERY_STATUS'
