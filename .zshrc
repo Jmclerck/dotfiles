@@ -19,14 +19,13 @@ compinit -u
 
 eval "$(fnm env --shell=zsh --use-on-cd)"
 
-PROMPT='$NEXT_WEBICON $NEXT_GIT_STATUS%c> '
+PROMPT='$NEXT_GIT_STATUS%c> '
 RPROMPT='$NEXT_CI_STATUS $(versions) $NEXT_BATTERY_STATUS'
 
 precmd() {
   battery_status
   ci_status $(pwd)
   git_status $(pwd)
-  webicons
 }
 
 wd() {
