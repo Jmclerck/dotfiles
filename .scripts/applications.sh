@@ -3,7 +3,6 @@ open https://github.com/BurntSushi/ripgrep
 open https://github.com/cli/cli
 open https://github.com/schniz/fnm
 
-open https://backblaze.com/
 open https://gnupg.org/
 open https://malwarebytes.com/
 open https://obdev.at/products/littlesnitch/
