@@ -3,7 +3,6 @@ setopt prompt_subst
 source ~/.zsh/zsh-async/async.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-battery-status/zsh-battery-status.zsh
-source ~/.zsh/zsh-ci-status/zsh-ci-status.zsh
 source ~/.zsh/zsh-command-status/zsh-command-status.zsh
 source ~/.zsh/zsh-completions/zsh-completions.plugin.zsh
 source ~/.zsh/zsh-git-status/zsh-git-status.zsh
@@ -19,11 +18,10 @@ compinit -u
 eval "$(fnm env --shell=zsh --use-on-cd)"
 
 PROMPT='$NEXT_GIT_STATUS%c> '
-RPROMPT='$NEXT_CI_STATUS $(versions) $NEXT_BATTERY_STATUS'
+RPROMPT='$(versions) $NEXT_BATTERY_STATUS'
 
 precmd() {
   battery_status
-  ci_status $(pwd)
   git_status $(pwd)
 }
 
