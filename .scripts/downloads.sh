@@ -5,3 +5,5 @@ open https://malwarebytes.com/
 open https://obdev.at/products/littlesnitch/
 open https://reincubate.com/camo/
 open https://visualstudio.microsoft.com/
+
+open https://www.jetbrains.com/lp/mono/
