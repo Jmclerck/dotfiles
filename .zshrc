@@ -9,8 +9,10 @@ source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source ~/.zprofile
 
+autoload -Uz colors
+colors
+
 autoload -Uz compinit
-compinit -u
 compinit
 
 PROMPT='$NEXT_GIT_STATUS%c> '
