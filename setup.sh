@@ -9,4 +9,4 @@ git clone git@github.com:zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosugges
 git clone git@github.com:zsh-users/zsh-completions.git ~/.zsh/zsh-completions
 git clone git@github.com:zsh-users/zsh-history-substring-search.git ~/.zsh/zsh-history-substring-search
 
-mkdir ~/.zsh/completions
+mkdir ~/.zsh/zsh-user-completions
