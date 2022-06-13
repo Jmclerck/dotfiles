@@ -12,9 +12,6 @@ source ~/.zprofile
 autoload -Uz colors
 colors
 
-autoload -Uz compinit
-compinit
-
 PROMPT='$NEXT_GIT_STATUS%c> '
 RPROMPT='$NEXT_BATTERY_STATUS'
 
