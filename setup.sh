@@ -1,4 +1,5 @@
 ln -sf "$(pwd)/.zshrc" ~
+ln -sf "$(pwd)/.zprofile" ~
 
 git clone git@github.com:Jmclerck/zsh-battery-status.git ~/.zsh/zsh-battery-status
 git clone git@github.com:Jmclerck/zsh-git-status.git ~/.zsh/zsh-git-status
