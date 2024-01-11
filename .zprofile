@@ -1,11 +1,13 @@
-source $(dirname $(readlink $0))/.path.zprofile
-
 fpath=($HOME/.zsh/wd $fpath)
 
 autoload -Uz compinit
 compinit -u
 
-source $(dirname $(readlink $0))/.completion.zprofile
+if [[ ! $0 =~ "^-" ]]
+then
+    source "$(dirname $(realpath $0))/.path.zprofile"
+    source "$(dirname $(realpath $0))/.completion.zprofile"
+fi
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down

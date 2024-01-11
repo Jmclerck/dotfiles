@@ -1,6 +1,6 @@
 choice() {
     local choice=$1
-    if [[ ${selections[choice]} ]]; then # toggle
+    if [[ ${selections[choice]} ]]; then
         selections[choice]=
     else
         selections[choice]=+
