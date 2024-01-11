@@ -1,6 +1,6 @@
 choice() {
     local choice=$1
-    if [[ ${selections[choice]} ]]; then # toggle
+    if [[ ${selections[choice]} ]]; then
         selections[choice]=
     else
         selections[choice]=+
@@ -12,6 +12,7 @@ apps=(
     '1password'
     'Affinity Designer'
     'Kaleidoscope'
+    'Opal'
     'Parallels Desktop'
     'Rectangle'
     'Tower'
@@ -24,6 +25,7 @@ links=(
     'https://1password.com/downloads/mac/'
     'https://store.serif.com/get/universal-licence-2/trial/'
     'https://kaleidoscope.app/download'
+    'https://opalcamera.com/opal-composer/download'
     'https://www.parallels.com/products/desktop/'
     'https://www.rectangleapp.com'
     'https://www.git-tower.com/mac'
