@@ -15,7 +15,7 @@ scripts=(
     'Applications'
     'Tools'
     'All'
-    'Quit'
+    'None'
 )
 select script in "${scripts[@]}"; do
     case $script in
@@ -32,7 +32,7 @@ select script in "${scripts[@]}"; do
         ./tools.sh
         break
         ;;
-    'Quit')
+    'None')
         break
         ;;
     *)
