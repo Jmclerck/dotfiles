@@ -40,3 +40,11 @@ select script in "${scripts[@]}"; do
         ;;
     esac
 done
+
+PS3='Seed configuration files: '
+select answer in "Yes" "No"; do
+    case $answer in
+        'Yes') ./seed.sh; break;;
+        'No') exit;;
+    esac
+done
