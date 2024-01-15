@@ -10,7 +10,6 @@ choice() {
 PS3='Install applications: '
 apps=(
     '1password'
-    'Affinity Designer'
     'Kaleidoscope'
     'Opal'
     'Parallels Desktop'
@@ -23,7 +22,6 @@ apps=(
 )
 links=(
     'https://1password.com/downloads/mac/'
-    'https://store.serif.com/get/universal-licence-2/trial/'
     'https://kaleidoscope.app/download'
     'https://opalcamera.com/opal-composer/download'
     'https://www.parallels.com/products/desktop/'
