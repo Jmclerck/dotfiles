@@ -19,7 +19,3 @@ precmd() {
   battery_status
   git_status $(pwd)
 }
-
-wd() {
-  source ~/.zsh/wd/wd.sh
-}

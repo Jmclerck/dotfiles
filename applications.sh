@@ -10,7 +10,6 @@ choice() {
 PS3='Install applications: '
 apps=(
     '1password'
-    'Affinity Designer'
     'Kaleidoscope'
     'Opal'
     'Parallels Desktop'
@@ -19,11 +18,10 @@ apps=(
     'Visual Studio Code'
     'Vivid'
     'All'
-    'Quit'
+    'None'
 )
 links=(
     'https://1password.com/downloads/mac/'
-    'https://store.serif.com/get/universal-licence-2/trial/'
     'https://kaleidoscope.app/download'
     'https://opalcamera.com/opal-composer/download'
     'https://www.parallels.com/products/desktop/'
@@ -42,7 +40,7 @@ select app in "${apps[@]}"; do
         done
         break
         ;;
-    'Quit')
+    'None')
         break
         ;;
     *)

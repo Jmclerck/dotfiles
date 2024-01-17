@@ -46,7 +46,7 @@ tools=(
     'Homebrew'
     'N'
     'All'
-    'Quit'
+    'None'
 )
 
 select tool in "${tools[@]}"; do
@@ -58,7 +58,7 @@ select tool in "${tools[@]}"; do
         done
         break
         ;;
-    'Quit')
+    'None')
         break
         ;;
     *)

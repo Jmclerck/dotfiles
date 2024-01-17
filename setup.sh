@@ -4,7 +4,6 @@ ln -sf "$(pwd)/.zprofile" ~
 git clone git@github.com:Jmclerck/zsh-battery-status.git ~/.zsh/zsh-battery-status
 git clone git@github.com:Jmclerck/zsh-git-status.git ~/.zsh/zsh-git-status
 git clone git@github.com:mafredri/zsh-async.git ~/.zsh/zsh-async
-git clone git@github.com:mfaerevaag/wd.git ~/.zsh/wd
 git clone git@github.com:zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 git clone git@github.com:zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
 git clone git@github.com:zsh-users/zsh-completions.git ~/.zsh/zsh-completions
@@ -15,7 +14,7 @@ scripts=(
     'Applications'
     'Tools'
     'All'
-    'Quit'
+    'None'
 )
 select script in "${scripts[@]}"; do
     case $script in
@@ -32,11 +31,19 @@ select script in "${scripts[@]}"; do
         ./tools.sh
         break
         ;;
-    'Quit')
+    'None')
         break
         ;;
     *)
         choice $REPLY
         ;;
+    esac
+done
+
+PS3='Run configuration scripts: '
+select answer in "Yes" "No"; do
+    case $answer in
+        'Yes') ./configure.sh; break;;
+        'No') exit;;
     esac
 done
