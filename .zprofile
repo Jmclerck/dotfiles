@@ -1,5 +1,3 @@
-fpath=($HOME/.zsh/wd $fpath)
-
 autoload -Uz compinit
 compinit -u
 
