@@ -18,7 +18,7 @@ apps=(
     'Visual Studio Code'
     'Vivid'
     'All'
-    'None'
+    'Exit'
 )
 links=(
     'https://1password.com/downloads/mac/'
@@ -40,7 +40,7 @@ select app in "${apps[@]}"; do
         done
         break
         ;;
-    'None')
+    'Exit')
         break
         ;;
     *)
