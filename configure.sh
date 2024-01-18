@@ -92,6 +92,11 @@ select answer in "Yes" "No"; do
             if [[ ! -e "$HOME/Library/LaunchAgents/is.edil.reset-launchpad.plist" ]]; then
                 touch "$HOME/Library/LaunchAgents/is.edil.reset-launchpad.plist"
             fi
+            if [[ -e "/usr/local/bin/fdautil" ]]; then
+                sudo /usr/local/bin/fdautil set agent is.edil.reset-launchpad $HOME/Documents/GitHub/dotfiles/scripts/reset-launchpad.sh
+            else
+                echo "fdautil not found, once fdautil is installed run the following command:\n\n$ sudo /usr/local/bin/fdautil set agent is.edil.reset-launchpad $HOME/Documents/GitHub/dotfiles/scripts/reset-launchpad.sh\n\nor configure fdautil through LaunchControl"
+            fi
             echo $plist | sed 's/^ *//g' > "$HOME/Library/LaunchAgents/is.edil.reset-launchpad.plist"
             break;;
         'No') break;;
