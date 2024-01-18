@@ -9,26 +9,28 @@ choice() {
 
 PS3='Install applications: '
 apps=(
-    '1password'
-    'Kaleidoscope'
-    'Opal'
-    'Parallels Desktop'
-    'Rectangle'
-    'Tower'
-    'Visual Studio Code'
-    'Vivid'
+    '1password (https://1password.com)'
+    'Kaleidoscope (https://kaleidoscope.app)'
+    'LaunchControl (https://soma-zone.com)'
+    'Opal (https://opalcamera.com)'
+    'Parallels Desktop (https://parallels.com)'
+    'Rectangle (https://rectangleapp.com)'
+    'Tower (https://git-tower.com/mac)'
+    'Visual Studio Code (https://code.visualstudio.com)'
+    'Vivid (https://getvivid.app)'
     'All'
-    'None'
+    'Exit'
 )
 links=(
     'https://1password.com/downloads/mac/'
     'https://kaleidoscope.app/download'
     'https://opalcamera.com/opal-composer/download'
-    'https://www.parallels.com/products/desktop/'
-    'https://www.rectangleapp.com'
-    'https://www.git-tower.com/mac'
+    'https://parallels.com/products/desktop/'
+    'https://rectangleapp.com'
+    'https://soma-zone.com/LaunchControl/'
+    'https://git-tower.com/mac'
     'https://code.visualstudio.com'
-    'https://www.getvivid.app'
+    'https://getvivid.app'
 )
 
 select app in "${apps[@]}"; do
@@ -40,7 +42,7 @@ select app in "${apps[@]}"; do
         done
         break
         ;;
-    'None')
+    'Exit')
         break
         ;;
     *)

@@ -40,13 +40,13 @@ paths=(
     'export N_PREFIX=$HOME/.n'
 )
 tools=(
-    '1password CLI'
-    'Deno'
-    'Github CLI'
-    'Homebrew'
-    'N'
+    '1password CLI (https://developer.1password.com)'
+    'Deno (https://deno.land)'
+    'Github CLI (https://cli.github.com)'
+    'Homebrew (https://brew.sh)'
+    'N (https://github.com/tj/n)'
     'All'
-    'None'
+    'Exit'
 )
 
 select tool in "${tools[@]}"; do
@@ -58,7 +58,7 @@ select tool in "${tools[@]}"; do
         done
         break
         ;;
-    'None')
+    'Exit')
         break
         ;;
     *)
