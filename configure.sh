@@ -90,6 +90,7 @@ select answer in "Yes" "No"; do
     case $answer in
         'Yes')
             if [[ ! -e "$HOME/Library/LaunchAgents/is.edil.reset-launchpad.plist" ]]; then
+                mkdir -p "$HOME/Library/LaunchAgents/"
                 touch "$HOME/Library/LaunchAgents/is.edil.reset-launchpad.plist"
             fi
             if [[ -e "/usr/local/bin/fdautil" ]]; then
