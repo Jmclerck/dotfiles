@@ -27,12 +27,12 @@ apps=(
 links=(
     'https://1password.com/downloads/mac/'
     'https://kaleidoscope.app/download'
+    'https://soma-zone.com/LaunchControl/'
     'https://opalcamera.com/opal-composer/download'
     'https://parallels.com/products/desktop/'
     'https://getpixelsnap.comx'
     'https://github.com/SAP/power-monitoring-tool-for-macos/releases'
     'https://rectangleapp.com'
-    'https://soma-zone.com/LaunchControl/'
     'https://telestream.net/screenflow/overview.htm'
     'https://git-tower.com/mac'
     'https://getvivid.app'
