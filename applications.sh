@@ -25,11 +25,11 @@ apps=(
 links=(
     'https://1password.com/downloads/mac/'
     'https://kaleidoscope.app/download'
+    'https://soma-zone.com/LaunchControl/'
     'https://opalcamera.com/opal-composer/download'
     'https://parallels.com/products/desktop/'
     'https://getpixelsnap.comx'
     'https://rectangleapp.com'
-    'https://soma-zone.com/LaunchControl/'
     'https://git-tower.com/mac'
     'https://getvivid.app'
     'https://zed.dev/download'
