@@ -17,6 +17,7 @@ apps=(
     'Rectangle (https://rectangleapp.com)'
     'Tower (https://git-tower.com/mac)'
     'Vivid (https://getvivid.app)'
+    'Zed (https://zed.dev/download)'
     'All'
     'Exit'
 )
@@ -29,6 +30,7 @@ links=(
     'https://soma-zone.com/LaunchControl/'
     'https://git-tower.com/mac'
     'https://getvivid.app'
+    'https://zed.dev/download'
 )
 
 select app in "${apps[@]}"; do
