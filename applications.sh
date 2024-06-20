@@ -16,7 +16,6 @@ apps=(
     'Parallels Desktop (https://parallels.com)'
     'Rectangle (https://rectangleapp.com)'
     'Tower (https://git-tower.com/mac)'
-    'Visual Studio Code (https://code.visualstudio.com)'
     'Vivid (https://getvivid.app)'
     'All'
     'Exit'
@@ -29,7 +28,6 @@ links=(
     'https://rectangleapp.com'
     'https://soma-zone.com/LaunchControl/'
     'https://git-tower.com/mac'
-    'https://code.visualstudio.com'
     'https://getvivid.app'
 )
 
