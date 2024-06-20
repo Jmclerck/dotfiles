@@ -17,8 +17,8 @@ apps=(
     'PixelSnap 2 (https://getpixelsnap.com)'
     'Rectangle (https://rectangleapp.com)'
     'Tower (https://git-tower.com/mac)'
-    'Visual Studio Code (https://code.visualstudio.com)'
     'Vivid (https://getvivid.app)'
+    'Zed (https://zed.dev/download)'
     'All'
     'Exit'
 )
@@ -31,8 +31,8 @@ links=(
     'https://rectangleapp.com'
     'https://soma-zone.com/LaunchControl/'
     'https://git-tower.com/mac'
-    'https://code.visualstudio.com'
     'https://getvivid.app'
+    'https://zed.dev/download'
 )
 
 select app in "${apps[@]}"; do
