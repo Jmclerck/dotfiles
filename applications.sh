@@ -18,6 +18,7 @@ apps=(
     'Tower (https://git-tower.com/mac)'
     'Visual Studio Code (https://code.visualstudio.com)'
     'Vivid (https://getvivid.app)'
+    'Zed (https://zed.dev/download)'
     'All'
     'Exit'
 )
@@ -31,6 +32,7 @@ links=(
     'https://git-tower.com/mac'
     'https://code.visualstudio.com'
     'https://getvivid.app'
+    'https://zed.dev/download'
 )
 
 select app in "${apps[@]}"; do
