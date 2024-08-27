@@ -30,7 +30,7 @@ links=(
     'https://soma-zone.com/LaunchControl/'
     'https://opalcamera.com/opal-composer/download'
     'https://parallels.com/products/desktop/'
-    'https://getpixelsnap.comx'
+    'https://getpixelsnap.com'
     'https://github.com/SAP/power-monitoring-tool-for-macos/releases'
     'https://rectangleapp.com'
     'https://telestream.net/screenflow/overview.htm'
