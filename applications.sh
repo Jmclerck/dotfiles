@@ -10,6 +10,7 @@ choice() {
 PS3='Install applications: '
 apps=(
     '1password (https://1password.com)'
+    'Docker (https://docker.com)'
     'Kaleidoscope (https://kaleidoscope.app)'
     'LaunchControl (https://soma-zone.com)'
     'Opal (https://opalcamera.com)'
@@ -26,6 +27,7 @@ apps=(
 )
 links=(
     'https://1password.com/downloads/mac/'
+    'https://docker.com'
     'https://kaleidoscope.app/download'
     'https://soma-zone.com/LaunchControl/'
     'https://opalcamera.com/opal-composer/download'
