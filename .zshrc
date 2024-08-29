@@ -1,4 +1,5 @@
 setopt prompt_subst
+setopt hist_ignore_all_dups
 
 source ~/.zsh/zsh-async/async.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh

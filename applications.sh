@@ -10,6 +10,9 @@ choice() {
 PS3='Install applications: '
 apps=(
     '1password (https://1password.com)'
+    'Chrome (https://google.co.uk/chrome)'
+    'Docker (https://docker.com)'
+    'Firefox (https://mozilla.org/en-US/firefox)'
     'Kaleidoscope (https://kaleidoscope.app)'
     'LaunchControl (https://soma-zone.com)'
     'Opal (https://opalcamera.com)'
@@ -26,11 +29,14 @@ apps=(
 )
 links=(
     'https://1password.com/downloads/mac/'
+    'https://google.co.uk/chrome'
+    'https://docker.com'
+    'https://mozilla.org/en-US/firefox'
     'https://kaleidoscope.app/download'
     'https://soma-zone.com/LaunchControl/'
     'https://opalcamera.com/opal-composer/download'
     'https://parallels.com/products/desktop/'
-    'https://getpixelsnap.comx'
+    'https://getpixelsnap.com'
     'https://github.com/SAP/power-monitoring-tool-for-macos/releases'
     'https://rectangleapp.com'
     'https://telestream.net/screenflow/overview.htm'
