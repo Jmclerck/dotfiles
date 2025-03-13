@@ -11,6 +11,7 @@ PS3='Install applications: '
 apps=(
     '1password (https://1password.com)'
     'Chrome (https://google.co.uk/chrome)'
+    'CleanShot X (https://cleanshot.com)'
     'Docker (https://docker.com)'
     'Firefox (https://mozilla.org/en-US/firefox)'
     'Kaleidoscope (https://kaleidoscope.app)'
@@ -31,6 +32,7 @@ apps=(
 links=(
     'https://1password.com/downloads/mac/'
     'https://google.co.uk/chrome'
+    'https://cleanshot.com'
     'https://docker.com'
     'https://mozilla.org/en-US/firefox'
     'https://kaleidoscope.app/download'
